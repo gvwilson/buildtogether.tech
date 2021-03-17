@@ -24,84 +24,89 @@ entries:
   label: '5'
   slug: 10-persuade
   title: Ten Simple Rules for Talking People Into Things
-- file: ./using-git/index.md
+- file: ./conflict/index.md
   kind: Chapter
   label: '6'
+  slug: conflict
+  title: Managing Conflict
+- file: ./using-git/index.md
+  kind: Chapter
+  label: '7'
   slug: using-git
   title: Using Git
 - file: ./project/index.md
   kind: Chapter
-  label: '7'
+  label: '8'
   slug: project
   title: Project Structure
 - file: ./code-review/index.md
   kind: Chapter
-  label: '8'
+  label: '9'
   slug: code-review
   title: Code Reviews
 - file: ./collaborate/index.md
   kind: Chapter
-  label: '9'
+  label: '10'
   slug: collaborate
   title: Collaborative Development
 - file: ./testing/index.md
   kind: Chapter
-  label: '10'
+  label: '11'
   slug: testing
   title: Is It Right Enough?
 - file: ./design/index.md
   kind: Chapter
-  label: '11'
+  label: '12'
   slug: design
   title: Testing, Evolution, and Design
 - file: ./errors/index.md
   kind: Chapter
-  label: '12'
+  label: '13'
   slug: errors
   title: When Things Go Wrong
 - file: ./tooling/index.md
   kind: Chapter
-  label: '13'
+  label: '14'
   slug: tooling
   title: The Tool Shapes the Hand
 - file: ./process/index.md
   kind: Chapter
-  label: '14'
+  label: '15'
   slug: process
   title: Pick a Process---Any Process
 - file: ./research/index.md
   kind: Chapter
-  label: '15'
+  label: '16'
   slug: research
   title: A Random Sample of Research
 - file: ./ip/index.md
   kind: Chapter
-  label: '16'
+  label: '17'
   slug: ip
   title: Intellectual Property
 - file: ./rights/index.md
   kind: Chapter
-  label: '17'
+  label: '18'
   slug: rights
   title: Know Your Rights
 - file: ./10-fired/index.md
   kind: Chapter
-  label: '18'
+  label: '19'
   slug: 10-fired
   title: Ten Simple Rules for Being Fired
 - file: ./delivery/index.md
   kind: Chapter
-  label: '19'
+  label: '20'
   slug: delivery
   title: At the End of the Day
 - file: ./10-handover/index.md
   kind: Chapter
-  label: '20'
+  label: '21'
   slug: 10-handover
   title: Ten Simple Rules for Handing Over and Moving On
 - file: ./conclusion/index.md
   kind: Chapter
-  label: '21'
+  label: '22'
   slug: conclusion
   title: Conclusion
 - file: LICENSE.md
@@ -150,16 +155,16 @@ entries:
   slug: evaluation
   title: Performance Evaluation
 figures:
-  after-clone: '6.2'
-  after-fork: '6.1'
-  after-remote: '6.3'
-  process-matrix: '14.1'
+  after-clone: '7.2'
+  after-fork: '7.1'
+  after-remote: '7.3'
+  process-matrix: '15.1'
   thinking-cognitive-architecture: G.2
   thinking-frisian: G.3
   thinking-models: G.1
-  use-case-map: '11.1'
-  washburn-2016-what-went-right: '15.1'
-  washburn-2016-what-went-wrong: '15.2'
+  use-case-map: '12.1'
+  washburn-2016-what-went-right: '16.1'
+  washburn-2016-what-went-wrong: '16.2'
 tables:
-  collaborate-code-review: '8.1'
+  collaborate-code-review: '9.1'
   starting-spinellis-stats: '3.1'
