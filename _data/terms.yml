@@ -134,6 +134,33 @@ important:
 - key: sense_vote
   term: sense vote
 introduction: []
+ip:
+- key: bsd_license
+  term: BSD license
+- key: cc0
+  term: CC0
+- key: cc_by
+  term: CC-BY
+- key: copyright
+  term: copyright
+- key: gpl
+  term: GNU Public License
+- key: intellectual_property
+  term: intellectual property
+- key: license
+  term: license
+- key: mit_license
+  term: MIT License
+- key: non_disclosure_agreement
+  term: non-disclosure agreement
+- key: open_license
+  term: open license
+- key: patent
+  term: patent
+- key: trade_secret
+  term: trade secret
+- key: trademark
+  term: trademark
 license: []
 links: []
 novices: []
@@ -219,36 +246,10 @@ research:
 rights:
 - key: ally
   term: ally
-- key: bsd_license
-  term: BSD license
-- key: cc0
-  term: CC0
-- key: cc_by
-  term: CC-BY
-- key: copyright
-  term: copyright
-- key: gpl
-  term: GNU Public License
-- key: intellectual_property
-  term: intellectual property
-- key: license
-  term: license
-- key: mit_license
-  term: MIT License
-- key: non_disclosure_agreement
-  term: non-disclosure agreement
-- key: open_license
-  term: open license
 - key: oppression
   term: oppression
-- key: patent
-  term: patent
 - key: privilege
   term: privilege
-- key: trade_secret
-  term: trade secret
-- key: trademark
-  term: trademark
 starting:
 - key: elevator_pitch
   term: elevator pitch

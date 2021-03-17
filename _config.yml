@@ -35,6 +35,8 @@ chapters:
     title: "Pick a Process---Any Process"
   - slug: "research"
     title: "A Random Sample of Research"
+  - slug: "ip"
+    title: "Intellectual Property"
   - slug: "rights"
     title: "Know Your Rights"
   - slug: "10-fired"

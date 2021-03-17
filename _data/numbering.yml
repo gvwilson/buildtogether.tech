@@ -74,29 +74,34 @@ entries:
   label: '15'
   slug: research
   title: A Random Sample of Research
-- file: ./rights/index.md
+- file: ./ip/index.md
   kind: Chapter
   label: '16'
+  slug: ip
+  title: Intellectual Property
+- file: ./rights/index.md
+  kind: Chapter
+  label: '17'
   slug: rights
   title: Know Your Rights
 - file: ./10-fired/index.md
   kind: Chapter
-  label: '17'
+  label: '18'
   slug: 10-fired
   title: Ten Simple Rules for Being Fired
 - file: ./delivery/index.md
   kind: Chapter
-  label: '18'
+  label: '19'
   slug: delivery
   title: At the End of the Day
 - file: ./10-handover/index.md
   kind: Chapter
-  label: '19'
+  label: '20'
   slug: 10-handover
   title: Ten Simple Rules for Handing Over and Moving On
 - file: ./conclusion/index.md
   kind: Chapter
-  label: '20'
+  label: '21'
   slug: conclusion
   title: Conclusion
 - file: LICENSE.md
