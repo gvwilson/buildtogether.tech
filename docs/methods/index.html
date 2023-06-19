@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="repo" content="https://github.com/gvwilson/buildtogether.tech">
+  <meta name="build_date" content="2023-06-19">
+  <meta name="template" content="default">
+  <meta name="major" content="Appendix G">
+  
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../mccole.css">
+  <link rel="stylesheet" href="../tango.css">
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script
+    type="text/javascript"
+    id="MathJax-script"
+    async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <script defer src="../mccole.js"></script>
+  <title>Building Tech Together: Research Methods</title>
+</head>
+
+  <body>
+    <div class="row">
+      <div class="sidebar">
+        <p>
+  
+  <img src="../logo.svg" alt="site logo" class="logo" />
+  <a href="../">Building Tech Together</a>
+  
+</p>
+<ol class="toc-chapter">
+  
+  <li>
+    <a href="../introduction/">
+      Introduction
+    </a>
+  </li>
+  
+  <li>
+    <a href="../important/">
+      The Important Stuff
+    </a>
+  </li>
+  
+  <li>
+    <a href="../starting/">
+      Starting
+    </a>
+  </li>
+  
+  <li>
+    <a href="../teams/">
+      Teams
+    </a>
+  </li>
+  
+  <li>
+    <a href="../conflict/">
+      Managing Conflict
+    </a>
+  </li>
+  
+  <li>
+    <a href="../git-solo/">
+      Using Git On Your Own
+    </a>
+  </li>
+  
+  <li>
+    <a href="../git-team/">
+      Using Git Together
+    </a>
+  </li>
+  
+  <li>
+    <a href="../ip/">
+      Intellectual Property
+    </a>
+  </li>
+  
+  <li>
+    <a href="../communicate/">
+      Communicating
+    </a>
+  </li>
+  
+  <li>
+    <a href="../testing/">
+      Testing
+    </a>
+  </li>
+  
+  <li>
+    <a href="../design/">
+      Software Design
+    </a>
+  </li>
+  
+  <li>
+    <a href="../security/">
+      Security
+    </a>
+  </li>
+  
+  <li>
+    <a href="../errors/">
+      Error Handling
+    </a>
+  </li>
+  
+  <li>
+    <a href="../debugging/">
+      Debugging
+    </a>
+  </li>
+  
+  <li>
+    <a href="../automation/">
+      Automation
+    </a>
+  </li>
+  
+  <li>
+    <a href="../tooling/">
+      Tooling
+    </a>
+  </li>
+  
+  <li>
+    <a href="../process/">
+      Process
+    </a>
+  </li>
+  
+  <li>
+    <a href="../research/">
+      Research
+    </a>
+  </li>
+  
+  <li>
+    <a href="../fairness/">
+      Fair Play
+    </a>
+  </li>
+  
+  <li>
+    <a href="../delivery/">
+      Wrapping Up
+    </a>
+  </li>
+  
+  <li>
+    <a href="../conclusion/">
+      Conclusion
+    </a>
+  </li>
+  
+</ol>
+<ol class="toc-appendix">
+  
+  <li>
+    <a href="../bibliography/">
+      Bibliography
+    </a>
+  </li>
+  
+  <li>
+    <a href="../license/">
+      License
+    </a>
+  </li>
+  
+  <li>
+    <a href="../conduct/">
+      Code of Conduct
+    </a>
+  </li>
+  
+  <li>
+    <a href="../contrib/">
+      Contributing
+    </a>
+  </li>
+  
+  <li>
+    <a href="../glossary/">
+      Glossary
+    </a>
+  </li>
+  
+  <li>
+    <a href="../thinking/">
+      Thinking
+    </a>
+  </li>
+  
+  <li>
+    <a href="../methods/">
+      <strong>Research Methods</strong>
+    </a>
+  </li>
+  
+  <li>
+    <a href="../onboarding/">
+      Onboarding Checklist
+    </a>
+  </li>
+  
+  <li>
+    <a href="../project-eval/">
+      Project Evaluation
+    </a>
+  </li>
+  
+  <li>
+    <a href="../personal-eval/">
+      Personal Evaluation
+    </a>
+  </li>
+  
+  <li>
+    <a href="../reading/">
+      Further Reading
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-persuade/">
+      How to Talk People Into Things
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-comfortable/">
+      How to Make Yourself Comfortable
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-joining/">
+      How to Join an Existing Project
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-newcomers/">
+      How to Welcome Newcomers
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-research/">
+      How to be a Good Research Partner
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-fired/">
+      How to Handle Being Fired
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-handover/">
+      How to Hand Over and Move On
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-freelance/">
+      How to Get Started Freelancing
+    </a>
+  </li>
+  
+  <li>
+    <a href="../rules-change/">
+      How to Change the World
+    </a>
+  </li>
+  
+  <li>
+    <a href="../contents/">
+      Index
+    </a>
+  </li>
+  
+</ol>
+
+<p><a href="../btt-examples.zip" type="application/zip">download examples</a></p>
+
+
+      </div>
+      <div id="printable" class="contents bordered">
+        <main>
+          
+  <h1>Appendix G: Research Methods</h1>
+
+
+          
+<div class="draft">
+  <p>DRAFT</p>
+</div>
+<div class="center">
+  <p>
+    <em>Please use section heading links to submit feedback.</em>
+  </p>
+</div>
+
+
+          
+
+          
+<p class="definitions">
+  Terms defined: <a class="gl-ref" href="../glossary/#confounding_variables" markdown="1">confounding variables</a>, <a class="gl-ref" href="../glossary/#control_group" markdown="1">control group</a>, <a class="gl-ref" href="../glossary/#dark_matter_developer" markdown="1">dark matter developer</a>, <a class="gl-ref" href="../glossary/#data_mining" markdown="1">data mining</a>, <a class="gl-ref" href="../glossary/#double_blind" markdown="1">double blind</a>, <a class="gl-ref" href="../glossary/#placebo" markdown="1">placebo</a>, <a class="gl-ref" href="../glossary/#pre_registration" markdown="1">pre-registration</a>, <a class="gl-ref" href="../glossary/#qualitative_method" markdown="1">qualitative method</a>, <a class="gl-ref" href="../glossary/#quasi_experiment" markdown="1">quasi-experiment</a>, <a class="gl-ref" href="../glossary/#treatment_group" markdown="1">treatment group</a>
+</p>
+
+
+          <div class="page-toc"></div>
+          <p>Back in 2016 <a href="https://twitter.com/gvwilson/status/776733301419630592">I tweeted</a>, &ldquo;If anyone has data showing <span class="ix-entry" ix-key="Excel" markdown="1">Excel</span> is <em>more</em> error-prone than <span class="ix-entry" ix-key="MATLAB" markdown="1">MATLAB</span>/<span class="ix-entry" ix-key="Python" markdown="1">Python</span>/<span class="ix-entry" ix-key="R (programming
+language)" markdown="1">R</span> once you normalize for hours spent learning it, please
+post.&rdquo;  It was clear from the responses and from other discussion online that
+most programmers believe this, but I&rsquo;m not really sure what &ldquo;this&rdquo; is:</p>
+<dl>
+<dt>There are more errors in published results created with Excel than in results created with scripting languages like MATLAB, Python, and R.</dt>
+<dd>Given that many more people use Excel, that&rsquo;s like saying that people in
+China have more heart attacks than people in Luxembourg.</dd>
+<dt>Results calculated with Excel are more likely to be wrong than results calculated with scripting languages.</dt>
+<dd>
+<p>This is what I had in mind when I tweeted, and I don&rsquo;t think the answer is
+obvious.  Yes, there are lots of examples of people botching spreadsheets,
+but there&rsquo;s also a lot of buggy code out there.  (<span class="ix-entry" ix-key="Flon's
+Axiom" markdown="1">Flon&rsquo;s Axiom</span> states, &ldquo;There is not now, nor has there ever
+been, nor will there ever be, any programming language in which it is the
+least bit difficult to write bad code.&rdquo;)</p>
+<p>And even if this claim is true, correlation isn&rsquo;t causation.  I think that
+people who do statistics programmatically have probably invested more time
+in mastering their tools than people who use spreadsheets.  Any differences
+in error rates could easily be due to differences in time spent in
+reflective practice.</p>
+</dd>
+<dt>People who are equally proficient in Excel and scripting languages are more likely to make mistakes in Excel.</dt>
+<dd>This formulation corrects the flaw identified above, but is nonsensical,
+since the only meaningful definition of &ldquo;equally proficient&rdquo; is &ldquo;use equally
+well&rdquo;.</dd>
+<dt>Spreadsheets are intrinsically more error-prone than scripting languages</dt>
+<dd>I have heard people claim that spreadsheets don&rsquo;t show errors as clearly,
+they&rsquo;re harder to test, it&rsquo;s harder to figure out what calculations are
+actually being done, or they themselves are buggier than scripting
+languages&rsquo; math libraries.  These are all plausible, but may all be red
+herrings.  Yes, it&rsquo;s hard to write unit tests for spreadsheets, but it&rsquo;s
+possible: <span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Hermans2016">Hermans2016</a>]</span> found that 8% of spreadsheets included
+tests like <code>if(A1&lt;&gt;5, "ERROR", "OK")</code>.  I&rsquo;d be surprised if more than 8% of
+people who do statistics in Python or R regularly write unit tests for their
+scripts, so the fact that they <em>could</em> is irrelevant.</dd>
+</dl>
+<p>To be clear, I&rsquo;m not defending or recommending spreadsheets.  But if programming
+really is a better way to do crunch numbers, we ought to be able to use science
+to prove it.  And to do that, we have to know what methods we have at our
+disposal and what they&rsquo;re good for.</p>
+<h2>Controlled Experiments</h2>
+<p>The first method that empirical research uses is <span class="ix-entry" ix-key="controlled
+experiments" markdown="1">controlled experiments</span>: subjects are given a task and some
+aspect of their performance is measured.  Subjects are typically divided into a
+<span class="ix-entry" ix-key="control group" markdown="1"><a class="gl-ref" href="../glossary/#control_group" markdown="1">control group</a></span> (who do things as
+normal) and a <span class="ix-entry" ix-key="treatment group" markdown="1"><a class="gl-ref" href="../glossary/#treatment_group" markdown="1">treatment group</a></span> (who do things in an alternative way). If the difference between
+the groups is large enough statistically, the experimenter can say that the
+treatment probably has an effect on outcomes.</p>
+<p>There are several traps in this for the unwary <span class="bib-ref">[<a class="bib-ref" href="../bibliography/#DeOliveiraNeto2019">DeOliveiraNeto2019</a>]</span>:</p>
+<dl>
+<dt><span class="ix-entry" ix-key="experimenter bias" markdown="1">Experimenter bias</span>.</dt>
+<dd>People have many biases, both conscious and unconscious.  In order to make
+sure that these don&rsquo;t inadvertently affect the results, subjects should be
+assigned to groups at random. Going even further, experiments in medicine
+are often <span class="ix-entry" ix-key="double blind experiments" markdown="1"><a class="gl-ref" href="../glossary/#double_blind" markdown="1">double blind</a></span>: neither the subject nor the person administering the treatment
+knows which subjects are getting the new heart medication and which are
+getting a <span class="ix-entry" ix-key="placebo" markdown="1"><a class="gl-ref" href="../glossary/#placebo" markdown="1">placebo</a></span>. It&rsquo;s usually not
+possible to achieve this when doing software engineering experiments.</dd>
+<dt><span class="ix-entry" ix-key="significance hacking" markdown="1">Significance hacking</span>.</dt>
+<dd>If you measure enough things and look for enough correlations, you will
+almost certainly find <em>something</em> that passes a test for statistical
+significance. For example, there is a strong correlation between the number
+of letters in winning words in spelling competitions and the number of
+people killed by venomous spiders <span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Vigen2015">Vigen2015</a>]</span>. To guard against
+this, researchers should <span class="ix-entry" ix-key="pre-registration of experiments" markdown="1"><a class="gl-ref" href="../glossary/#pre_registration" markdown="1">pre-register</a></span> their analyses, i.e., say in advance what
+they&rsquo;re going to compare against what, and then use various statistical
+techniques that require a higher standard of proof when they are checking
+more possible combinations.</dd>
+<dt><span class="ix-entry" ix-key="negative results (failure to publish)" markdown="1">Failure to publish negative results</span>.</dt>
+<dd>An experiment isn&rsquo;t a failure if it doesn&rsquo;t find something that is
+statistically significant: ruling something out is just as useful as finding
+something new. However, negative results are not as exciting (and not as
+beneficial to a researcher&rsquo;s career), so they often go unreported.</dd>
+</dl>
+<p>Getting a few undergraduates in a lab for an hour each is easy; getting
+professional programmers to do something new or different for several months is
+not, but this doesn&rsquo;t mean that controlled experiments have to be expensive.  If
+you have an idea you want to test, gather a little data and use that to evaluate
+the plausibility of your idea. If you need to be really confident, build up the
+evidence base over time in multiple experiments, increasing the sample size and
+improving the methodology each time to get a stronger answer for a more specific
+question.</p>
+<p>Researchers often rely on <span class="ix-entry" ix-key="quasi-experiment" markdown="1"><a class="gl-ref" href="../glossary/#quasi_experiment" markdown="1">quasi-experiments</a></span> when doing this, i.e., they look
+at pre-existing groups like programmers who have decided for themselves to use a
+new IDE against ones who have not. Quasi-experiments are cheaper and easier to
+set up, but researchers must be careful to account for <span class="ix-entry" ix-key="confounding variable" markdown="1"><a class="gl-ref" href="../glossary/#confounding_variables" markdown="1">confounding variables</a></span>. For example, are programmers who choose to use an IDE younger
+and therefore less experienced than ones who use legacy text editors? If so, how
+does that difference skew the results?</p>
+<h2>Data Mining</h2>
+<p>Quasi-experiments blend into the second major research approach, which uses
+statistics and machine learning to find patterns in whatever data the researcher
+can get her hands on. Doing this is called <span class="ix-entry" ix-key="data mining" markdown="1"><a class="gl-ref" href="../glossary/#data_mining" markdown="1">data mining</a></span>, and most studies of this kind make use of the wealth
+of information available online at sites like <a href="https://github.com/">GitHub</a>]<a href="https://github.com/">github</a> and <a href="https://stackoverflow.com/">Stack
+Overflow</a> or from millions of crash reports collected online
+<span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Glerum2009">Glerum2009</a>]</span>.  Data mining has produced many valuable insights, but
+has challenges of its own.  The largest of these is that people who work in the
+open aren&rsquo;t typical, so any results we get from studying them must be
+interpreted cautiously.</p>
+<p>One problem with data mining is that once again, correlation doesn&rsquo;t imply
+causation.  Another is that we usually don&rsquo;t know whether the data we have
+access to is representative.  In 2012, Scott Hanselman coined the term <span class="ix-entry" ix-key="dark matter developer" markdown="1"><a class="gl-ref" href="../glossary/#dark_matter_developer" markdown="1">dark matter developers</a></span> to describe programmers who don&rsquo;t blog, don&rsquo;t answer questions
+in online forums, don&rsquo;t have their work in public repositories, and so on. Just
+as dark matter makes up most of the universe, dark matter developers make up
+most of our industry, and just as the matter we can see is vanishingly atypical,
+so too are developers who radiate information.</p>
+<p>One reason for this is that the web ranges from unwelcoming to actively hostile
+for people from under-represented groups <span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Ford2016">Ford2016</a>, <a class="bib-ref" href="../bibliography/#May2019">May2019</a>]</span>.
+Unfortunately, in-person workplaces are often no better: many are filled with
+small signs that make many people feel out of place <span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Cheryan2009">Cheryan2009</a>]</span>.
+<a class="x-ref" href="../fairness/">Chapter 19</a> takes a closer look at these issues.</p>
+<div class="callout">
+<h3>A cautionary tale</h3>
+<p><span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Zeller2011">Zeller2011</a>]</span> did what too many researchers in too many fields do on a
+regular basis: throw some data at some machine learning algorithms and then
+claim that whatever comes out the other end is significant. Luckily for us, they
+did it on purpose to make a point.</p>
+<p>They took data on code and errors for the Eclipse IDE and correlated the two to
+find good predictors of bugs. Which sounds sensible—except they did the
+correlation at the level of individual characters. It turns out that &lsquo;i&rsquo;, &lsquo;r&rsquo;,
+&lsquo;o&rsquo;, and &lsquo;p&rsquo; are most strongly correlated with errors. What is a sensible
+researcher to do facing these findings? Take those letters out of the keyboard,
+of course.  The authors then go over everything that&rsquo;s wrong with their
+approach, from lack of theoretical grounding to dishonest use of
+statistics. Before you read too much research, make sure to read this.</p>
+</div>
+<h2>Qualitative Methods</h2>
+<p>The third set of approaches are called <span class="ix-entry" ix-key="qualitative methods" markdown="1"><a class="gl-ref" href="../glossary/#qualitative_method" markdown="1">qualitative methods</a></span>, and involve close analysis
+of a small number of cases to tease out common patterns.  Articles like
+<span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Sharp2016">Sharp2016</a>]</span> do an excellent job of explaining how these methods work
+and what their strengths and limitations are.</p>
+<div class="callout">
+<h3>Wish I knew then what I know now</h3>
+<p>My classes in engineering taught me to look down on anything that wasn&rsquo;t a
+controlled laboratory experiment whose results could be neatly displayed in a
+scatterplot or bar chart.  It wasn&rsquo;t until I was in my thirties that I accepted
+that the &ldquo;fuzzy&rdquo; methods of the social sciences were just as rigorous when used
+properly, and the only ones that could produce certain valuable insights.</p>
+</div>
+<p><span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Washburn2016">Washburn2016</a>]</span> demonstrates the kinds of insights these methods can
+produce. They analyzed 155 postmortem reviews of game projects to identify
+characteristics of game development, link the characteristics to positive and
+negative experiences, and distill a set of best practices and pitfalls for game
+development. Their description of their method is worth repeating in full:</p>
+<blockquote>
+<p>Initially, we started with 12 categories of common aspects of development…  In
+order to identify additional categories, we performed 3 iterations of analysis
+and identification.  The first week, we each read and analyzed 3 postmortem
+reviews each, classifying the items discussed in each section into the 12
+predetermined categories of common aspects that impact development.  While
+analyzing these reviews, we identified additional categories of items that went
+right or wrong during development, and revisited the reviews we had already
+analyzed to update the categorization of items. For the next two weeks we
+repeated this process of analyzing postmortems and identifying categories,
+analyzing 10 postmortems each in week 2, and 15 postmortems each in week
+3. After each iteration, we discussed the additional categories we identified,
+and determined if they were viable.</p>
+<p>After our initial iterations for identifying additional categories, we had
+completed the analysis of 60 postmortem reviews.  We then stopped identifying
+new categories, and began analyzing postmortems at a combined rate of about 40
+postmortem reviews per week.  After each week we reviewed what we had done to
+ensure we both had the same understanding of each category.  This continued
+until we had analyzed all the postmortem reviews.</p>
+</blockquote>
+<h2>The Fourth Tradition</h2>
+<blockquote>
+<p>&ldquo;Once the rockets are up, who cares where they come down?
+<br/>
+That&rsquo;s not my department!&rdquo; says Wernher von Braun</p>
+<p>— <span class="ix-entry" ix-key="Lehrer, Tom" markdown="1">Tom Lehrer</span></p>
+</blockquote>
+<p><span class="bib-ref">[<a class="bib-ref" href="../bibliography/#Tedre2008">Tedre2008</a>]</span> describes three traditions that have shaped how we think
+about computing: the <span class="ix-entry" ix-key="mathematical tradition in
+computing" markdown="1">mathematical</span>, which focuses on algorithms and proofs; the
+<span class="ix-entry" ix-key="scientific tradition in computing" markdown="1">scientific</span>, which studies
+programs and programmers empirically; and the <span class="ix-entry" ix-key="engineering tradition in
+computing" markdown="1">engineering tradition</span>, which centers the fact that computing
+matters because we can actually build useful things.</p>
+<p>That paper changed how I think about our field, but in the past few years I have
+realized that <span class="ix-entry" ix-key="humanist tradition in computing" markdown="1">another point of
+view</span> is just as important, though not as well respected.  It draws on
+humanities and social sciences to explore questions like, &ldquo;Who does this help?&rdquo;,
+&ldquo;Who does this hurt?&rdquo;, and, &ldquo;Who decides?&rdquo;  Just as the most interesting
+software engineering research these days is look at how the way we think
+interacts with the way we program (<a class="x-ref" href="../research/">Chapter 18</a>), the most interesting
+thinking about computing as a whole is coming from people who have outgrown the
+&ldquo;Wernher von Braun&rdquo; mentality of Lehrer&rsquo;s song.</p>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

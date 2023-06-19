@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="repo" content="https://github.com/gvwilson/buildtogether.tech">
+  <meta name="build_date" content="2023-06-19">
+  <meta name="template" content="slides">
+  <meta name="major" content="Chapter 16">
+  
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <link rel="stylesheet" href="../../mccole.css">
+  <link rel="stylesheet" href="../../tango.css">
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script
+    type="text/javascript"
+    id="MathJax-script"
+    async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <script defer src="../../mccole.js"></script>
+  <title>Building Tech Together: Tooling</title>
+</head>
+
+  <body>
+    <textarea id="source">
+
+class: slide-title
+
+<p>
+  <a href="https://third-bit.com/btt/">Building Tech Together</a>
+</p>
+<h1>Tooling</h1>
+<div class="bottom">
+  <a href="../">chapter</a>
+</div>
+
+---
+
+
+FIXME
+
+
+[adhd-thread]: https://twitter.com/NomeDaBarbarian/status/1369846245200515072
+[alloy]: https://alloytools.org/
+[ant]: https://ant.apache.org/
+[aosa]: https://aosabook.org/
+[apache]: https://apache.org/
+[apt]: https://en.wikipedia.org/wiki/APT_(software)
+[ask-a-manager]: https://www.askamanager.org/
+[atlassian-git]: https://www.atlassian.com/git/tutorials
+[automattic-hiring]: https://automattic.com/work-with-us/how-we-hire-developers/
+[baxter-interviews]: https://github.com/tBaxter/questions-for-employers
+[baxter-t-carter]: https://twitter.com/tbaxter
+[bitbucket]: https://bitbucket.org/
+[black]: https://pypi.org/project/black/
+[blackbox]: https://bluej.org/blackbox/
+[bleachbit]: https://www.bleachbit.org/
+[block-party]: https://www.blockpartyapp.com/
+[brown-neil]: https://twistedsquare.com/
+[bst-repo]: https://github.com/gvwilson/buildtogether.tech/
+[burns-privacy-quote]: https://webdevlaw.uk/2021/03/21/privacy-curriculum-developers/
+[buzzfeed-datacamp]: http://third-bit.com/2019/04/22/datacamp-clarifications/
+[captain-awkward]: https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup
+[carnac]: http://code52.org/carnac/
+[carpentries]: https://carpentries.org/
+[carpentries-git]: https://swcarpentry.github.io/git-novice/
+[carpentrycon-talk]: https://www.youtube.com/watch?v=7xR50ty5DZ0
+[cc-by-nc]: https://creativecommons.org/licenses/by-nc/4.0/
+[charles-rules]: https://geekfeminism.wikia.com/wiki/Charles%27_Rules_of_Argument
+[checkstyle]: https://checkstyle.org/
+[choose-license]: https://choosealicense.com/
+[coco]: https://coco-net.org/
+[coco-problem]: https://coco-net.org/problem-woman-colour-nonprofit-organizations/
+[commonmark]: https://commonmark.org/
+[contributor-covenant]: https://www.contributor-covenant.org
+[conways-law]: https://en.wikipedia.org/wiki/Conway%27s_law
+[cook-mary-rose]: https://maryrosecook.com/
+[creative-commons]: https://creativecommons.org/
+[ctan]: https://www.ctan.org/
+[curley-april]: https://twitter.com/RealAbril
+[cvs]: https://www.nongnu.org/cvs/
+[diagrams]: https://www.diagrams.net/
+[diffmerge]: https://sourcegear.com/diffmerge/
+[dlf]: https://www.diglib.org/
+[dlf-active-bystander]: https://www.diglib.org/active-bystander-orientation/
+[dobzhansky]: https://en.wikipedia.org/wiki/Nothing_in_Biology_Makes_Sense_Except_in_the_Light_of_Evolution
+[docker]: https://www.docker.com/
+[doi2bib]: https://doi2bib.org/
+[dropbox]: https://dropbox.com
+[duckduckgo]: https://duckduckgo.com/
+[eiffel]: https://www.eiffel.org/
+[emacs]: https://www.gnu.org/software/emacs/
+[email]: mailto:gvwilson@third-bit.com
+[evans-julia]: https://jvns.ca/
+[evans-interviews]: https://jvns.ca/blog/2013/12/30/questions-im-asking-in-interviews/
+[evans-manager]: https://jvns.ca/blog/things-your-manager-might-not-know/
+[eslint]: https://eslint.org/
+[excel-tweet]: https://twitter.com/gvwilson/status/776733301419630592
+[facebook-rohingya]: https://www.buzzfeednews.com/article/meghara/facebook-myanmar-rohingya-genocide
+[fileshredder]: https://voidtech.net/apps/fileshredder/
+[flower-annalee]: https://flowerhorne.com/
+[flower-good-intent]: https://thebias.com/2017/09/26/how-good-intent-undermines-diversity-and-inclusion/
+[gdb]: https://www.gnu.org/software/gdb/
+[gdpr]: https://en.wikipedia.org/wiki/General_Data_Protection_Regulation
+[gdpr-forgotten]: https://www.gdpreu.org/right-to-be-forgotten/
+[gebru-firing]: https://www.fastcompany.com/90608471/timnit-gebru-google-ai-ethics-equitable-tech-movement
+[gender-decoder]: http://gender-decoder.katmatfield.com/
+[gendermag]: http://gendermag.org/
+[ghostery]: https://www.ghostery.com/
+[git]: https://git-scm.com/
+[git-difftool]: https://git-scm.com/docs/git-difftool
+[git-man-page-generator]: https://git-man-page-generator.lokaltog.net/
+[github]: https://github.com/
+[github-actions]: https://github.com/features/actions
+[github-guides]: https://guides.github.com/
+[github-mvg]: https://github.com/github/MVG
+[github-pages]: https://pages.github.com/
+[gitkraken]: https://www.gitkraken.com/
+[gitlab]: https://gitlab.com/
+[gitlet]: http://gitlet.maryrosecook.com/
+[glosario]: https://glosario.carpentries.org/
+[goodhart-law]: https://en.wikipedia.org/wiki/Goodhart%27s_law
+[grand-perspective]: http://grandperspectiv.sourceforge.net/
+[gritter-alloy]: https://medium.com%2F@medium.com/@markgritter/finding-graph-counterexamples-with-alloy-e4114cc0f2fb
+[gritter-tla-plus]: https://medium.com%2F@medium.com/@fuzz_ai/reproducing-a-memory-tracking-bug-with-tla-35ce0652ce72
+[hanselman-dark-matter]: https://www.hanselman.com/blog/dark-matter-developers-the-unseen-99
+[hanselman-scott]: https://www.hanselman.com/
+[hippocratic-license]: https://firstdonoharm.dev/
+[homebrew]: https://en.wikipedia.org/wiki/Homebrew_(package_manager)
+[hoye-mike]: http://exple.tive.org/
+[jekyll]: https://jekyllrb.com/
+[jekyll-bug]: https://stackoverflow.com/questions/66320774/how-to-pre-define-links-in-jekyll-config-yml-using-kramdown-links-def-options
+[jira]: https://www.atlassian.com/software/jira
+[js4ds]: https://js4ds.org/
+[jsdoc]: https://jsdoc.app/
+[kaplan-moss-executives]: https://jacobian.org/2021/mar/5/exec-status-update/
+[kaplan-moss-jacob]: https://jacobian.org/
+[lua]: https://www.lua.org/
+[make]: https://www.gnu.org/software/make/
+[marthas-rules]: https://journals.sagepub.com/doi/10.1177/088610998600100206
+[mathml]: https://www.w3.org/Math/
+[mccole]: https://gvwilson.github.io/mccole/
+[mercurial]: https://www.mercurial-scm.org/
+[namely-time-off]: https://library.namely.com/hr-mythbusters-2017
+[noaa-disruptive]: https://coast.noaa.gov/ddb/
+[nodejs]: https://nodejs.org/en/
+[npm]: https://en.wikipedia.org/wiki/Npm_(software)
+[npm-xml-search]: https://www.npmjs.com/search?q=xml%20parser
+[npms]: https://npms.io/about
+[osi]: https://opensource.org/
+[osi-license-list]: https://opensource.org/licenses
+[paradox-of-tolerance]: https://en.wikipedia.org/wiki/Paradox_of_tolerance
+[pep8]: https://www.python.org/dev/peps/pep-0008/
+[petre-marian]: https://www.open.ac.uk/people/mp8
+[petrov-handing-over]: https://shazow.net/posts/how-to-hand-over-an-open-source-project-to-a-new-maintainer/
+[pip]: https://pypi.org/project/pip/
+[plantuml]: https://plantuml.com/
+[plos]: https://plos.org/
+[privacy-right]: https://en.wikipedia.org/wiki/Right_to_privacy
+[program-repair]: https://program-repair.org/
+[pryce-nat]: http://www.natpryce.com/
+[pryce-onboarding]: https://twitter.com/natpryce/status/1375949072910200835
+[py-rse]: https://merely-useful.tech/py-rse/
+[python]: https://www.python.org/
+[pytest]: http://pytest.org/
+[pytest-benchmark]: https://pypi.org/project/pytest-benchmark/
+[quarterback-syndrome]: https://en.wikipedia.org/wiki/Racial_issues_faced_by_black_quarterbacks
+[quorum]: https://quorumlanguage.com/
+[rake]: https://ruby.github.io/rake/
+[red-door]: https://www.reddoorshelter.ca/
+[ruby]: https://www.ruby-lang.org/
+[schneier-bruce]: https://www.schneier.com/
+[sci-hub]: https://en.wikipedia.org/wiki/Sci-Hub
+[scratch]: https://scratch.mit.edu/
+[selenium]: https://www.selenium.dev/
+[smartbear-code-review]: https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/
+[snakemake]: https://snakemake.readthedocs.io/en/stable/
+[so-configure-git-editor]: https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits
+[so-exit-vim]: https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor
+[sourcetree]: https://www.sourcetreeapp.com/
+[sqlite]: https://www.sqlite.org/
+[stack-overflow]: https://stackoverflow.com/
+[stack-overflow-good-question]: https://stackoverflow.com/help/how-to-ask
+[stjs]: https://stjs.tech/
+[subversion]: https://subversion.apache.org/
+[t3]: http://teachtogether.tech/
+[t3-personas]: https://teachtogether.tech/en/index.html#s:process-personas
+[taylor-francis]: https://taylorandfrancis.com/
+[tech-solidarity]: https://techsolidarity.org/
+[therac-25]: https://en.wikipedia.org/wiki/Therac-25
+[thirdbit-burnout]: http://third-bit.com/2015/11/09/daddy-why-dont-you-ever-laugh/
+[tla-plus]: https://lamport.azurewebsites.net/tla/tla.html
+[tldr-gpl]: https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)
+[tldr-legal]: https://tldrlegal.com/
+[travis-ci]: https://travis-ci.org/
+[udhr]: https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights
+[uk-home-office-a11y]: https://ukhomeoffice.github.io/accessibility-posters/posters/accessibility-posters.pdf
+[ultima-online-players]: https://twitter.com/ZenOfDesign/status/1371347166736834560
+[visual-basic]: https://en.wikipedia.org/wiki/Visual_Basic
+[vs-code]: https://code.visualstudio.com/
+[wapost-facebook-vaccine]: https://www.washingtonpost.com/technology/2021/03/14/facebook-vaccine-hesistancy-qanon/
+[wayne-hillel]: https://hillelwayne.com/
+[wayne-linked-lists]: https://www.hillelwayne.com/post/linked-lists/
+[webaim-wave]: https://wave.webaim.org/
+[wilson-greg]: https://third-bit.com/
+[womens-work]: https://en.wikipedia.org/wiki/Women%27s_work
+[xkcd-passwords]: https://xkcd.com/936/
+
+    </textarea>
+    <script src="../../remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+        highlightLines: true
+      })
+    </script>
+  </body>
+</html>

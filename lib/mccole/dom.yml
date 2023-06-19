@@ -1,0 +1,164 @@
+'[document]': []
+a:
+  class:
+  - bib-ref
+  - email
+  - fig-ref
+  - gl-ref
+  - ix-ref
+  - link-ref
+  - no-footnote
+  - tbl-ref
+  - x-ref
+  href: "any"
+  ix-ref: "any"
+  markdown: "any"
+  type:
+  - "application/zip"
+blockquote: []
+body: []
+br: []
+caption: []
+code: []
+dd: []
+div:
+  caption: "any"
+  class:
+  - bonus
+  - bordered
+  - bottom
+  - callout
+  - center
+  - code-sample
+  - col-2
+  - col-10
+  - contents
+  - draft
+  - glossary
+  - highlight
+  - html
+  - row
+  - table
+  - todo
+  - lang-as
+  - lang-ht
+  - lang-html
+  - lang-json
+  - lang-mx
+  - lang-out
+  - lang-py
+  - lang-sh
+  - lang-tll
+  - lang-txt
+  - lang-yml
+  - page-toc
+  - sidebar
+  id: "any"
+  title: "any"
+dl:
+  class:
+  - bib-list
+dt:
+  id: "any"
+em: []
+figcaption:
+  markdown: "any"
+figure:
+  id: "any"
+h1:
+  id: "any"
+h2:
+  class:
+  - bonus
+  id: "any"
+h3:
+  class:
+  - exercise
+head: []
+html:
+  lang:
+  - en
+img:
+  alt: "any"
+  class:
+  - centered
+  - image
+  - logo
+  src: "any"
+  style: "any"
+  width: "any"
+li:
+  class:
+  - todo
+  markdown: "any"
+link:
+  href: "any"
+  rel:
+  - icon
+  - stylesheet
+  type:
+  - image/x-icon
+main: []
+meta:
+  charset: "any"
+  content: "any"
+  http-equiv: "any"
+  name: "any"
+ol:
+  class:
+  - ix-list
+  - syllabus
+  - toc-appendix
+  - toc-chapter
+p:
+  class:
+  - compact
+  - continue
+  - definitions
+  - shout
+  - small
+  - todo
+pre: []
+script:
+  async: "any"
+  data-domain: "any"
+  defer: "any"
+  id: "any"
+  src: "any"
+  type:
+  - text/javascript
+section:
+  class:
+  - cover
+  - new-chapter
+  - tocElement
+  id: "any"
+span:
+  class:
+  - FIXME
+  - bib-ref
+  - bibtex-protected
+  - fixme
+  - gl-key
+  - ix-entry
+  id: "any"
+  ix-key: "any"
+  markdown: "any"
+strong: []
+sup: []
+table:
+  class:
+  - acknowledgments
+  id: "any"
+tbody: []
+td: []
+textarea:
+  id: "any"
+th: []
+thead: []
+title: []
+tr: []
+ul:
+  class:
+  - ix-list
+  - syllabus

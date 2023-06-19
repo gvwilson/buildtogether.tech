@@ -1,0 +1,495 @@
+- key: adhd-thread
+  url: https://twitter.com/NomeDaBarbarian/status/1369846245200515072
+  title: A thread on ADHD
+- key: alloy
+  url: https://alloytools.org/
+  title: Alloy
+- key: ant
+  url: https://ant.apache.org/
+  title: Apache Ant
+- key: aosa
+  url: https://aosabook.org/
+  title: The Architecture of Open Source Applications
+- key: apache
+  url: https://apache.org/
+  title: Apache Software Foundation
+- key: apt
+  url: https://en.wikipedia.org/wiki/APT_(software)
+  title: APT
+- key: ask-a-manager
+  url: https://www.askamanager.org/
+  title: Ask a Manager
+- key: atlassian-git
+  url: https://www.atlassian.com/git/tutorials
+  title: Atlassian Git tutorials
+- key: automattic-hiring
+  url: https://automattic.com/work-with-us/how-we-hire-developers/
+  title: Automattic hiring process
+- key: baxter-interviews
+  url: https://github.com/tBaxter/questions-for-employers
+  title: Questions for potential employers
+- key: baxter-t-carter
+  url: https://twitter.com/tbaxter
+  title: T. Carter Baxter
+- key: bitbucket
+  url: https://bitbucket.org/
+  title: Bitbucket
+- key: black
+  url: https://pypi.org/project/black/
+  title: Black
+- key: blackbox
+  url: https://bluej.org/blackbox/
+  title: Blackbox
+- key: bleachbit
+  url: https://www.bleachbit.org/
+  title: BleachBit
+- key: block-party
+  url: https://www.blockpartyapp.com/
+  title: Block Party
+- key: brown-neil
+  url: https://twistedsquare.com/
+  title: Neil C. C. Brown
+- key: bst-repo
+  url: https://github.com/gvwilson/buildtogether.tech/
+  title: Building Software Together repository
+- key: burns-privacy-quote
+  url: https://webdevlaw.uk/2021/03/21/privacy-curriculum-developers/
+  title: Heather Burns on privacy
+- key: buzzfeed-datacamp
+  url: http://third-bit.com/2019/04/22/datacamp-clarifications/
+  title: DataCamp Clarifications
+- key: captain-awkward
+  url: https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup
+  title: Buzzfeed article on DataCamp
+- key: carnac
+  url: http://code52.org/carnac/
+  title: Carnac
+- key: carpentries
+  url: https://carpentries.org/
+  title: The Carpentries
+- key: carpentries-git
+  url: https://swcarpentry.github.io/git-novice/
+  title: The Carpentries' lesson on Git
+- key: carpentrycon-talk
+  url: https://www.youtube.com/watch?v=7xR50ty5DZ0
+  title: Greg Wilson's CarpentryCon keynote
+- key: cc-by-nc
+  url: https://creativecommons.org/licenses/by-nc/4.0/
+  title: CC-BY-NC License
+- key: charles-rules
+  url: https://geekfeminism.wikia.com/wiki/Charles%27_Rules_of_Argument
+  title: Charles' Rules of Argument
+- key: checkstyle
+  url: https://checkstyle.org/
+  title: Checkstyle
+- key: choose-license
+  url: https://choosealicense.com/
+  title: Choose a License
+- key: coco
+  url: https://coco-net.org/
+  title: Centre for Community Organizations
+- key: coco-problem
+  url: https://coco-net.org/problem-woman-colour-nonprofit-organizations/
+  title: The 'Problem' Woman of Colour in the Workplace
+- key: commonmark
+  url: https://commonmark.org/
+  title: CommonMark
+- key: contributor-covenant
+  url: https://www.contributor-covenant.org
+  title: Contributor Covenant
+- key: conways-law
+  url: https://en.wikipedia.org/wiki/Conway%27s_law
+  title: Conway's Law
+- key: cook-mary-rose
+  url: https://maryrosecook.com/
+  title: Mary Rose Cook
+- key: creative-commons
+  url: https://creativecommons.org/
+  title: Creative Commons
+- key: ctan
+  url: https://www.ctan.org/
+  title: The Comprehensive TeX Archive Network
+- key: curley-april
+  url: https://twitter.com/RealAbril
+  title: April Christina Curley
+- key: cvs
+  url: https://www.nongnu.org/cvs/
+  title: CVS
+- key: diagrams
+  url: https://www.diagrams.net/
+  title: diagrams.net drawing tool
+- key: diffmerge
+  url: https://sourcegear.com/diffmerge/
+  title: SourceGear DiffMerge
+- key: dlf
+  url: https://www.diglib.org/
+  title: Digital Library Foundation
+- key: dlf-active-bystander
+  url: https://www.diglib.org/active-bystander-orientation/
+  title: DLF Active Bystander Orientation
+- key: dobzhansky
+  url: https://en.wikipedia.org/wiki/Nothing_in_Biology_Makes_Sense_Except_in_the_Light_of_Evolution
+  title: Nothing in biology makes sense except in the light of evolution
+- key: docker
+  url: https://www.docker.com/
+  title: Docker
+- key: doi2bib
+  url: https://doi2bib.org/
+  title: Turn DOIs into bibliography entries
+- key: dropbox
+  url: https://dropbox.com
+  title: Dropbox
+- key: duckduckgo
+  url: https://duckduckgo.com/
+  title: DuckDuckGo
+- key: eiffel
+  url: https://www.eiffel.org/
+  title: Eiffel
+- key: emacs
+  url: https://www.gnu.org/software/emacs/
+  title: Emacs
+- key: email
+  url: mailto:gvwilson@third-bit.com
+  title: Contact address
+- key: evans-julia
+  url: https://jvns.ca/
+  title: Julia Evans
+- key: evans-interviews
+  url: https://jvns.ca/blog/2013/12/30/questions-im-asking-in-interviews/
+  title: Questions I'm Asking in Interviews
+- key: evans-manager
+  url: https://jvns.ca/blog/things-your-manager-might-not-know/
+  title: Things Your Manager Might Not Know
+- key: eslint
+  url: https://eslint.org/
+  title: ESLint
+- key: excel-tweet
+  url: https://twitter.com/gvwilson/status/776733301419630592
+  title: Tweet about Excel and evidence
+- key: facebook-rohingya
+  url: https://www.buzzfeednews.com/article/meghara/facebook-myanmar-rohingya-genocide
+  title: How Facebook Failed the Rohingya in Myanmar
+- key: fileshredder
+  url: https://voidtech.net/apps/fileshredder/
+  title: FileShredder
+- key: flower-annalee
+  url: https://flowerhorne.com/
+  title: Annalee Flower
+- key: flower-good-intent
+  url: https://thebias.com/2017/09/26/how-good-intent-undermines-diversity-and-inclusion/
+  title: How 'Good Intent' Undermines Diversity and Inclusion
+- key: gdb
+  url: https://www.gnu.org/software/gdb/
+  title: GDB
+- key: gdpr
+  url: https://en.wikipedia.org/wiki/General_Data_Protection_Regulation
+  title: General Data Protection Regulation
+- key: gdpr-forgotten
+  url: https://www.gdpreu.org/right-to-be-forgotten/
+  title: GDPR-mandated right to be forgotten
+- key: gebru-firing
+  url: https://www.fastcompany.com/90608471/timnit-gebru-google-ai-ethics-equitable-tech-movement
+  title: This is bigger than just Timnit
+- key: gender-decoder
+  url: http://gender-decoder.katmatfield.com/
+  title: Gender Decoder
+- key: gendermag
+  url: http://gendermag.org/
+  title: GenderMag
+- key: ghostery
+  url: https://www.ghostery.com/
+  title: Ghostery
+- key: git
+  url: https://git-scm.com/
+  title: Git
+- key: git-difftool
+  url: https://git-scm.com/docs/git-difftool
+  title: git difftool
+- key: git-man-page-generator
+  url: https://git-man-page-generator.lokaltog.net/
+  title: Git Random Man Page Generator
+- key: github
+  url: https://github.com/
+  title: GitHub
+- key: github-actions
+  url: https://github.com/features/actions
+  title: GitHub Actions
+- key: github-guides
+  url: https://guides.github.com/
+  title: GitHub Guides
+- key: github-mvg
+  url: https://github.com/github/MVG
+  title: GitHub Minimum Viable Governance
+- key: github-pages
+  url: https://pages.github.com/
+  title: GitHub Pages
+- key: gitkraken
+  url: https://www.gitkraken.com/
+  title: GitKraken
+- key: gitlab
+  url: https://gitlab.com/
+  title: GitLab
+- key: gitlet
+  url: http://gitlet.maryrosecook.com/
+  title: Gitlet
+- key: glosario
+  url: https://glosario.carpentries.org/
+  title: Glosario
+- key: goodhart-law
+  url: https://en.wikipedia.org/wiki/Goodhart%27s_law
+  title: Goodhart's Law
+- key: grand-perspective
+  url: http://grandperspectiv.sourceforge.net/
+  title: Grand Perspective
+- key: gritter-alloy
+  url: https://medium.com%2F@medium.com/@markgritter/finding-graph-counterexamples-with-alloy-e4114cc0f2fb
+  title: Finding Graph Counterexamples with Alloy
+- key: gritter-tla-plus
+  url: https://medium.com%2F@medium.com/@fuzz_ai/reproducing-a-memory-tracking-bug-with-tla-35ce0652ce72
+  title: Reproducing a Memory-Tracking Bug with TLA+
+- key: hanselman-dark-matter
+  url: https://www.hanselman.com/blog/dark-matter-developers-the-unseen-99
+  title: "Dark Matter Developers: The Unseen 99%"
+- key: hanselman-scott
+  url: https://www.hanselman.com/
+  title: Scott Hanselman
+- key: hippocratic-license
+  url: https://firstdonoharm.dev/
+  title: Hippocratic License
+- key: homebrew
+  url: https://en.wikipedia.org/wiki/Homebrew_(package_manager)
+  title: Homebrew
+- key: hoye-mike
+  url: http://exple.tive.org/
+  title: Mike Hoye
+- key: jekyll
+  url: https://jekyllrb.com/
+  title: Jekyll
+- key: jekyll-bug
+  url: https://stackoverflow.com/questions/66320774/how-to-pre-define-links-in-jekyll-config-yml-using-kramdown-links-def-options
+  title: A bug in Jekyll
+- key: jira
+  url: https://www.atlassian.com/software/jira
+  title: Jira
+- key: js4ds
+  url: https://js4ds.org/
+  title: JavaScript for Data Science
+- key: jsdoc
+  url: https://jsdoc.app/
+  title: JSDoc
+- key: kaplan-moss-executives
+  url: https://jacobian.org/2021/mar/5/exec-status-update/
+  title: How to Give a Status Update to Executives
+- key: kaplan-moss-jacob
+  url: https://jacobian.org/
+  title: Jacob Kaplan-Moss
+- key: lua
+  url: https://www.lua.org/
+  title: Lua
+- key: make
+  url: https://www.gnu.org/software/make/
+  title: GNU Make
+- key: marthas-rules
+  url: https://journals.sagepub.com/doi/10.1177/088610998600100206
+  title: Martha's Rules
+- key: mathml
+  url: https://www.w3.org/Math/
+  title: MathML
+- key: mccole
+  url: https://gvwilson.github.io/mccole/
+  title: McCole
+- key: mercurial
+  url: https://www.mercurial-scm.org/
+  title: Mercurial
+- key: namely-time-off
+  url: https://library.namely.com/hr-mythbusters-2017
+  title: 2017 HR Mythbusters report
+- key: noaa-disruptive
+  url: https://coast.noaa.gov/ddb/
+  title: Dealing with Disruptive Behaviors
+- key: nodejs
+  url: https://nodejs.org/en/
+  title: Node.js
+- key: npm
+  url: https://en.wikipedia.org/wiki/Npm_(software)
+  title: NPM
+- key: npm-xml-search
+  url: https://www.npmjs.com/search?q=xml%20parser
+  title: XML parsers on NPM
+- key: npms
+  url: https://npms.io/about
+  title: About NPMS scores
+- key: osi
+  url: https://opensource.org/
+  title: Open Source Initiative
+- key: osi-license-list
+  url: https://opensource.org/licenses
+  title: Open Source Initiative License List
+- key: paradox-of-tolerance
+  url: https://en.wikipedia.org/wiki/Paradox_of_tolerance
+  title: Paradox of tolerance
+- key: pep8
+  url: https://www.python.org/dev/peps/pep-0008/
+  title: PEP 8 Style Guide for Python Code
+- key: petre-marian
+  url: https://www.open.ac.uk/people/mp8
+  title: Marian Petre
+- key: petrov-handing-over
+  url: https://shazow.net/posts/how-to-hand-over-an-open-source-project-to-a-new-maintainer/
+  title: How to hand over an Open Source project to a new maintainer
+- key: pip
+  url: https://pypi.org/project/pip/
+  title: pip
+- key: plantuml
+  url: https://plantuml.com/
+  title: PlantUML
+- key: plos
+  url: https://plos.org/
+  title: PLoS
+- key: privacy-right
+  url: https://en.wikipedia.org/wiki/Right_to_privacy
+  title: Right to privacy
+- key: program-repair
+  url: https://program-repair.org/
+  title: Program Repair
+- key: pryce-nat
+  url: http://www.natpryce.com/
+  title: Nat Pryce
+- key: pryce-onboarding
+  url: https://twitter.com/natpryce/status/1375949072910200835
+  title: Onboarding checklist
+- key: py-rse
+  url: https://merely-useful.tech/py-rse/
+  title: Research Software Engineering with Python
+- key: python
+  url: https://www.python.org/
+  title: Python
+- key: pytest
+  url: http://pytest.org/
+  title: pytest
+- key: pytest-benchmark
+  url: https://pypi.org/project/pytest-benchmark/
+  title: pytest-benchmark
+- key: quarterback-syndrome
+  url: https://en.wikipedia.org/wiki/Racial_issues_faced_by_black_quarterbacks
+  title: Quarterback syndrome
+- key: quorum
+  url: https://quorumlanguage.com/
+  title: Quorum
+- key: rake
+  url: https://ruby.github.io/rake/
+  title: Rake
+- key: red-door
+  url: https://www.reddoorshelter.ca/
+  title: Red Door Family Shelter
+- key: ruby
+  url: https://www.ruby-lang.org/
+  title: Ruby
+- key: schneier-bruce
+  url: https://www.schneier.com/
+  title: Bruce Schneier
+- key: sci-hub
+  url: https://en.wikipedia.org/wiki/Sci-Hub
+  title: Sci-Hub
+- key: scratch
+  url: https://scratch.mit.edu/
+  title: Scratch
+- key: selenium
+  url: https://www.selenium.dev/
+  title: Selenium
+- key: smartbear-code-review
+  url: https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/
+  title: Best Practices for Peer Code Review
+- key: snakemake
+  url: https://snakemake.readthedocs.io/en/stable/
+  title: Snakemake
+- key: so-configure-git-editor
+  url: https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits
+  title: How do I make Git use the editor of my choice for commits?
+- key: so-exit-vim
+  url: https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor
+  title: How do I exit the Vim editor?
+- key: sourcetree
+  url: https://www.sourcetreeapp.com/
+  title: SourceTree
+- key: sqlite
+  url: https://www.sqlite.org/
+  title: SQLite
+- key: stack-overflow
+  url: https://stackoverflow.com/
+  title: Stack Overflow
+- key: stack-overflow-good-question
+  url: https://stackoverflow.com/help/how-to-ask
+  title: How do I ask a good question?
+- key: stjs
+  url: https://stjs.tech/
+  title: Software Design by Example
+- key: subversion
+  url: https://subversion.apache.org/
+  title: Subversion
+- key: t3
+  url: http://teachtogether.tech/
+  title: Teaching Tech Together
+- key: t3-personas
+  url: https://teachtogether.tech/en/index.html#s:process-personas
+  title: Learner Personas
+- key: taylor-francis
+  url: https://taylorandfrancis.com/
+  title: Taylor & Francis
+- key: tech-solidarity
+  url: https://techsolidarity.org/
+  title: Tech Solidarity
+- key: therac-25
+  url: https://en.wikipedia.org/wiki/Therac-25
+  title: Therac-25
+- key: thirdbit-burnout
+  url: http://third-bit.com/2015/11/09/daddy-why-dont-you-ever-laugh/
+  title: Daddy, Why Don't You Ever Laugh?
+- key: tla-plus
+  url: https://lamport.azurewebsites.net/tla/tla.html
+  title: TLA+
+- key: tldr-gpl
+  url: https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)
+  title: tl;dr summary of the GPL
+- key: tldr-legal
+  url: https://tldrlegal.com/
+  title: Software Licenses in Plain English
+- key: travis-ci
+  url: https://travis-ci.org/
+  title: Travis CI
+- key: udhr
+  url: https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights
+  title: Universal Declaration of Human Rights
+- key: uk-home-office-a11y
+  url: https://ukhomeoffice.github.io/accessibility-posters/posters/accessibility-posters.pdf
+  title: UK Home Office posters on accessibility
+- key: ultima-online-players
+  url: https://twitter.com/ZenOfDesign/status/1371347166736834560
+  title: Number of badly-behaved players in Ultima Online
+- key: visual-basic
+  url: https://en.wikipedia.org/wiki/Visual_Basic
+  title: Visual Basic
+- key: vs-code
+  url: https://code.visualstudio.com/
+  title: Microsoft Visual Studio Code
+- key: wapost-facebook-vaccine
+  url: https://www.washingtonpost.com/technology/2021/03/14/facebook-vaccine-hesistancy-qanon/
+  title: Massive Facebook study on users' doubt in vaccines finds a small group appears to play a big role in pushing the skepticism
+- key: wayne-hillel
+  url: https://hillelwayne.com/
+  title: Hillel Wayne
+- key: wayne-linked-lists
+  url: https://www.hillelwayne.com/post/linked-lists/
+  title: Why Do Interviewers Ask Linked List Questions?
+- key: webaim-wave
+  url: https://wave.webaim.org/
+  title: WebAIM WAVE
+- key: wilson-greg
+  url: https://third-bit.com/
+  title: Greg Wilson
+- key: womens-work
+  url: https://en.wikipedia.org/wiki/Women%27s_work
+  title: Women's work
+- key: xkcd-passwords
+  url: https://xkcd.com/936/
+  title: XKCD on secure passwords
