@@ -125,11 +125,7 @@ please file an issue in [this site's GitHub repository][bst-repo] or [send us em
 
 ## Acknowledgments
 
-This book is dedicated to [%i "Petre, Marian" %][Marian Petre][petre-marian][%/i%],
-who taught me that not everything worth studying can be measured,
-and to [%i "Wilkie, Tom" %]Tom Wilkie[%/i%],
-who taught me how to turn a thousand words I'd written into a hundred someone would actually want to read.
-I am also grateful to all of the students who have done projects with me over the years.
+FIXME: dedication
 
 I have tried to base recommendations on empirical software engineering research ([%x research %])
 and on the science of teaching and learning ([%x thinking %]).
@@ -137,48 +133,48 @@ Where those don't have answers,
 I have drawn on the experience of the students and programmers mentioned below.
 Any errors, omissions, or misunderstandings that remain are entirely our fault.
 
-- [Bram Adams](https://mcis.cs.queensu.ca/bram.html)
-- [Rohan Alexander](https://rohanalexander.com/)
-- [Tavish Armstrong](http://tavisharmstrong.com/)
-- [Titus Barik](https://www.barik.net/)
-- [Robert Beghian](http://www.vasken.ca/)
-- [Yanina Bellini Saibene](https://yabellini.netlify.app/)
-- [Neil Brown](https://twistedsquare.com/)
-- [Jordi Cabot](https://jordicabot.com/)
-- [Silvia Canelón](https://silvia.rbind.io/)
+- Bram Adams
+- Rohan Alexander
+- Tavish Armstrong
+- Titus Barik
+- Robert Beghian
+- Yanina Bellini Saibene
+- Neil Brown
+- Jordi Cabot
+- Silvia Canelón
 - Francisco Canas
-- [Mike Conley](https://mikeconley.ca/)
-- [Michael DiBernardo](https://mikedebo.com/)
-- [Isaac Ezer](http://www.isaacezer.com/)
-- [Ian Flores Siaca](https://ianfs.dev/)
-- [Adam Goucher](https://adam.goucher.ca/)
-- [Mustafa Haddara](https://twitter.com/MustafaHaddara/)
-- [Johan Harjono](http://johanharjono.com/)
-- [Kate Hertweck](https://katehertweck.com/)
-- [Daniel Jackson](https://people.csail.mit.edu/dnj/)
-- [Jacob Kaplan-Moss](https://jacobian.org/)
-- [Ritu Kapur](https://sites.google.com/view/ritu-kapur)
-- [Zain Kazmi](https://zainhkazmi.github.io/)
-- [Laurie MacDougall Sookraj](https://www.linkedin.com/in/lauriemacdougallsookraj/)
-- [Darren McElligott](https://www.linkedin.com/in/darren-mcelligott-07689473/)
-- [Kim Moir](https://kimmoir.blog/)
-- [Natalia Morandeira](https://nmorandeira.netlify.app/)
-- [Meiyappan Nagappan](https://cs.uwaterloo.ca/~m2nagapp/)
-- [Iain Parris](https://parris.org/)
-- [Elizabeth Patitsas](https://patitsas.github.io/)
-- [Andrew Petersen](https://utmandrew.bitbucket.io/)
-- [Andrey Petrov](https://shazow.net/)
-- [Andrew Potapov](https://www.andrewpotapov.com/)
-- [Lutz Prechelt](http://www.mi.fu-berlin.de/w/Main/LutzPrechelt)
-- [Yim Register](https://students.washington.edu/yreg/)
-- [Evan Schultz](https://evanjustevan.com/)
-- [Alex Serebrenik](https://www.win.tue.nl/~aserebre/)
-- [Naaz Sibia](https://www.linkedin.com/in/naaz-sibia/)
-- [Andreas Stefik](https://web.cs.unlv.edu/stefika/)
+- Mike Conley
+- Michael DiBernardo
+- Isaac Ezer
+- Ian Flores Siaca
+- Adam Goucher
+- Mustafa Haddara
+- Johan Harjono
+- Kate Hertweck
+- Daniel Jackson
+- Jacob Kaplan-Moss
+- Ritu Kapur
+- Zain Kazmi
+- Laurie MacDougall Sookraj
+- Darren McElligott
+- Kim Moir
+- Natalia Morandeira
+- Meiyappan Nagappan
+- Iain Parris
+- Elizabeth Patitsas
+- Andrew Petersen
+- Andrey Petrov
+- Andrew Potapov
+- Lutz Prechelt
+- Yim Register
+- Evan Schultz
+- Alex Serebrenik
+- Naaz Sibia
+- Andreas Stefik
 - Rory Tulk
-- [Blake Winton](https://bwinton.latte.ca/)
-- [Andy Zaidman](https://azaidman.github.io/)
-- [Andreas Zeller](https://andreas-zeller.info/)
+- Blake Winton
+- Andy Zaidman
+- Andreas Zeller
 
 [%b Sholler2019 Wilson2019 Irving2021 Smalls2021 %];
 I'm grateful to [%i "Taylor & Francis" %][Taylor & Francis][taylor-francis][%/i%],

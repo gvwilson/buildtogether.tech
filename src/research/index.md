@@ -358,8 +358,8 @@ are:
 1.  With a rapid release model, users adopt new versions faster compared to the
     traditional release model.
 
-#3 is good news; #2 is (mostly) good, but #1 is a puzzle for which the authors
-don't have an explanation.
+The third is good news; the second is (mostly) good, but the first is a puzzle
+for which the authors don't have an explanation.
 
 One of the many reasons software projects fail is poor estimation, and one of
 the reasons people estimate badly is that they don't keep track of what's
