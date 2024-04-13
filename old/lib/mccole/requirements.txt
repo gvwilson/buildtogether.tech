@@ -1,0 +1,11 @@
+ark
+beautifulsoup4
+black
+flake8
+gitpython
+html5validator
+isort
+prettytable
+pybtex
+pymdown-extensions
+python-frontmatter

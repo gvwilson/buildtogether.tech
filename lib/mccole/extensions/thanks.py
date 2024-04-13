@@ -1,6 +1,10 @@
-"""Generate list of thanks."""
+"""Handle thanks."""
 
+import ark
+from pathlib import Path
 import shortcodes
+import yaml
+
 import util
 
 
@@ -9,16 +13,9 @@ def thanks(pargs, kwargs, node):
     """Handle [% thanks %] shortcode."""
     util.require(
         (not pargs) and (not kwargs),
-        f"Bad 'thanks' shortcode with {pargs} and {kwargs}",
+        f"Bad 'thanks' in {node.path}: '{pargs}' and '{kwargs}'",
     )
-    details = util.read_thanks()
-    if not details:
-        return ""
-    details = [f"{d['personal']} {d['family']}" for d in details]
-    if len(details) == 1:
-        return details[0]
-    elif len(details) == 2:
-        return f"{details[0]} and {details[1]}"
-    else:
-        details[-1] = f"and {details[-1]}"
-        return ", ".join(details)
+    filepath = Path(ark.site.home(), "info", "thanks.yml")
+    names = yaml.safe_load(filepath.read_text()) or []
+    names = "\n".join([f"<li>{person}</li>" for person in names])
+    return f'<ul class="thanks">{names}</ul>'
