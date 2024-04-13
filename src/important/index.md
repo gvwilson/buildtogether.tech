@@ -189,12 +189,10 @@ but require the same total effort?
 Laying things out on a grid can't answer that question,
 but at least it can tell you what the question is.
 
-<blockquote>
-How to prioritize:
-always finish first the tasks that will allow other people to continue/start/finish their work.
-
-— Yanina Bellini Saibene
-</div>
+> How to prioritize:
+> always finish first the tasks that will allow other people to continue/start/finish their work.
+> 
+> — Yanina Bellini Saibene
 
 If any task on your list is more than an hour long,
 break it down into smaller pieces and prioritize those separately.
@@ -467,17 +465,15 @@ so that the moderator can group related questions together.
 The first release of GitHub's [Minimum Viable Governance][github-mvg] guidelines
 included this:
 
-<blockquote>
-**2.1. Consensus-Based Decision Making**
-
-Projects make decisions through consensus of the Maintainers.
-While explicit agreement of all Maintainers is preferred,
-it is not required for consensus.
-Rather,
-the Maintainers will determine consensus based on their good faith consideration of a number of factors,
-including the dominant view of the Contributors and nature of support and objections.
-The Maintainers will document evidence of consensus in accordance with these requirements.
-</div>
+> **2.1. Consensus-Based Decision Making**
+> 
+> Projects make decisions through consensus of the Maintainers.
+> While explicit agreement of all Maintainers is preferred,
+> it is not required for consensus.
+> Rather,
+> the Maintainers will determine consensus based on their good faith consideration of a number of factors,
+> including the dominant view of the Contributors and nature of support and objections.
+> The Maintainers will document evidence of consensus in accordance with these requirements.
 
 It sounds reasonable,
 but it is harmfully wrong.
