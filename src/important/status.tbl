@@ -1,0 +1,8 @@
+| Person | Progress | Plans | Problems |
+| ------ | -------- | ----- | ---------- |
+| Ren    | Parsing OCTL records | Tag OCTL records in DVC | Duplicate OCTL tags? |
+|        | Deployed progress bar patch | Help onboard Silvia | |
+| Mikka  | Refactored PostgreSQL connector | #156: handle records with NULL timestamp | Clarify authorship guidelines |
+|        | Patched database tests | #171: auto-archive duplicate records | |
+| Sanjay | … | … | … |
+| Jess   | … | … | … |

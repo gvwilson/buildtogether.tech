@@ -209,7 +209,6 @@ img.splash {
 /* Reduce list indentation */
 li {
     list-style-type: disc;
-    margin-left: var(--spacing-large-negative);
 }
 
 /* Make navigation controls larger */
@@ -218,12 +217,12 @@ nav {
 }
 
 /* Appendix list */
-ol.toc-appendices {
+ol.toc-appendices li {
     list-style-type: upper-latin;
 }
 
 /* Chapter list */
-ol.toc-chapters {
+ol.toc-chapters li {
     list-style-type: decimal;
 }
 

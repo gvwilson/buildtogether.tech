@@ -1,0 +1,18 @@
+| Line(s) | Comment |
+| ------- | ------- |
+| 02      | Add a [%g docstring "docstring" %] describing the program. |
+| 03      | Put imports in alphabetical order. |
+| 07      | Use a set instead of a list for faster lookup. |
+|         | One entry per line will be easier to read. |
+| 09      | `SENSES` isn't used anywhere: delete. |
+| 12      | Add a docstring describing this function. |
+| 12-22   | Use `argparse` to handle options. |
+| 12-22   | Put option handling in its own function. |
+| 17      | Print error message to `sys.stderr`. |
+| 33      | Add a docstring describing this function. |
+| 34-39   | Use `any` instead of a loop to check this. |
+| 41      | [%g magic_number "Magic number" %] 10. |
+| 41      | Provide option to control progress reporting. |
+| 47      | Use `'rb'` to read files as binary. |
+| 57      | Add a docstring describing this function. |
+| 60      | Why `paths.pop()`? |

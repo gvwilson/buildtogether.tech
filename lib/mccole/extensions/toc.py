@@ -17,13 +17,13 @@ def table_of_contents(pargs, kwargs, node):
         f"<li>{cross_ref([slug], {'kind': 'title'}, node)}</li>"
         for slug in ark.site.config["chapters"]
     ]
-    chapters = f'<ol class="toc-chapters">{"".join(chapters)}</ol>'
+    chapters = f'<div class="col-6"><ol class="toc-chapters">{"".join(chapters)}</ol></div>'
     appendices = [
         f"<li>{cross_ref([slug], {'kind': 'title'}, node)}</li>"
         for slug in ark.site.config["appendices"]
     ]
-    appendices = f'<ol class="toc-appendices">{"".join(appendices)}</ol>'
-    return f"{chapters}\n{appendices}"
+    appendices = f'<div class="col-6"><ol class="toc-appendices">{"".join(appendices)}</ol></div>'
+    return f'<div class="row">{chapters}\n{appendices}</div>'
 
 
 @shortcodes.register("x")

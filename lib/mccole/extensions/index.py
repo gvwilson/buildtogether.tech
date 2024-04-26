@@ -6,13 +6,11 @@ import shortcodes
 import util
 
 
-@shortcodes.register("i")
-def index_ref(pargs, kwargs, node):
+@shortcodes.register("i", "/i")
+def index_ref(pargs, kwargs, context, content):
     """Format index shortcode."""
-    key, text, url = _get_index_ref_fields(node, pargs, kwargs)
-    cls = 'class="ix-entry"'
-    content = f"[{text}][{url}]" if url else text
-    return f'<span {cls} ix-key="{key}" markdown="1">{content}</span>'
+    # FIXME
+    return content
 
 
 @shortcodes.register("index")
@@ -46,18 +44,6 @@ def make_index(pargs, kwargs, node):
         *links,
         "</ul>",
     ])
-
-
-def _get_index_ref_fields(node, pargs, kwargs):
-    """Extract key, text, and url."""
-    if len(pargs) == 1:
-        key = text = pargs[0]
-    elif len(pargs) == 2:
-        key, text = pargs
-    else:
-        util.fail(f"Bad 'i' in {node.path}: '{pargs}' and '{kwargs}'")
-    url = kwargs.get("url", None)
-    return key, text, url
 
 
 def _make_links(key, slugs, ordering):

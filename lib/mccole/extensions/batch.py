@@ -56,7 +56,7 @@ def _collect_shortcodes():
     parser = shortcodes.Parser(inherit_globals=False, ignore_unknown=True)
     parser.register(_collect_shortcodes_figures, "figure")
     parser.register(_collect_shortcodes_glossary, "g")
-    parser.register(_collect_shortcodes_index, "i")
+    # FIXME parser.register(_collect_shortcodes_index, "i")
     parser.register(_collect_shortcodes_tables, "table")
 
     collector = {}
