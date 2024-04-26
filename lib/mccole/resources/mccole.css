@@ -109,6 +109,17 @@ body {
     max-width: var(--width-page);
 }
 
+/* Caption on table */
+caption {
+    text-align: center;
+    text-wrap-mode: nowrap;
+}
+
+/* Citations */
+cite {
+    font-style: italic;
+}
+
 /* Code fragments */
 code {
     font-family: "Source Code Pro", monospace;
@@ -153,6 +164,11 @@ div.language-yml {
     border-color: var(--stamp-orange-light);
 }
 
+/* JavaScript */
+div.language-js {
+    border-color: var(--stamp-blue-light);
+}
+
 /* Output */
 div.language-out {
     border-color: var(--stamp-brown-light);
@@ -186,6 +202,11 @@ dl.bibliography dt {
 /* Glossary term definitions */
 dl.glossary dt {
     font-weight: bold;
+}
+
+/* Caption on figure */
+figcaption {
+    text-align: center;
 }
 
 /* Figures */
@@ -254,11 +275,6 @@ p.subtitle {
     margin-bottom: var(--border-heavy);
 }
 
-/* Caption on table */
-p.table-caption {
-    text-align: center;
-}
-
 /* Term definitions */
 p.terms {
     font-style: italic;
@@ -271,6 +287,7 @@ span.ix-entry {
 /* Tables */
 table {
     border-collapse: collapse;
+    caption-side: bottom;
     margin-left: auto;
     margin-right: auto;
 }
