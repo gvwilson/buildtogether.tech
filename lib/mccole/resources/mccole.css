@@ -115,6 +115,14 @@ code {
     font-size: var(--size-code);
 }
 
+/* Add space below definitions in definition list. */
+dd {
+    margin-bottom: var(--spacing-medium);
+}
+dd:last-of-type {
+    margin-bottom: 0px;
+}
+
 /* Callouts */
 div.callout {
     background-color: var(--gray-faint);

@@ -25,7 +25,6 @@ Be open.
     information freely available on the Internet, any paywall or login barrier
     put between you and your hoped-for audience will send a large number of
     people elsewhere.
-
     More importantly, these barriers send a clear signal that you do not care if
     practitioners read your work or not: as one colleague observed rather
     sourly, it's the equivalent of inviting people to your house for dinner and
