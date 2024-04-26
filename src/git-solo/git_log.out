@@ -1,0 +1,19 @@
+commit d4351c4f093f60d03f303737b66b28ebb6b9ed45
+Author: Greg Wilson <gvwilson@third-bit.com>
+Date:   Fri Feb 19 09:48:37 2021 -0500
+
+    Writing the first section of the chapter on version control.
+
+commit 80d38a8cbf650431fe4719ec768bd890e00c7431
+Author: Greg Wilson <gvwilson@third-bit.com>
+Date:   Thu Feb 18 11:21:00 2021 -0500
+
+    Adding more citations to the description of team formation.
+
+commit 6e30bd5e5af2c3491f25f014c03d5e9ff5c79879
+Author: Greg Wilson <gvwilson@third-bit.com>
+Date:   Wed Feb 17 20:48:04 2021 -0500
+
+    Moving the discussion of code review into its own chapter.
+
+…

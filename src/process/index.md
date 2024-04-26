@@ -131,7 +131,7 @@ example:
 
 4:05 p.m.
 :   You can now start work on the feature you want to add, which translates part
-    of the program's internal data structure into a blob of [%g json "JSON" %] to send to a web server.  You have an hour less to do
+    of the program's internal data structure into a blob of JSON to send to a web server.  You have an hour less to do
     this than you originally planned, but that's OK: by fixing bugs first,
     you've avoided the all-too-common situation of only half the code working
     when the project is "done". Again, the first step is to create a new branch

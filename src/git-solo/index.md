@@ -97,10 +97,7 @@ Git as a file backup system.
 The first step is to make sure that [%i "Git!configuring" %]Git knows who
 we[%/i%] are by telling it our name and email address:
 
-```sh
-$ git config --global user.name "Peggy Springsteen"
-$ git config --global user.email "peggy@wolframhart.org"
-```
+[%inc git_config.sh %]
 
 Breaking this down:
 
@@ -146,11 +143,8 @@ project's URL to get a local copy called a [%i "Git!cloning project" %][%g clone
 For example, if you want a clone of this book, you can do
 this:
 
-```sh
-$ git clone https://github.com/gvwilson/buildtogether.tech.git
-```
+[%inc git_clone.sh %]
 
-<!-- continue -->
 This will create a directory with the same name as the project, create a `.git`
 sub-directory inside it, and download the project's history so that you can
 start work.
@@ -159,30 +153,8 @@ Regardless of how you create your repository, you can use `git log` to look at
 its [%i "Git!history" %]history[%/i%]. If I run this command right now for
 this book, I get:
 
-```sh
-$ git log
-```
-```out
-commit d4351c4f093f60d03f303737b66b28ebb6b9ed45
-Author: Greg Wilson <gvwilson@third-bit.com>
-Date:   Fri Feb 19 09:48:37 2021 -0500
-
-    Writing the first section of the chapter on version control.
-
-commit 80d38a8cbf650431fe4719ec768bd890e00c7431
-Author: Greg Wilson <gvwilson@third-bit.com>
-Date:   Thu Feb 18 11:21:00 2021 -0500
-
-    Adding more citations to the description of team formation.
-
-commit 6e30bd5e5af2c3491f25f014c03d5e9ff5c79879
-Author: Greg Wilson <gvwilson@third-bit.com>
-Date:   Wed Feb 17 20:48:04 2021 -0500
-
-    Moving the discussion of code review into its own chapter.
-
-...
-```
+[%inc git_log.sh %]
+[%inc git_log.out %]
 
 Each entry has:
 
@@ -209,11 +181,8 @@ All right: what are [%i "commit (version control)" "Git!commit" %][%g commit "co
 of the project at a particular moment in time; we create them using a command
 like:
 
-```sh
-$ git commit -m "Made the status bar display the user name"
-```
+[%inc git_commit_with_message.sh %]
 
-<!-- continue -->
 Here, `commit` is the verb and the `-m` (short for "message") option is followed
 by the comment we want to save in the log.
 
@@ -235,11 +204,8 @@ One of the many reasons you should interact with Git through a GUI is to avoid t
 Before we run `git commit`, though, we need to tell Git which files we want to
 save in the commit, which we do using `git add`:
 
-```sh
-$ git add version-control.md _data/glossary.yml
-```
+[%inc git_add.sh %]
 
-<!-- continue -->
 [%i "Git!difference between add and commit" %]One way to think about
 this[%/i%] is that `git add` puts things in a box to be shipped, while `git
 commit` actually sends the package. Git requires us to do this in two steps
@@ -258,16 +224,7 @@ files[%/i%] by putting their names, or patterns that match multiple names, in a
 file called `.gitignore`.  For example, the `.gitignore` file for this project
 includes:
 
-```txt
-*.pyc
-*~
-.DS_Store
-.jekyll-cache
-.jekyll-metadata
-.sass-cache
-__pycache__
-_site
-```
+[%inc git_ignore.txt %]
 
 Be careful not to put files containing passwords or [%g api_key "API
 keys" %] for web services into version control: even if the repository is
@@ -279,26 +236,9 @@ We can keep track of which changes haven't yet been added and which ones have
 using [%i "Git!showing status" %]`git status`[%/i%]. If I run this command
 right now in this book's project I get:
 
-```sh
-$ git status
-```
-```out
-On branch main
-Your branch is up to date with 'origin/main'.
+[%inc git_status.sh %]
+[%inc git_status.out %]
 
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   _includes/links.md
-	modified:   bibliography.md
-	modified:   version-control.md
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   version-control.md
-```
-
-<!-- continue -->
 The first paragraph titled "Changes to be committed" tells me which files I have
 asked Git to save using `git add`. The second paragraph, "Changes not staged for
 commit", shows that I have modified `version-control.md` (this chapter) since I
@@ -313,11 +253,8 @@ reasons people use them. For example, if I want to get the version of this file
 from two days ago, I can use `git log` to find the commit ID `2be70844`, and
 then run:
 
-```sh
-$ git restore --source 2be70844 version-control.md
-```
+[%inc git_restore.sh %]
 
-<!-- continue -->
 I can also count backward from where I am now.  The most recent commit has the
 special [%i "Git!HEAD" %]symbolic name `HEAD`[%/i%]; the expression `HEAD~1`
 means "the one before it", while `HEAD~2` goes back two commits and so
@@ -332,15 +269,9 @@ automatically have created a bookmark called a
 [%i "Git!remote" "remote (in Git)" %][%g remote_git "remote" %][%/i%] that points
 at the original repository. I can get a list of remotes like this:
 
-```sh
-$ git remote -v
-```
-```out
-origin	https://github.com/gvwilson/buildtogether.tech.git (fetch)
-origin	https://github.com/gvwilson/buildtogether.tech.git (push)
-```
+[%inc git_remote.sh %]
+[%inc git_remote.out %]
 
-<!-- continue -->
 The `-v` option (short for "verbose") tells Git to print more than just the
 remote's name. The remote itself is called `origin`, and Git lists two URLs for
 it because in theory you can download (or "fetch") from one and upload (or
@@ -352,11 +283,8 @@ backup tool like [Dropbox][dropbox] is that Git *doesn't* automatically
 synchronize local changes to the remote repository.  If I want to [%i "Git!saving changes remotely" %]save[%/i%] everything I've done locally on
 GitHub, I have to push them explicitly:
 
-```sh
-$ git push origin main
-```
+[%inc git_push_origin_main.sh %]
 
-<!-- continue -->
 The verb is `push`; the word `origin` identifies where I want to send things,
 and the word `main` identifies the branch I'm on.  We'll discuss branches in the
 next section, but for now, you can run `git branch` to see which ones you have
@@ -365,9 +293,7 @@ and which one you're working in.
 The counterpart of `git push` is `git pull`. It downloads changes from the
 remote repository and merges them into your local copy:
 
-```sh
-$ git pull origin main
-```
+[%inc git_pull_origin_main.sh %]
 
 Pushing and pulling changes allows you and your teammates to synchronize your
 work. They're also very useful operations if you're working on your own and
@@ -398,21 +324,14 @@ them.
 
 We can see what branches exist in a repository like this:
 
-```sh
-$ git branch
-```
-```out
-* main
-```
+[%inc git_branch.sh %]
+[%inc git_branch.out %]
 
 When we initialize a repository, Git automatically creates a branch called
 `master`; most people now rename this to `main` by running:
 
-```sh
-$ git branch -m main
-```
+[%inc git_branch_rename.sh %]
 
-<!-- continue -->
 immediately after running `git init`.  The [%i "Git!branch names" %]`main`
 branch[%/i%] is usually considered the "official" version of the repository,
 i.e., the version of the project that should be graded or published for other
@@ -421,33 +340,20 @@ that all changes we make will take place in this branch by default.
 
 To create a new branch called `homework3` we run:
 
-```sh
-$ git branch homework3
-```
+[%inc git_branch_create.sh %]
 
 The name of the branch should indicate what it's for, just like the names of
 files and variables.  We can check that the branch exists by running `git
 branch` again:
 
-```sh
-$ git branch
-```
-```out
-* main
-  homework3
-```
+[%inc git_branch_2.sh %]
+[%inc git_branch_2.out %]
 
 Our branch is there, but the `*` shows that we are still in the `main` branch.
 To switch to our new branch we use the `checkout` command:
 
-```sh
-$ git checkout homework3
-$ git branch
-```
-```out
-  main
-* homework3
-```
+[%inc git_checkout.sh %]
+[%inc git_checkout.out %]
 
 We haven't made any changes since switching to the `homework3` branch, so at
 this point `main` and `homework3` are at the same point in the repository's
@@ -475,41 +381,14 @@ there are in the destination branch.
 
 To see what the differences are between two branches, we use [%i "Git!viewing differences" %]`git diff`[%/i%] with those branches' names:
 
-```sh
-$ git diff homework3..main
-```
+[%inc git_diff_branch.sh %]
 
-<!-- continue -->
 More generally, we can use `git diff` to compare any two states of the
 repository, including old versions with current ones:
 
-```sh
-$ git diff HEAD~3..HEAD
-```
-```txt
-diff --git a/bin/html2tex.py b/bin/html2tex.py
-index 4c756f4..10efe1c 100755
---- a/bin/html2tex.py
-+++ b/bin/html2tex.py
-@@ -35,10 +35,13 @@ def html2tex(options):
-     '''Main driver.'''
-     update_numbering(options.numbering)
-     config = utils.read_yaml(options.config)
--    filenames = get_filenames(options.site, config)
-+    entries = get_filenames(options.site, config)
-     accum = []
--    for f in filenames:
--        convert_file(f, accum)
-+    for [kind, filename] in entries:
-+        if kind == 'entry':
-+            convert_file(filename, accum)
-+        elif kind == 'appendix':
-+            accum.append('\n\\appendix\n')
-     result = ''.join(accum)
-     display(options, config, result)
-```
+[%inc git_diff_head.sh %]
+[%inc git_diff_head.out %]
 
-<!-- continue -->
 The output marks additions with a `+` and deletions with a `-`. A line that has
 changed is shown as a deletion followed by an addition, and the lines marked
 with `@@` show where in the file the change occurred.
@@ -529,11 +408,8 @@ would be good ones.
 
 Once we're sure we actually want to merge changes, we do so like this:
 
-```sh
-$ git merge homework3 main
-```
+[%inc git_merge.sh %]
 
-<!-- continue -->
 Git automatically creates a new commit to represent the merge.  If we now run
 `git diff main..homework3`, Git doesn't print anything because there aren't any
 differences to show.
@@ -541,12 +417,8 @@ differences to show.
 After we merge the changes from `homework3` into `main` there is no need to keep
 the `homework3` branch, so we can delete it:
 
-```sh
-$ git branch -d homework3
-```
-```out
-Deleted branch homework3 (was 1577404).
-```
+[%inc git_branch_delete.sh %]
+[%inc git_branch_delete.out %]
 
 Merging `homework3` into `main` went smoothly, but if we are going to use
 branches, we must learn how to merge [%i "conflict (in Git)" "Git!conflict" %][%g conflict_git "conflicts" %][%/i%].  These occur when a line has been changed
@@ -556,23 +428,17 @@ but edited in the other.
 If the file `README.md` has been changed in both `main` and `homework4`,
 `git diff` will show the conflict:
 
-```sh
-$ git diff homework4..main
-```
+[%inc git_diff_conflict.sh %]
 
 When we try to merge `homework4` into `main`, Git doesn't know which of these
 changes to keep:
 
-```sh
-$ git merge homework4 main
-```
+[%inc git_merge_conflict.sh %]
 
 After we run this command, Git has put both sets of changes into `README.md`,
 but has marked which came from where:
 
-```sh
-$ cat README.md
-```
+[%inc cat_readme.sh %]
 
 The lines from `<<<<<<< HEAD` to `=======` are what was in `main`, while the
 lines from there to `>>>>>>> docs` show what was in `homework4`.  If there were
@@ -586,23 +452,16 @@ We have to decide what to do next: keep the `main` changes, keep those from
 Whatever we do, we must remove the `>>>`, `===`, and `<<<` markers.  Once we are
 done, we can add the file and commit the change like we would any other edit:
 
-```sh
-$ git add README.md
-$ git commit -m "Merging README additions"
-```
+[%inc git_resolve.sh %]
 
 Our branch's history will now show a single sequence of commits with the `main`
 changes on top of the earlier `homework4` changes:
 
-```sh
-$ git log --oneline -n 4
-```
+[%inc git_log_oneline.sh %]
 
 If we want to see what happened, we can add the `--graph` option to `git log`:
 
-```sh
-$ git log --oneline --graph -n 4
-```
+[%inc git_log_graph.sh %]
 
 At this point we can delete the `homework` branch or switch back to it and do
 some more work.  Each time we switch to it, we merge changes *from* `main`
@@ -618,11 +477,8 @@ consecutive commits into one.  This is called
 [%i "Git!rebase; rebasing (in version control)" %][%g "rebase_git" "rebasing" %][%/i%],
 and can be done using:
 
-```sh
-$ git rebase -i START
-```
+[%inc git_rebase.sh %]
 
-<!-- continue -->
 where `START` identifies the commit *before* the ones you want to start merging
 (i.e., the last one *not* to modify). Rebasing can go wrong in a lot of
 confusing ways, particularly if you have merged changes from another branch into

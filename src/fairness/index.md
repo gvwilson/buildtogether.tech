@@ -94,7 +94,7 @@ Write inclusive, accessible job ads.
     Decoder][gender-decoder][%/i%] and [%i "GenderMag" %][GenderMag][gendermag][%/i%] can help you find bugs like this
     in ads and software [%b Hilderbrand2020 %]. Tools for finding and
     eliminating racial bias and other problems aren't as common, but
-    [%b Washington2020 %] will tell you what to aim for, and if [%i "WebAIM WAVE" %][WebAIM WAVE][webaim-wave][%/i%] doesn't give your online
+    [%b Washington2020 %] will tell you what to aim for, and if [%i "WebAIM WAVE" %][WebAIM WAVE][wave][%/i%] doesn't give your online
     job ads a clean bill of health, please fix them.
 
 Post a public description of the hiring process.
@@ -318,7 +318,6 @@ with your teammates and the rest of your class:
 > same teams as the gay students for religious reasons.  How should the instructor
 > respond?
 
-<!-- continue -->
 Another scenario might be:
 
 > Your and your teammates frequently work together in the business school library

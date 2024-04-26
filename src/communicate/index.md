@@ -249,7 +249,7 @@ allows the project's members to see changes scroll by in their usual blog
 reader, which is a handy way to keep track of what their teammates are doing.
 
 If you are going to create a blog, use a [%i "static site generator" %][%g static_site_generator "static site generator" %][%/i%] to format and publish
-content consistently.  On GitHub, for example, you can create a site with [%i "GitHub Pages" %][GitHub Pages][github-pages][%/i%] using a tool called [%i "Jekyll" "static site generator!Jekyll" %][Jekyll][jekyll][%/i%]; lots of
+content consistently.  On GitHub, for example, you can create a site with [%i "GitHub Pages" %][GitHub Pages][ghp][%/i%] using a tool called [%i "Jekyll" "static site generator!Jekyll" %][Jekyll][jekyll][%/i%]; lots of
 different themes are available, and there are many good tutorials online.
 
 <div class="callout" markdown="1">
@@ -265,21 +265,17 @@ itself will explain what it's doing when someone reads it aloud; the comments
 should therefore explain *why*, just as you would in an email.  For example,
 this is not a useful comment:
 
-```py
-x = x[1:] # take all but first element of list
-```
+[%inc useless_comment.py %]
 
-<!-- continue -->
 This, on the other hand, tells the next person why we're doing it:
 
-```py
-threads = threads[1:] # We are already running the first thread, so save the others.
-```
+[%inc useful_comment.py %]
 </div>
 
 ## Reporting Up
 
-As well as reporting progress to your teammates, you may have to [%i "reporting!to your manager" %]report[%/i%] it regularly to your instructor, who
+As well as reporting progress to your teammates,
+you may have to [%i "reporting!to your manager" %]report[%/i%] it regularly to your instructor, who
 is effectively your manager. [%i "Evans, Julia" %][Julia
 Evans][evans-julia][%/i%] has described [eight things your manager might not
 know][evans-manager], all of which apply to student teams:
@@ -349,7 +345,6 @@ examples of good one-line docstrings include:
 -   "Clip signals to lie in [0...1]."
 -   "Reduce the red component of each pixel."
 
-<!-- continue -->
 You can tell our one-liners are useful if you can read them aloud in the order
 the functions are called in place of the function's name and parameters.
 

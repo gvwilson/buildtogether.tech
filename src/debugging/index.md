@@ -142,7 +142,6 @@ common errors in Python programs were (in order):
 1.  SyntaxError: unexpected EOF while parsing
 1.  IndentationError: unindent does not match any outer indentation level
 
-<!-- continue -->
 while the most common in Java were:
 
 1.  cannot find symbol - variable NAME
@@ -176,7 +175,6 @@ Trees and graphs
     self-referential (head points to head); circular sub-structure; depth
     greater than one.
 
-<!-- continue -->
 As [%x git-team %] said, the longer list in
 [%b Stegeman2014 Stegeman2016 %] can be adapted for more advanced
 students' programs.
@@ -227,19 +225,15 @@ Machine learning.
 Symbolic execution.
 :   Rather than a program on a particular set of inputs, a tool can simulate
     execution to build constraints, then check if those constraints can be
-    satisfied. For example, if a program contains the statements:
-    ```py
-    longest = ''
-    for name in all_names:
-        if len(name) > len(longest):
-            longest = name
-    ```
+    satisfied. For example, if a program contains the statements shown below,
     then symbolic execution can determine that the final value of `longest` is
     either the empty string or the first string in the list that belongs to the
     set containing the longest strings in the list.  The complexity of that
     sentence is a sign of how complex symbolic execution can be, but when
     combined with the modeling tools discussed in [%x tooling %], this
     approach can find bugs that would otherwise escape detection for years.
+
+[%inc find_longest.py %]
 
 Most [program repair tools][program-repair] are still research prototypes, but
 one particularly interesting use case is repairing student programs as a way of

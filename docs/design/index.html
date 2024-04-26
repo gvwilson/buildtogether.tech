@@ -306,6 +306,7 @@ modification.</p>
 <p>For example, suppose that we are simulating a hospital emergency room. We could
 write the function that simulates someone&rsquo;s response to a cardiac arrest like
 this:</p>
+<div class="language-py" title="switch.py">
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_cardiac_arrest</span><span class="p">(</span><span class="n">all_actors</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">actor</span> <span class="ow">in</span> <span class="n">all_actors</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">actor</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s1">&#39;nurse&#39;</span><span class="p">:</span>
@@ -315,7 +316,7 @@ this:</p>
         <span class="k">else</span><span class="p">:</span>
             <span class="o">...</span><span class="n">do</span> <span class="n">some</span> <span class="n">default</span> <span class="n">action</span><span class="o">...</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>(The term <a class="gl-ref" href="../glossary/#gl:actor" markdown="1">actor</a> is often used in simulations to mean
 &ldquo;anything that can take actions&rdquo;.) If we want to add another kind of actor, we
 need to modify this code to add another <code>elif</code> clause, and if we want to add
@@ -323,14 +324,16 @@ another kind of event, we have to write another function <em>and</em> make sure 
 have an <code>if</code> or <code>elif</code> for kind of actor.</p>
 <p>A better design is to create a base class that defines a generic behavior for
 all actors:</p>
+<div class="language-py" title="actor_base.py">
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Actor</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
         <span class="o">...</span><span class="n">do</span> <span class="n">generic</span> <span class="n">setup</span><span class="o">...</span>
     <span class="k">def</span> <span class="nf">handle_cardiac_arrest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span> <span class="c1"># by default, don&#39;t do anything</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>and then derive one class for each type of actor:</p>
+<div class="language-py" title="actor_concrete.py">
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Nurse</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">handle_cardiac_arrest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="o">...</span><span class="n">do</span> <span class="n">something</span><span class="o">...</span>
@@ -339,13 +342,15 @@ all actors:</p>
     <span class="k">def</span> <span class="nf">handle_cardiac_arrest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="o">...</span><span class="n">do</span> <span class="n">something</span> <span class="k">else</span><span class="o">...</span>
 </code></pre></div>
+</div>
 <p>We can then ask each actor to handle the cardiac arrest however they&rsquo;re supposed
 to:</p>
+<div class="language-py" title="switch_class.py">
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_cardiac_arrest</span><span class="p">(</span><span class="n">all_actors</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">actor</span> <span class="ow">in</span> <span class="n">all_actors</span><span class="p">:</span>
         <span class="n">actor</span><span class="o">.</span><span class="n">handle_cardiac_arrest</span><span class="p">()</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>If we want to add another kind of actor, we derive another class from <code>Actor</code>
 and override methods to give it the behaviors we want: the general
 <code>handle_cardiac_arrest</code> function doesn&rsquo;t need to change.</p>
@@ -354,6 +359,7 @@ need to define a default response to it by adding a method to <code>Actor</code>
 override that method for the specific kinds of actors that have different
 behaviors. A more sophisticated design would define classes to represent events
 and select a method to call based on the event:</p>
+<div class="language-py" title="handle_event.py">
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Actor</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
         <span class="o">...</span><span class="n">do</span> <span class="n">generic</span> <span class="n">setup</span><span class="o">...</span>
@@ -364,6 +370,7 @@ and select a method to call based on the event:</p>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">default_action</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
 </code></pre></div>
+</div>
 <p>This design makes it harder to figure out exactly who&rsquo;s doing what, but ensures
 that we can add new actors <em>and</em> new events without having to go back and change
 old code.</p>
@@ -412,7 +419,8 @@ gradually losing their hearing.</p>
 from the UK Home Office</a>. Each one lays out a few simple
 do&rsquo;s and don&rsquo;ts that will help make your software accessible to people who are
 neurodivergent, use screen readers, are dyslexic, have physical or motor
-challenges, or are hard of hearing. You can also use tools like <a href="https://wave.webaim.org/">WebAIM WAVE</a> to
+challenges, or are hard of hearing. You can also use tools like
+<a href="https://wave.webaim.org/">WebAIM WAVE</a> to
 check for common problems, most of which are easy to fix. It only takes a few
 minutes, it&rsquo;s the compassionate thing to do, and almost every change you make
 will also make the software easier to test and maintain.</p>
@@ -478,6 +486,7 @@ next chapter: security.</p>
 in mind makes packaging a lot easier.  In Python, for example, a package
 consists of one or more Python source files in a specific directory structure
 like this:</p>
+<div class="language-txt" title="package_structure.txt">
 <div class="highlight"><pre><span></span><code>pkg_name
 +-- pkg_name
 |   +-- module1.py
@@ -485,9 +494,11 @@ like this:</p>
 +-- README.md
 +-- setup.py
 </code></pre></div>
+</div>
 <p>The top-level directory is named after the package.  It contains a directory
 that is also named after the package, which contains the package&rsquo;s source files.
 To turn this into an installable package, we put the following in <code>setup.py</code>:</p>
+<div class="language-py" title="setup.py">
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 
 <span class="n">setup</span><span class="p">(</span>
@@ -496,14 +507,15 @@ To turn this into an installable package, we put the following in <code>setup.py
     <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.1.0&#39;</span><span class="p">,</span>
     <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pkg_name&#39;</span><span class="p">])</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>The <code>name</code> and <code>author</code> fields are self-explanatory; the <code>packages</code> field lists
 the sub-directories containing packages (there may actually be several), and
 we&rsquo;ll talk about versioning in <a href="../delivery/">Chapter&nbsp;20</a>.  Once you have this in
 place, you can run:</p>
+<div class="language-sh" title="pip_install_dot.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>.
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>to create a package.</p>
 <h2>Find Your Current Comfort Zone</h2>
 <p>When we use a low-level language, we incur the cognitive load of assembling

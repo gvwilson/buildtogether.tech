@@ -1,0 +1,6 @@
+pkg_name
++-- pkg_name
+|   +-- module1.py
+|   +-- module2.py
++-- README.md
++-- setup.py

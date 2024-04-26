@@ -136,9 +136,11 @@ activity. Adding two more commands to set things up produces a toolkit that uses
 Git as a file backup system.</p>
 <p>The first step is to make sure that Git knows who
 we are by telling it our name and email address:</p>
+<div class="language-sh" title="git_config.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Peggy Springsteen&quot;</span>
 $<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;peggy@wolframhart.org&quot;</span>
 </code></pre></div>
+</div>
 <p>Breaking this down:</p>
 <ul>
 <li>
@@ -184,17 +186,21 @@ won&rsquo;t use <code>git init</code>. Instead, you will use <code>git clone</co
 project&rsquo;s URL to get a local copy called a <a class="gl-ref" href="../glossary/#gl:clone_git" markdown="1">clone</a>.
 For example, if you want a clone of this book, you can do
 this:</p>
+<div class="language-sh" title="git_clone.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/gvwilson/buildtogether.tech.git
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>This will create a directory with the same name as the project, create a <code>.git</code>
 sub-directory inside it, and download the project&rsquo;s history so that you can
 start work.</p>
 <p>Regardless of how you create your repository, you can use <code>git log</code> to look at
 its history. If I run this command right now for
 this book, I get:</p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>log
+<div class="language-sh" title="git_log.sh">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>log
 </code></pre></div>
+</div>
+<div class="language-out" title="git_log.out">
 <div class="highlight"><pre><span></span><code>commit d4351c4f093f60d03f303737b66b28ebb6b9ed45
 Author: Greg Wilson &lt;gvwilson@third-bit.com&gt;
 Date:   Fri Feb 19 09:48:37 2021 -0500
@@ -213,8 +219,9 @@ Date:   Wed Feb 17 20:48:04 2021 -0500
 
     Moving the discussion of code review into its own chapter.
 
-...
-</code></pre></div></p>
+…
+</code></pre></div>
+</div>
 <p>Each entry has:</p>
 <ul>
 <li>
@@ -243,9 +250,10 @@ Date:   Wed Feb 17 20:48:04 2021 -0500
 <p>All right: what are <a class="gl-ref" href="../glossary/#gl:commit" markdown="1">commits</a> and where do they come from? A commit is a snapshot
 of the project at a particular moment in time; we create them using a command
 like:</p>
+<div class="language-sh" title="git_commit_with_message.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Made the status bar display the user name&quot;</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>Here, <code>commit</code> is the verb and the <code>-m</code> (short for &ldquo;message&rdquo;) option is followed
 by the comment we want to save in the log.</p>
 <div class="callout">
@@ -263,9 +271,10 @@ One of the many reasons you should interact with Git through a GUI is to avoid t
 </div>
 <p>Before we run <code>git commit</code>, though, we need to tell Git which files we want to
 save in the commit, which we do using <code>git add</code>:</p>
+<div class="language-sh" title="git_add.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>version-control.md<span class="w"> </span>_data/glossary.yml
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>One way to think about
 this is that <code>git add</code> puts things in a box to be shipped, while <code>git
 commit</code> actually sends the package. Git requires us to do this in two steps
@@ -281,6 +290,7 @@ committing.</p>
 files by putting their names, or patterns that match multiple names, in a
 file called <code>.gitignore</code>.  For example, the <code>.gitignore</code> file for this project
 includes:</p>
+<div class="language-txt" title="git_ignore.txt">
 <div class="highlight"><pre><span></span><code>*.pyc
 *~
 .DS_Store
@@ -290,6 +300,7 @@ includes:</p>
 __pycache__
 _site
 </code></pre></div>
+</div>
 <p>Be careful not to put files containing passwords or <a class="gl-ref" href="../glossary/#gl:api_key" markdown="1">API
 keys</a> for web services into version control: even if the repository is
 private now, it might be public in future, or the team might grow to include
@@ -298,8 +309,11 @@ someone who shouldn&rsquo;t have access (<a href="../security/">Chapter&nbsp;12<
 <p>We can keep track of which changes haven&rsquo;t yet been added and which ones have
 using <code>git status</code>. If I run this command
 right now in this book&rsquo;s project I get:</p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>status
+<div class="language-sh" title="git_status.sh">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>status
 </code></pre></div>
+</div>
+<div class="language-out" title="git_status.out">
 <div class="highlight"><pre><span></span><code>On branch main
 Your branch is up to date with &#39;origin/main&#39;.
 
@@ -313,8 +327,8 @@ Changes not staged for commit:
   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
   (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
     modified:   version-control.md
-</code></pre></div></p>
-<!-- continue -->
+</code></pre></div>
+</div>
 <p>The first paragraph titled &ldquo;Changes to be committed&rdquo; tells me which files I have
 asked Git to save using <code>git add</code>. The second paragraph, &ldquo;Changes not staged for
 commit&rdquo;, shows that I have modified <code>version-control.md</code> (this chapter) since I
@@ -327,9 +341,10 @@ original motivation for version control systems, and is still one of the main
 reasons people use them. For example, if I want to get the version of this file
 from two days ago, I can use <code>git log</code> to find the commit ID <code>2be70844</code>, and
 then run:</p>
+<div class="language-sh" title="git_restore.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>restore<span class="w"> </span>--source<span class="w"> </span>2be70844<span class="w"> </span>version-control.md
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>I can also count backward from where I am now.  The most recent commit has the
 special symbolic name <code>HEAD</code>; the expression <code>HEAD~1</code>
 means &ldquo;the one before it&rdquo;, while <code>HEAD~2</code> goes back two commits and so
@@ -342,12 +357,15 @@ created the repository by cloning something on GitHub, then Git will
 automatically have created a bookmark called a
 <a class="gl-ref" href="../glossary/#gl:remote_git" markdown="1">remote</a> that points
 at the original repository. I can get a list of remotes like this:</p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
+<div class="language-sh" title="git_remote.sh">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
 </code></pre></div>
+</div>
+<div class="language-out" title="git_remote.out">
 <div class="highlight"><pre><span></span><code>origin  https://github.com/gvwilson/buildtogether.tech.git (fetch)
 origin  https://github.com/gvwilson/buildtogether.tech.git (push)
-</code></pre></div></p>
-<!-- continue -->
+</code></pre></div>
+</div>
 <p>The <code>-v</code> option (short for &ldquo;verbose&rdquo;) tells Git to print more than just the
 remote&rsquo;s name. The remote itself is called <code>origin</code>, and Git lists two URLs for
 it because in theory you can download (or &ldquo;fetch&rdquo;) from one and upload (or
@@ -357,17 +375,20 @@ once needed this feature.)</p>
 backup tool like <a href="https://dropbox.com">Dropbox</a> is that Git <em>doesn&rsquo;t</em> automatically
 synchronize local changes to the remote repository.  If I want to save everything I&rsquo;ve done locally on
 GitHub, I have to push them explicitly:</p>
+<div class="language-sh" title="git_push_origin_main.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>The verb is <code>push</code>; the word <code>origin</code> identifies where I want to send things,
 and the word <code>main</code> identifies the branch I&rsquo;m on.  We&rsquo;ll discuss branches in the
 next section, but for now, you can run <code>git branch</code> to see which ones you have
 and which one you&rsquo;re working in.</p>
 <p>The counterpart of <code>git push</code> is <code>git pull</code>. It downloads changes from the
 remote repository and merges them into your local copy:</p>
+<div class="language-sh" title="git_pull_origin_main.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
+</div>
 <p>Pushing and pulling changes allows you and your teammates to synchronize your
 work. They&rsquo;re also very useful operations if you&rsquo;re working on your own and
 using two or more computers (such as a personal laptop and your school&rsquo;s
@@ -391,39 +412,54 @@ separate tasks in parallel.  Each branch is like a parallel timeline: changes ma
 to one branch have no effect on other branches unless and until we explicitly merge
 them.</p>
 <p>We can see what branches exist in a repository like this:</p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch
+<div class="language-sh" title="git_branch.sh">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch
 </code></pre></div>
+</div>
+<div class="language-out" title="git_branch.out">
 <div class="highlight"><pre><span></span><code>* main
-</code></pre></div></p>
+</code></pre></div>
+</div>
 <p>When we initialize a repository, Git automatically creates a branch called
 <code>master</code>; most people now rename this to <code>main</code> by running:</p>
+<div class="language-sh" title="git_branch_rename.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>immediately after running <code>git init</code>.  The <code>main</code>
 branch is usually considered the &ldquo;official&rdquo; version of the repository,
 i.e., the version of the project that should be graded or published for other
 people to use.  The asterisk <code>*</code> indicates that it is currently active, i.e.,
 that all changes we make will take place in this branch by default.</p>
 <p>To create a new branch called <code>homework3</code> we run:</p>
+<div class="language-sh" title="git_branch_create.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>homework3
 </code></pre></div>
+</div>
 <p>The name of the branch should indicate what it&rsquo;s for, just like the names of
 files and variables.  We can check that the branch exists by running <code>git
 branch</code> again:</p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch
+<div class="language-sh" title="git_branch_2.sh">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch
 </code></pre></div>
+</div>
+<div class="language-out" title="git_branch_2.out">
 <div class="highlight"><pre><span></span><code>* main
   homework3
-</code></pre></div></p>
+</code></pre></div>
+</div>
 <p>Our branch is there, but the <code>*</code> shows that we are still in the <code>main</code> branch.
 To switch to our new branch we use the <code>checkout</code> command:</p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>homework3
+<div class="language-sh" title="git_checkout.sh">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>homework3
 $<span class="w"> </span>git<span class="w"> </span>branch
 </code></pre></div>
+</div>
+<div class="language-out" title="git_checkout.out">
 <div class="highlight"><pre><span></span><code>  main
 * homework3
-</code></pre></div></p>
+</code></pre></div>
+</div>
 <p>We haven&rsquo;t made any changes since switching to the <code>homework3</code> branch, so at
 this point <code>main</code> and <code>homework3</code> are at the same point in the repository&rsquo;s
 history.  Commands like <code>ls</code> and <code>git log</code> therefore show that the files and
@@ -444,13 +480,17 @@ early start on homework 4, we can create a new branch from <code>main</code> cal
 doesn&rsquo;t change the source branch, but once it&rsquo;s done, all of the changes made
 there are in the destination branch.</p>
 <p>To see what the differences are between two branches, we use <code>git diff</code> with those branches&rsquo; names:</p>
+<div class="language-sh" title="git_diff_branch.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>homework3..main
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>More generally, we can use <code>git diff</code> to compare any two states of the
 repository, including old versions with current ones:</p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>HEAD~3..HEAD
+<div class="language-sh" title="git_diff_head.sh">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>HEAD~3..HEAD
 </code></pre></div>
+</div>
+<div class="language-out" title="git_diff_head.out">
 <div class="highlight"><pre><span></span><code>diff --git a/bin/html2tex.py b/bin/html2tex.py
 index 4c756f4..10efe1c 100755
 --- a/bin/html2tex.py
@@ -471,8 +511,8 @@ index 4c756f4..10efe1c 100755
 +            accum.append(&#39;\n\\appendix\n&#39;)
      result = &#39;&#39;.join(accum)
      display(options, config, result)
-</code></pre></div></p>
-<!-- continue -->
+</code></pre></div>
+</div>
 <p>The output marks additions with a <code>+</code> and deletions with a <code>-</code>. A line that has
 changed is shown as a deletion followed by an addition, and the lines marked
 with <code>@@</code> show where in the file the change occurred.</p>
@@ -488,34 +528,45 @@ If you are looking for projects to work on that people will actually use, these
 would be good ones.</p>
 </div>
 <p>Once we&rsquo;re sure we actually want to merge changes, we do so like this:</p>
+<div class="language-sh" title="git_merge.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>homework3<span class="w"> </span>main
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>Git automatically creates a new commit to represent the merge.  If we now run
 <code>git diff main..homework3</code>, Git doesn&rsquo;t print anything because there aren&rsquo;t any
 differences to show.</p>
 <p>After we merge the changes from <code>homework3</code> into <code>main</code> there is no need to keep
 the <code>homework3</code> branch, so we can delete it:</p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>homework3
+<div class="language-sh" title="git_branch_delete.sh">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>homework3
 </code></pre></div>
+</div>
+<div class="language-out" title="git_branch_delete.out">
 <div class="highlight"><pre><span></span><code>Deleted branch homework3 (was 1577404).
-</code></pre></div></p>
+</code></pre></div>
+</div>
 <p>Merging <code>homework3</code> into <code>main</code> went smoothly, but if we are going to use
 branches, we must learn how to merge <a class="gl-ref" href="../glossary/#gl:conflict_git" markdown="1">conflicts</a>.  These occur when a line has been changed
 in different ways in two branches or when a file has been deleted in one branch
 but edited in the other.</p>
 <p>If the file <code>README.md</code> has been changed in both <code>main</code> and <code>homework4</code>,
 <code>git diff</code> will show the conflict:</p>
+<div class="language-sh" title="git_diff_conflict.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>homework4..main
 </code></pre></div>
+</div>
 <p>When we try to merge <code>homework4</code> into <code>main</code>, Git doesn&rsquo;t know which of these
 changes to keep:</p>
+<div class="language-sh" title="git_merge_conflict.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>homework4<span class="w"> </span>main
 </code></pre></div>
+</div>
 <p>After we run this command, Git has put both sets of changes into <code>README.md</code>,
 but has marked which came from where:</p>
+<div class="language-sh" title="cat_readme.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>README.md
 </code></pre></div>
+</div>
 <p>The lines from <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> to <code>=======</code> are what was in <code>main</code>, while the
 lines from there to <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; docs</code> show what was in <code>homework4</code>.  If there were
 several conflicting regions in the same file, Git would mark each one this way.
@@ -526,16 +577,22 @@ and Git GUIs will help you view and edit these regions.</p>
 <code>homework4</code>, edit this part of the file to combine them, or write something new.
 Whatever we do, we must remove the <code>&gt;&gt;&gt;</code>, <code>===</code>, and <code>&lt;&lt;&lt;</code> markers.  Once we are
 done, we can add the file and commit the change like we would any other edit:</p>
+<div class="language-sh" title="git_resolve.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
 $<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Merging README additions&quot;</span>
 </code></pre></div>
+</div>
 <p>Our branch&rsquo;s history will now show a single sequence of commits with the <code>main</code>
 changes on top of the earlier <code>homework4</code> changes:</p>
+<div class="language-sh" title="git_log_oneline.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span>
 </code></pre></div>
+</div>
 <p>If we want to see what happened, we can add the <code>--graph</code> option to <code>git log</code>:</p>
+<div class="language-sh" title="git_log_graph.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span>
 </code></pre></div>
+</div>
 <p>At this point we can delete the <code>homework</code> branch or switch back to it and do
 some more work.  Each time we switch to it, we merge changes <em>from</em> <code>main</code>
 <em>into</em> <code>homework4</code>, do our editing (while switching back to <code>main</code> or other
@@ -547,9 +604,10 @@ branches as needed to work on the code), and then merge <em>from</em> <code>home
 consecutive commits into one.  This is called
 <a class="gl-ref" href="../glossary/#gl:rebase_git" markdown="1">rebasing</a>,
 and can be done using:</p>
+<div class="language-sh" title="git_rebase.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>START
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>where <code>START</code> identifies the commit <em>before</em> the ones you want to start merging
 (i.e., the last one <em>not</em> to modify). Rebasing can go wrong in a lot of
 confusing ways, particularly if you have merged changes from another branch into

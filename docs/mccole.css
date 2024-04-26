@@ -115,6 +115,11 @@ code {
     font-size: var(--size-code);
 }
 
+/* Callouts */
+div.callout {
+    background-color: var(--gray-faint);
+}
+
 /* Generic output */
 div[class*='language'] {
     border-left: solid var(--border-heavy);

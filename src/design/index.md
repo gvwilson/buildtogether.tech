@@ -272,18 +272,8 @@ For example, suppose that we are simulating a hospital emergency room. We could
 write the function that simulates someone's response to a cardiac arrest like
 this:
 
-```py
-def handle_cardiac_arrest(all_actors):
-    for actor in all_actors:
-        if actor.kind == 'nurse':
-            ...do something...
-        elif actor.kind == 'doctor':
-            ...do something else...
-        else:
-            ...do some default action...
-```
+[%inc switch.py %]
 
-<!-- continue -->
 (The term [%g actor "actor" %] is often used in simulations to mean
 "anything that can take actions".) If we want to add another kind of actor, we
 need to modify this code to add another `elif` clause, and if we want to add
@@ -293,37 +283,17 @@ have an `if` or `elif` for kind of actor.
 A better design is to create a base class that defines a generic behavior for
 all actors:
 
-```py
-class Actor:
-    def __init__(...):
-        ...do generic setup...
-    def handle_cardiac_arrest(self):
-        pass # by default, don't do anything
-```
+[%inc actor_base.py %]
 
-<!-- continue -->
 and then derive one class for each type of actor:
 
-```py
-class Nurse(Actor):
-    def handle_cardiac_arrest(self):
-        ...do something...
-
-class Doctor(Actor):
-    def handle_cardiac_arrest(self):
-        ...do something else...
-```
+[%inc actor_concrete.py %]
 
 We can then ask each actor to handle the cardiac arrest however they're supposed
 to:
 
-```py
-def handle_cardiac_arrest(all_actors):
-    for actor in all_actors:
-        actor.handle_cardiac_arrest()
-```
+[%inc switch_class.py %]
 
-<!-- continue -->
 If we want to add another kind of actor, we derive another class from `Actor`
 and override methods to give it the behaviors we want: the general
 `handle_cardiac_arrest` function doesn't need to change.
@@ -334,17 +304,7 @@ override that method for the specific kinds of actors that have different
 behaviors. A more sophisticated design would define classes to represent events
 and select a method to call based on the event:
 
-```py
-class Actor:
-    def __init__(...):
-        ...do generic setup...
-    def handle_event(self, event):
-        if self.has_handler_for(event):
-            handler = self.get_handler_for(event)
-            handler(event)
-        else:
-            self.default_action(event)
-```
+[%inc handle_event.py %]
 
 This design makes it harder to figure out exactly who's doing what, but ensures
 that we can add new actors *and* new events without having to go back and change
@@ -402,7 +362,8 @@ The best short guide I have found for accessible design is [this set of posters
 from the UK Home Office][uk-home-office-a11y]. Each one lays out a few simple
 do's and don'ts that will help make your software accessible to people who are
 neurodivergent, use screen readers, are dyslexic, have physical or motor
-challenges, or are hard of hearing. You can also use tools like [%i "accessibility!WebAIM WAVE" "WebAIM WAVE" %][WebAIM WAVE][webaim-wave][%/i%] to
+challenges, or are hard of hearing. You can also use tools like
+[%i "accessibility!WebAIM WAVE" "WebAIM WAVE" %][WebAIM WAVE][wave][%/i%] to
 check for common problems, most of which are easy to fix. It only takes a few
 minutes, it's the compassionate thing to do, and almost every change you make
 will also make the software easier to test and maintain.
@@ -479,40 +440,21 @@ in mind makes packaging a lot easier.  In Python, for example, a package
 consists of one or more Python source files in a specific directory structure
 like this:
 
-```txt
-pkg_name
-+-- pkg_name
-|   +-- module1.py
-|   +-- module2.py
-+-- README.md
-+-- setup.py
-```
+[%inc package_structure.txt %]
 
 The top-level directory is named after the package.  It contains a directory
 that is also named after the package, which contains the package's source files.
 To turn this into an installable package, we put the following in `setup.py`:
 
-```py
-from setuptools import setup
+[%inc setup.py %]
 
-setup(
-    name='pkg_name',
-    author='Some Name',
-    version='0.1.0',
-    packages=['pkg_name'])
-```
-
-<!-- continue -->
 The `name` and `author` fields are self-explanatory; the `packages` field lists
 the sub-directories containing packages (there may actually be several), and
 we'll talk about versioning in [%x delivery %].  Once you have this in
 place, you can run:
 
-```sh
-$ pip install .
-```
+[%inc pip_install_dot.sh %]
 
-<!-- continue -->
 to create a package.
 
 ## Find Your Current Comfort Zone

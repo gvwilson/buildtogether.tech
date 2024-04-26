@@ -177,7 +177,6 @@ common errors in Python programs were (in order):</p>
 <li>SyntaxError: unexpected EOF while parsing</li>
 <li>IndentationError: unindent does not match any outer indentation level</li>
 </ol>
-<!-- continue -->
 <p>while the most common in Java were:</p>
 <ol>
 <li>cannot find symbol - variable NAME</li>
@@ -208,7 +207,6 @@ objects match.</dd>
 self-referential (head points to head); circular sub-structure; depth
 greater than one.</dd>
 </dl>
-<!-- continue -->
 <p>As <a href="../git-team/">Chapter&nbsp;7</a> said, the longer list in
 <span class="bib-ref">[<a class="bib-ref" href="../bib/#Stegeman2014">Stegeman2014</a>, <a class="bib-ref" href="../bib/#Stegeman2016">Stegeman2016</a>]</span> can be adapted for more advanced
 students&rsquo; programs.</p>
@@ -261,12 +259,7 @@ particular changes.</dd>
 <dt>Symbolic execution.</dt>
 <dd>Rather than a program on a particular set of inputs, a tool can simulate
 execution to build constraints, then check if those constraints can be
-satisfied. For example, if a program contains the statements:
-<div class="highlight"><pre><span></span><code><span class="n">longest</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">all_names</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">longest</span><span class="p">):</span>
-        <span class="n">longest</span> <span class="o">=</span> <span class="n">name</span>
-</code></pre></div>
+satisfied. For example, if a program contains the statements shown below,
 then symbolic execution can determine that the final value of <code>longest</code> is
 either the empty string or the first string in the list that belongs to the
 set containing the longest strings in the list.  The complexity of that
@@ -274,6 +267,13 @@ sentence is a sign of how complex symbolic execution can be, but when
 combined with the modeling tools discussed in <a href="../tooling/">Chapter&nbsp;16</a>, this
 approach can find bugs that would otherwise escape detection for years.</dd>
 </dl>
+<div class="language-py" title="find_longest.py">
+<div class="highlight"><pre><span></span><code><span class="n">longest</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">all_names</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">longest</span><span class="p">):</span>
+        <span class="n">longest</span> <span class="o">=</span> <span class="n">name</span>
+</code></pre></div>
+</div>
 <p>Most <a href="https://program-repair.org/">program repair tools</a> are still research prototypes, but
 one particularly interesting use case is repairing student programs as a way of
 giving feedback on assignments <span class="bib-ref">[<a class="bib-ref" href="../bib/#Hu2019">Hu2019</a>]</span>.  If you are looking for an

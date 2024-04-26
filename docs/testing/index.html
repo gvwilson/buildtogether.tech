@@ -198,12 +198,14 @@ changing the order of attributes within a tag, will break string comparison.</p>
 <p>A better strategy is to add unique IDs to significant elements in the HTML page,
 and only check the contents of those elements. For example, if we&rsquo;re testing
 login, then somewhere on the page there ought to be an element like this:</p>
+<div class="language-html" title="current_user.html">
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;currentuser&quot;</span><span class="p">&gt;</span>Logged in as <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>marian<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
 (<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.example.org/logout&quot;</span><span class="p">&gt;</span>logout<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 |
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.example.org/preferences&quot;</span><span class="p">&gt;</span>preferences<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>)
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
+</div>
 <p>We can find that pretty easily with a <a class="gl-ref" href="../glossary/#gl:css_selector" markdown="1">CSS selector</a> that looks for a <code>div</code> with the ID
 <code>currentuser</code>.  We can then move the <code>div</code> around without breaking any of our
 tests; if we were a little more polite about formatting its internals (i.e., if
@@ -233,6 +235,7 @@ and also makes tests much faster (since in-memory operations are thousands of
 times faster than operations that touch the disk).</p>
 <p>A mock object can also be designed to give pre-programmed responses to just a
 handful of specific requests:</p>
+<div class="language-py" title="mock_http_server.py">
 <div class="highlight"><pre><span></span><code><span class="n">INDEX_PAGE</span> <span class="o">=</span> <span class="s1">&#39;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Index Page&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&#39;</span>
 <span class="n">USER_PAGE</span> <span class="o">=</span> <span class="s1">&#39;&lt;html&gt;&lt;body&gt;&lt;h1&gt;User Page&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&#39;</span>
 
@@ -244,7 +247,7 @@ handful of specific requests:</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">UrlError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;unhandled URL &quot;</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>The strength of the pre-programmed approach is that if anything ever sends an
 unexpected URL, the failure will be obvious.  The weakness is the tedium of
 writing out all the cases, though in most testing scenarios there are fewer than
@@ -294,14 +297,15 @@ when the application is slowing down and do something about it.</p>
 <p>The simplest kind of performance
 testing is simply to measure how much time elapses between the start and
 end of a test. You can do this manually:</p>
+<div class="language-py" title="manual_timing.py">
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="k">def</span> <span class="nf">test_something</span><span class="p">():</span>
     <span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-    <span class="o">...</span><span class="n">run</span> <span class="n">the</span> <span class="n">test</span><span class="o">...</span>
+    <span class="c1"># …run the test…</span>
     <span class="n">elapsed</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">microsecond</span> <span class="o">-</span> <span class="n">start</span><span class="o">.</span><span class="n">microsecond</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>but most test frameworks will do it for you. If you are using <code>pytest</code>, for
 example, the <code>--durations</code> will report the slowest tests or the running time for
 all tests. If you want to average over several runs (which you should, because
@@ -343,14 +347,17 @@ your code aren&rsquo;t being tested?  To find out, you can check the <a class="g
 possible paths through the code that the tests are actually exercising.</p>
 <p>If you are using Python, you can check your tests&rsquo; coverage with the <code>coverage</code>
 library.  The command:</p>
+<div class="language-sh" title="run_coverage.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>coverage<span class="w"> </span>run<span class="w"> </span>-m<span class="w"> </span>pytest
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>doesn&rsquo;t display any information of its own, since mixing that in with our
 program&rsquo;s output would be confusing.  Instead, it puts coverage data in a file
 called <code>.coverage</code> in the current directory.  To display that data, you run:</p>
+<div class="language-sh" title="run_coverage_report.sh">
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>coverage<span class="w"> </span>report<span class="w"> </span>-m
 </code></pre></div>
+</div>
 <p>Its output shows you what percentage of your program was and wasn&rsquo;t executed.
 You can get a more complete report by running <code>coverage html</code> at the command
 line and opening the file <code>htmlcov/index.html</code>, which displays a colorized

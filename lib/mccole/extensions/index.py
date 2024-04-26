@@ -7,9 +7,8 @@ import util
 
 
 @shortcodes.register("i", "/i")
-def index_ref(pargs, kwargs, context, content):
+def index_ref(pargs, kwargs, node, content):
     """Format index shortcode."""
-    # FIXME
     return content
 
 
@@ -37,7 +36,7 @@ def make_index(pargs, kwargs, node):
     # Format index list.
     links = [
         _make_links(key, slugs, ordering)
-        for key, slugs in sorted(lookup.items())
+        for key, slugs in sorted(lookup.items(), key=lambda x: x[0].lower())
     ]
     return "\n".join([
         '<ul class="ix-list">',
@@ -57,4 +56,6 @@ def _make_links(key, slugs, ordering):
         f'<a class="ix-ref" ix-ref="{key}" href="{path}">{title}</a>'
         for (slug, path, title) in triples
     )
+    if "!" in key:
+        key = f"…{key.split('!')[-1]}"
     return f"<li>{key}: {result}</li>"

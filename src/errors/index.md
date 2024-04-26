@@ -40,62 +40,23 @@ We often want to know exactly what went wrong, so Python and other languages
 store information about the error in an object (which is also called an
 exception).  We can [%i "exception!handling" "catch exception" %][%g catch_exception "catch" %][%/i%] an exception and inspect it as follows:
 
-```py
-for denom in [-5, 0, 5]:
-    try:
-        result = 1/denom
-        print(f'1/{denom} == {result}')
-    except Exception as error:
-        print(f'{denom} has no reciprocal: {error}')
-```
-```out
-1/-5 == -0.2
-0 has no reciprocal: division by zero
-1/5 == 0.2
-```
+[%inc catch_exception.py %]
+[%inc catch_exception.out %]
 
 Most languages also allow us to specify what kind of exception we want to catch.
 For example, we can write code to handle out-of-range indexing and division by
 zero in Python separately:
 
-```py
-numbers = [-5, 0, 5]
-for i in [0, 1, 2, 3]:
-    try:
-        denom = numbers[i]
-        result = 1/denom
-        print(f'1/{denom} == {result}')
-    except IndexError as error:
-        print(f'index {i} out of range')
-    except ZeroDivisionError as error:
-        print(f'{denom} has no reciprocal: {error}')
-```
-```out
-1/-5 == -0.2
-0 has no reciprocal: division by zero
-1/5 == 0.2
-index 3 out of range
-```
+[%inc specify_exception.py %]
+[%inc specify_exception.out %]
 
-So where do exceptions come from?  The answer is that programmers can [%i "exception!raise" "raise exception" %][%g raise_exception "raise" %][%/i%] them
+So where do exceptions come from?
+The answer is that programmers can [%i "exception!raise" "raise exception" %][%g raise_exception "raise" %][%/i%] them
 explicitly:
 
-```py
-for number in [1, 0, -1]:
-    try:
-        if number < 0:
-            raise ValueError(f'no negatives: {number}')
-        print(number)
-    except ValueError as error:
-        print(f'exception: {error}')
-```
-```out
-1
-0
-exception: no negatives: -1
-```
+[%inc raise_exception.py %]
+[%inc raise_exception.out %]
 
-<!-- continue -->
 We can define our own exception types, and many libraries do, but the built-in
 types are enough to cover common cases.
 
@@ -146,16 +107,8 @@ true, the program does nothing; if it's false, it halts and prints a
 user-defined error message.  For example, this Python code halts as soon as the
 loop encounters a negative word frequency:
 
-```py
-frequencies = [13, 10, 2, -4, 5, 6, 25]
-total = 0.0
-for freq in frequencies[:5]:
-    assert freq >= 0.0, 'Word frequencies must be non-negative'
-    total += freq
-print('total frequency of first 5 words:', total)
-```
+[%inc assert.py %]
 
-<!-- continue -->
 Programs intended for widespread use are typically full of assertions: 10--20%
 of the code they contain is there to check that the other 80--90% is working
 correctly.
@@ -164,19 +117,13 @@ correctly.
 
 This is not a useful error message:
 
-```out
-OSError: Something went wrong, try again.
-```
+[%inc useless_error_msg.txt %]
 
-<!-- continue -->
 It doesn't provide any information on what went wrong, so it is difficult for
 the user to know what to change next time.  A slightly better message is:
 
-```out
-OSError: Unsupported file type.
-```
+[%inc better_error_msg.txt %]
 
-<!-- continue -->
 This message tells us the problem is with the type of file we're trying to
 process, but it still doesn't tell us what file types are supported, which means
 we have to rely on guesswork or read the source code.  Telling the user that a
@@ -186,11 +133,8 @@ the file, this message could confuse someone who has comma-separated values
 saved in a `.txt` file.  An even [%i "error message!writing helpful" %]better
 message[%/i%] would therefore be:
 
-```out
-OSError: File must end in .csv
-```
+[%inc helpful_error_msg.txt %]
 
-<!-- continue -->
 This message tells us exactly what the criteria are to avoid the error.
 
 Error messages are often the first thing people read about a piece of software,
@@ -233,58 +177,26 @@ Use a consistent vocabulary.
 That last suggestion deserves a little elaboration.  Most people write error
 messages directly in their code:
 
-```py
-if fname[-4:] != '.csv':
-    raise OSError(f'{fname}: File must end in .csv')
-```
+[%inc error_msg_in_code.py %]
 
-<!-- continue -->
 A better approach is to put all the error messages in a [%i "error
 message!internationalizing" %]dictionary[%/i%]:
 
-```py
-ERRORS = {
-    'not_csv_suffix' : '{fname}: File must end in .csv',
-    'config_corrupted' : '{config_name} corrupted',
-    # ...more error messages...
-}
-```
+[%inc error_msg_in_dict.py %]
 
-<!-- continue -->
 and then only use messages from that dictionary:
 
-```py
-if fname[-4:] != '.csv':
-    raise OSError(ERRORS['not_csv_suffix'].format(fname=fname))
-```
+[%inc error_msg_use_dict.py %]
 
 Doing this makes it much easier to ensure that messages are consistent.  It also
 makes it much easier to give messages in the user's preferred language:
 
-```py
-ERRORS = {
-  'en' : {
-    'not_csv_suffix' : '{fname}: File must end in .csv',
-    'config_corrupted' : '{config_name} corrupted',
-    # ...more error messages in English...
-  },
-  'fr' : {
-    'not_csv_suffix' : '{fname}: Doit se terminer par .csv',
-    'config_corrupted' : f'{config_name} corrompu',
-    # ...more error messages in French...
-  }
-  # ...other languages...
-}
-```
+[%inc error_msg_dictionary.py %]
 
-<!-- continue -->
 The error report is then looked up and formatted as:
 
-```py
-ERRORS[user_language]['not_csv_suffix'].format(fname=fname)
-```
+[%inc error_msg_fmt.py %]
 
-{: continue}
 where `user_language` is a two-letter code for the user's preferred language.
 
 ## Logging
@@ -293,48 +205,18 @@ Something else you can design into your system to make your life easier later on
 is [%i "logging" %][%g logging "logging" %][%/i%]. Instead of writing `print`
 statements like this:
 
-```py
-def extrapolate(basis, case):
-    print "entering extrapolate..."
-    trials = count_basis_width(basis)
-    if not trials:
-        print "...no trials!"
-        raise InvalidDataException("no trials")
-    print "...running", len(trials), "trials"
-    result = run_trial(trials[0])
-    for t in range(1, len(trials)):
-        result = max(result, run_trial(trials[i]))
-    print "...exiting extrapolate with", result
-```
+[%inc print_msg.py %]
 
-{: continue}
 you use your language's logging library:
 
-```py
-import logging
-
-def extrapolate(basis, case):
-    logging.debug("entering extrapolate...")
-    trials = count_basis_width(basis)
-    if not trials:
-        logging.warning("...no trials!")
-        raise InvalidDataException("no trials")
-    logging.debug(f"...running {len(trials)} trials")
-    result = run_trial(trials[0])
-    for t in range(1, len(trials)):
-        result = max(result, run_trial(trials[i]))
-    logging.debug(f"...exiting extrapolate with {result}")
-```
+[%inc log_msg.py %]
 
 At first glance this is just more verbose. The benefit, though, is that your
 messages are now divided into categories. If you want to get all the messages
 you put:
 
-```py
-logging.basicConfig(level=logging.DEBUG)
-```
+[%inc log_config.py %]
 
-<!-- continue -->
 somewhere near the start of your program. The `DEBUG` option identifies the
 lowest-level messages in your program—the ones you probably only want to see
 when you're trying to figure out what's gone wrong. In order, the more important
@@ -342,11 +224,8 @@ when you're trying to figure out what's gone wrong. In order, the more important
 `WARNING`, `ERROR`, and `CRITICAL`. If you only want messages at the `WARNING`
 level and above, you change the configuration to:
 
-```py
-logging.basicConfig(level=logging.WARNING)
-```
+[%inc log_warning.py %]
 
-<!-- continue -->
 so that `DEBUG` and `INFO` messages aren't printed.
 
 A logging library allows you to control how much your program tells you about
@@ -363,11 +242,7 @@ They also let you control where your messages are sent. By default, they go to
 the screen, but you can send them to a file instead simply by changing the
 configuration:
 
-```py
-logging.basicConfig(level=logging.ERROR,
-                    filename="/tmp/mylog.txt",
-                    filemode="append")
-```
+[%inc log_basic_config.py %]
 
 This is handy if it takes your program a while to get to the point where the
 error occurs. It's also handy if you don't know whether your program contains an

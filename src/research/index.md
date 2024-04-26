@@ -191,13 +191,8 @@ interpretation flow graph[%/i%] (which is the set of all paths once possible
 data values are taken into account).  To make this more concrete, the control
 flow graph for:
 
-```py
-01: x = 0
-02: if x > 0:
-03:     x = 1
-```
+[%inc flow_graph.py %]
 
-<!-- continue -->
 includes the statement on line 3, but the abstract interpretation flow graph
 doesn't, because there's no way it could ever be executed given the possible
 value(s) of `x`.  Code paths that are never executed signal
@@ -391,7 +386,6 @@ could look at which outcomes were reproducible and which were not:
 -   Low reproducibility: firm price, planned schedule, schedule overrun,
     reliability, and maintainability
 
-<!-- continue -->
 Putting something in the "low" category here doesn't mean that it was uniformly
 poor.  Instead, it means that there was wide variation, i.e., that results were
 unpredictable.  Their results match software engineering folklore, and are a

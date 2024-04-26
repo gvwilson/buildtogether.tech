@@ -16,7 +16,6 @@ Git repository in one of two ways [%b Irving2021 %]:
     the main repository to create one that they own,
     do their work in that, and then submit their changes to the main repository.
 
-<!-- continue -->
 The first approach works well for teams of up to half a dozen people, so we will
 focus on it. If the project is larger, or if contributors are worried that they
 might make a mess in the `main` branch, the second approach is safer.
@@ -47,47 +46,19 @@ working directory (initially `~`, meaning "home directory") to make it easier to
 follow what's happening.  First, she updates her desktop repository to make sure
 she is starting with the most recent set of files:
 
-```sh
-amira:~ $ cd bst
-amira:~/bst $ git pull origin main
-amira:~/bst $ ls
-```
-```out
-LICENSE.md   README.md    hw1/    hw2/    hw3/    hw4/
-```
+[%inc git_pull.sh %]
+[%inc git_pull.out %]
 
 Amira creates a new directory for homework 5 and adds a copy of the assignment spec:
 
-```sh
-amira:~/bst $ mkdir hw5
-amira:~/bst $ cd hw5
-amira:~/bst $ cp ~/Downloads/Assignment5.txt hw5/spec.txt
-amira:~/bst $ git add .
-amira:~/bst $ git commit -m "Adding homework 5 spec"
-```
-```out
-[main f5f7d30] Adding homework 5 spec
- 1 files changed, 132 insertions(+)
-```
+[%inc first_commit.sh %]
+[%inc first_commit.out %]
 
 She then pushes her changes to the shared repository:
 
-```sh
-amira:~/bst $ git push origin main
-```
-```out
-Enumerating objects: 7, done.
-Counting objects: 100% (7/7), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (4/4), 485 bytes | 485.00 KiB/s, done.
-Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To github.com:sami/bst.git
-   f5f7d30..433a2d5  main -> main
-```
+[%inc first_push.sh %]
+[%inc first_push.out %]
 
-<!-- continue -->
 And no, [%i "Git!interface (indistinguishable from hoax)" %]Git's
 output[%/i%] here isn't particularly useful to anyone except people who are
 debugging Git's internals.
@@ -95,9 +66,7 @@ debugging Git's internals.
 Amira's changes are now on her desktop computer and in the GitHub repository but
 not on Sami's laptop. They can get them by running:
 
-```sh
-sami:~/bst $ git pull origin main
-```
+[%inc second_pull.sh %]
 
 But what if Sami is working on some changes to homework 4 (which homework 5
 builds on)? She could just make her changes and push, but that would lead to a
@@ -119,18 +88,12 @@ PRs the review system we all wish journals actually had.
 To see this in action, suppose Sami wants to add their email address to
 `README.md`.  They create a new branch and switch to it:
 
-```sh
-sami:~/bst $ git checkout -b adding-email
-```
+[%inc create_branch.sh %]
 
-<!-- continue -->
 then make a change and commit it:
 
-```sh
-sami:~/bst $ git commit -a -m "Adding my email address"
-```
+[%inc commit_branch.sh %]
 
-<!-- continue -->
 (Notice that Sami uses the `-a` option to `git commit` to add all changes and
 commit them in a single step. This is both convenient and dangerous.)
 
@@ -138,9 +101,7 @@ Sami's changes are only in their local repository.  They cannot create a pull
 request until those changes are on GitHub, so they push their new branch to
 their repository on GitHub:
 
-```sh
-sami:~/bst $ git push origin adding-email
-```
+[%inc git_push_branch.sh %]
 
 When Sami views their repository in the browser, GitHub notices that they have
 just pushed a new branch and asks them if they want to create a PR.  When they
@@ -196,25 +157,7 @@ variations on the sample shown below; as with programming style
 ([%x research %]), the most important thing is being consistent rather than the
 particular rules you follow.
 
-```txt
-One-line summary
-
-Detailed explanatory text separated from the summary by a blank line.  (If you
-do this, many tools will treat the first line like the subject of an email and
-the rest of the text as the body.)
-
-Be brief but specific and write your message in the imperative voice, i.e.,
-"Handle indentation in configuration files correctly" rather than "Config file
-indentation."
-
-- Bullet points are OK (GitHub will format them as a list).  Some other Markdown
-  conventions work too.
-
-If this commit fixes an open issue, refer to it like as shown below. GitHub
-automatically turns things like `#123` into links.
-
-Closes: #123
-```
+[%inc commit_message.txt %]
 
 The most important thing to remember when writing a commit message is that its
 purpose is to make work easier to find and understand in the future. You

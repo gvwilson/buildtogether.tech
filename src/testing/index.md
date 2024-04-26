@@ -168,13 +168,7 @@ A better strategy is to add unique IDs to significant elements in the HTML page,
 and only check the contents of those elements. For example, if we're testing
 login, then somewhere on the page there ought to be an element like this:
 
-```html
-<div id="currentuser">Logged in as <strong>marian</strong>
-(<a href="http://www.example.org/logout">logout</a>
-|
-<a href="http://www.example.org/preferences">preferences</a>)
-</div>
-```
+[%inc current_user.html %]
 
 We can find that pretty easily with a [%i "CSS selector!use in testing" %][%g css_selector "CSS selector" %][%/i%] that looks for a `div` with the ID
 `currentuser`.  We can then move the `div` around without breaking any of our
@@ -210,20 +204,8 @@ times faster than operations that touch the disk).
 A mock object can also be designed to give pre-programmed responses to just a
 handful of specific requests:
 
-```py
-INDEX_PAGE = '<html><body><h1>Index Page</h1></body></html>'
-USER_PAGE = '<html><body><h1>User Page</h1></body></html>'
+[%inc mock_http_server.py %]
 
-def mock_http_server(url):
-    if url == '/':
-        return INDEX_PAGE
-    elif url in ['/user/', '/user/index.html']:
-        return USER_PAGE
-    else:
-        raise UrlError(f'unhandled URL "{url}"')
-```
-
-<!-- continue -->
 The strength of the pre-programmed approach is that if anything ever sends an
 unexpected URL, the failure will be obvious.  The weakness is the tedium of
 writing out all the cases, though in most testing scenarios there are fewer than
@@ -285,16 +267,8 @@ The simplest kind of [%i "performance testing!manual" %]performance
 testing[%/i%] is simply to measure how much time elapses between the start and
 end of a test. You can do this manually:
 
-```py
-from datetime import datetime
+[%inc manual_timing.py %]
 
-def test_something():
-    start = datetime.now()
-    ...run the test...
-    elapsed = datetime.now().microsecond - start.microsecond
-```
-
-<!-- continue -->
 but most test frameworks will do it for you. If you are using `pytest`, for
 example, the `--durations` will report the slowest tests or the running time for
 all tests. If you want to average over several runs (which you should, because
@@ -344,18 +318,13 @@ possible paths through the code that the tests are actually exercising.
 If you are using Python, you can check your tests' coverage with the `coverage`
 library.  The command:
 
-```sh
-$ coverage run -m pytest
-```
+[%inc run_coverage.sh %]
 
-<!-- continue -->
 doesn't display any information of its own, since mixing that in with our
 program's output would be confusing.  Instead, it puts coverage data in a file
 called `.coverage` in the current directory.  To display that data, you run:
 
-```sh
-$ coverage report -m
-```
+[%inc run_coverage_report.sh %]
 
 Its output shows you what percentage of your program was and wasn't executed.
 You can get a more complete report by running `coverage html` at the command

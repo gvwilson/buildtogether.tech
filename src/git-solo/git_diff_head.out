@@ -1,0 +1,20 @@
+diff --git a/bin/html2tex.py b/bin/html2tex.py
+index 4c756f4..10efe1c 100755
+--- a/bin/html2tex.py
++++ b/bin/html2tex.py
+@@ -35,10 +35,13 @@ def html2tex(options):
+     '''Main driver.'''
+     update_numbering(options.numbering)
+     config = utils.read_yaml(options.config)
+-    filenames = get_filenames(options.site, config)
++    entries = get_filenames(options.site, config)
+     accum = []
+-    for f in filenames:
+-        convert_file(f, accum)
++    for [kind, filename] in entries:
++        if kind == 'entry':
++            convert_file(filename, accum)
++        elif kind == 'appendix':
++            accum.append('\n\\appendix\n')
+     result = ''.join(accum)
+     display(options, config, result)

@@ -328,10 +328,6 @@
   url: https://github.com/github/MVG
   title: GitHub Minimum Viable Governance
 
-- key: github-pages
-  url: https://pages.github.com/
-  title: GitHub Pages
-
 - key: gitkraken
   url: https://www.gitkraken.com/
   title: GitKraken
@@ -737,10 +733,6 @@
 - key: wayne-linked-lists
   url: https://www.hillelwayne.com/post/linked-lists/
   title: Why Do Interviewers Ask Linked List Questions?
-
-- key: webaim-wave
-  url: https://wave.webaim.org/
-  title: WebAIM WAVE
 
 - key: wilson-greg
   url: https://third-bit.com/

@@ -398,29 +398,17 @@ you at least one software exploit that's unfortunately still quite common.
 Suppose your application lets the user type in their ID, then uses that to look
 up their account details in a database:
 
-```py
-def get_account(database_connection):
-    username = input('Username:')
-    query = 'select * from User where username="{}";'.format(username)
-    result = database_connection.run(query)
-    return result
-```
+[%inc get_account.py %]
 
 It's simple, and the programmer has even remembered to wrap the username in
 quotes. But suppose a malicious user enters this as their username:
 
-```txt
-"; drop table User; select "
-```
+[%inc malicious_input.txt %]
 
-<!-- continue -->
 Once this is inserted, the query becomes:
 
-```py
-select * from User where username=""; drop table User; select "";'
-```
+[%inc get_account_query.py %]
 
-<!-- continue -->
 which looks up a user without a name, erases all of the data in the `User`
 table, and then returns an empty string (the final `select`).  This is called an
 [%i "SQL injection attack" %][%g sql_injection "SQL injection attack" %][%/i%],
@@ -429,12 +417,8 @@ and with a few modifications, it can be used to [%i "exfiltrate" %]exfiltrate[%/
 You defend against this by always [%i "sanitizing data" %][%g sanitizing_data "sanitizing user input" %][%/i%] before using it. In this case, the query can
 be written as:
 
-```py
-    query = 'select * from User where username=?;'
-    result = database_connection.run(query, username)
-```
+[%inc sanitize_input.py %]
 
-<!-- continue -->
 The database connection library will escape special characters like the quotes
 and semi-colons in the user's input and then use the result in place of the
 question mark `?` in the query.

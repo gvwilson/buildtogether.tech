@@ -427,31 +427,36 @@ that here, but it wouldn&rsquo;t feel right to wrap up this chapter without show
 you at least one software exploit that&rsquo;s unfortunately still quite common.</p>
 <p>Suppose your application lets the user type in their ID, then uses that to look
 up their account details in a database:</p>
+<div class="language-py" title="get_account.py">
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_account</span><span class="p">(</span><span class="n">database_connection</span><span class="p">):</span>
     <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Username:&#39;</span><span class="p">)</span>
     <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;select * from User where username=&quot;</span><span class="si">{}</span><span class="s1">&quot;;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">database_connection</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
+</div>
 <p>It&rsquo;s simple, and the programmer has even remembered to wrap the username in
 quotes. But suppose a malicious user enters this as their username:</p>
+<div class="language-txt" title="malicious_input.txt">
 <div class="highlight"><pre><span></span><code>&quot;; drop table User; select &quot;
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>Once this is inserted, the query becomes:</p>
+<div class="language-py" title="get_account_query.py">
 <div class="highlight"><pre><span></span><code><span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">User</span> <span class="n">where</span> <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="n">drop</span> <span class="n">table</span> <span class="n">User</span><span class="p">;</span> <span class="n">select</span> <span class="s2">&quot;&quot;</span><span class="p">;</span><span class="s1">&#39;</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>which looks up a user without a name, erases all of the data in the <code>User</code>
 table, and then returns an empty string (the final <code>select</code>).  This is called an
 <a class="gl-ref" href="../glossary/#gl:sql_injection" markdown="1">SQL injection attack</a>,
 and with a few modifications, it can be used to exfiltrate data rather than delete it.</p>
 <p>You defend against this by always <a class="gl-ref" href="../glossary/#gl:sanitizing_data" markdown="1">sanitizing user input</a> before using it. In this case, the query can
 be written as:</p>
-<div class="highlight"><pre><span></span><code>    <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;select * from User where username=?;&#39;</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">database_connection</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
+<div class="language-py" title="sanitize_input.py">
+<div class="highlight"><pre><span></span><code><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;select * from User where username=?;&#39;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">database_connection</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>The database connection library will escape special characters like the quotes
 and semi-colons in the user&rsquo;s input and then use the result in place of the
 question mark <code>?</code> in the query.</p>

@@ -214,11 +214,12 @@ the program) with the abstract
 interpretation flow graph (which is the set of all paths once possible
 data values are taken into account).  To make this more concrete, the control
 flow graph for:</p>
-<div class="highlight"><pre><span></span><code><span class="mi">01</span><span class="p">:</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="mi">02</span><span class="p">:</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="mi">03</span><span class="p">:</span>     <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="language-py" title="flow_graph.py">
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>     <span class="c1"># 01</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># 02</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># 03</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>includes the statement on line 3, but the abstract interpretation flow graph
 doesn&rsquo;t, because there&rsquo;s no way it could ever be executed given the possible
 value(s) of <code>x</code>.  Code paths that are never executed signal
@@ -412,7 +413,6 @@ could look at which outcomes were reproducible and which were not:</p>
     reliability, and maintainability</p>
 </li>
 </ul>
-<!-- continue -->
 <p>Putting something in the &ldquo;low&rdquo; category here doesn&rsquo;t mean that it was uniformly
 poor.  Instead, it means that there was wide variation, i.e., that results were
 unpredictable.  Their results match software engineering folklore, and are a

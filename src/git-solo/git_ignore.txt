@@ -1,0 +1,8 @@
+*.pyc
+*~
+.DS_Store
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+__pycache__
+_site

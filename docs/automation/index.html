@@ -68,13 +68,14 @@ invented in 1975 by a summer intern at Bell Labs to compile programs in which
 some modules depended on others. To use it, you create a Makefile that specifies
 the dependencies between the files in your project and the commands needed to
 update them. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nf">game.exe </span><span class="o">:</span><span class="w"> </span><span class="n">game</span>.<span class="n">bc</span> <span class="n">graphics</span>.<span class="n">bc</span> <span class="n">utils</span>.<span class="n">bc</span>
-<span class="w">        </span>tx<span class="w"> </span>-E<span class="w"> </span>-o<span class="w"> </span>game.exe<span class="w"> </span>game.bc<span class="w"> </span>graphics.bc<span class="w"> </span>utils.bc
+<div class="language-txt" title="example_makefile.txt">
+<div class="highlight"><pre><span></span><code>game.exe : game.bc graphics.bc utils.bc
+        tx -E -o game.exe game.bc graphics.bc utils.bc
 
-<span class="nf">%.bc </span><span class="o">:</span><span class="w"> </span>%.<span class="n">grace</span>
-<span class="w">        </span>tx<span class="w"> </span>-C<span class="w"> </span>$&lt;
+%.bc : %.grace
+        tx -C $&lt;
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>tells Make that <code>game.exe</code> can&rsquo;t be built until <code>game.bc</code>, <code>graphics.bc</code>, and
 <code>utils.bc</code> exist, and that once they do, the way to create <code>game.exe</code> is to run
 the <code>tx</code> compiler with several options.  Below that is a
@@ -103,26 +104,27 @@ syntax, but most still don&rsquo;t have debuggers. The <code>package.json</code>
 file—as the example below shows, some of its entries describe the package or
 its dependencies, while others store commands that can be re-run by typing
 things like <code>npm run test</code>:</p>
+<div class="language-json" title="example_npm.json">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;stjs&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Software Design by Example&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;main&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;index.js&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;ejslint&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ejslint inc/*.html *.md */*.md&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;serve&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http-server docs -p 4000 --utc&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mocha */test/test-*.js&quot;</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;stjs&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Software Design by Example&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;index.js&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;ejslint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ejslint inc/*.html *.md */*.md&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;serve&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http-server docs -p 4000 --utc&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mocha */test/test-*.js&quot;</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;argparse&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^2.0.1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;caller&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^1.0.1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;csv&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^5.3.2&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="p">..</span>
+<span class="w">  </span><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;argparse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^2.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;caller&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^1.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;csv&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.3.2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="err">..</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p><code>package.json</code> files have two flaws: there is no standard way to write comments
 (since <a class="gl-ref" href="../glossary/#gl:json" markdown="1">JSON</a> itself doesn&rsquo;t have this) and there is no way
 to express dependencies between tasks, i.e., there&rsquo;s no way to say, &ldquo;A depends
@@ -211,6 +213,7 @@ you&rsquo;ll stop checking in broken code…)</p>
 <p>For example, we can check every attempt to push changes to the repository for a
 Python project, and every pull request created for that repository, by putting
 these commands in a file called <code>.github/workflows/check.yml</code>:</p>
+<div class="language-yml" title="check.yml">
 <div class="highlight"><pre><span></span><code>name: Check
 
 on: [push, pull_request]
@@ -234,6 +237,7 @@ jobs:
       - run: flake8
       - run: pytest
 </code></pre></div>
+</div>
 <p>From top to bottom:</p>
 <ul>
 <li>

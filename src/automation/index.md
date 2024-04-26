@@ -23,15 +23,8 @@ some modules depended on others. To use it, you create a Makefile that specifies
 the dependencies between the files in your project and the commands needed to
 update them. For example:
 
-```make
-game.exe : game.bc graphics.bc utils.bc
-        tx -E -o game.exe game.bc graphics.bc utils.bc
+[%inc example_makefile.txt %]
 
-%.bc : %.grace
-        tx -C $<
-```
-
-<!-- continue -->
 tells Make that `game.exe` can't be built until `game.bc`, `graphics.bc`, and
 `utils.bc` exist, and that once they do, the way to create `game.exe` is to run
 the `tx` compiler with several options.  Below that is a
@@ -64,28 +57,8 @@ file—as the example below shows, some of its entries describe the package or
 its dependencies, while others store commands that can be re-run by typing
 things like `npm run test`:
 
-```js
-{
-  "name": "stjs",
-  "version": "1.0.0",
-  "description": "Software Design by Example",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "ejslint": "ejslint inc/*.html *.md */*.md",
-    "serve": "http-server docs -p 4000 --utc",
-    "test": "mocha */test/test-*.js"
-  },
-  "dependencies": {
-    "argparse": "^2.0.1",
-    "caller": "^1.0.1",
-    "csv": "^5.3.2",
-    ..
-  }
-}
-```
+[%inc example_npm.json %]
 
-<!-- continue -->
 `package.json` files have two flaws: there is no standard way to write comments
 (since [%g json "JSON" %] itself doesn't have this) and there is no way
 to express dependencies between tasks, i.e., there's no way to say, "A depends
@@ -195,30 +168,7 @@ For example, we can check every attempt to push changes to the repository for a
 Python project, and every pull request created for that repository, by putting
 these commands in a file called `.github/workflows/check.yml`:
 
-```yml
-name: Check
-
-on: [push, pull_request]
-
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup Python
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.9
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - run: black --check .
-      - run: flake8
-      - run: pytest
-```
+[%inc check.yml %]
 
 From top to bottom:
 

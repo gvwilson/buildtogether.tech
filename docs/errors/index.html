@@ -82,21 +82,26 @@ something does go wrong, the program jumps immediately to the body of the
 <p>We often want to know exactly what went wrong, so Python and other languages
 store information about the error in an object (which is also called an
 exception).  We can <a class="gl-ref" href="../glossary/#gl:catch_exception" markdown="1">catch</a> an exception and inspect it as follows:</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">denom</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+<div class="language-py" title="catch_exception.py">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">denom</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">denom</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;1/</span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s1"> == </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s1"> has no reciprocal: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
+</div>
+<div class="language-out" title="catch_exception.out">
 <div class="highlight"><pre><span></span><code>1/-5 == -0.2
 0 has no reciprocal: division by zero
 1/5 == 0.2
-</code></pre></div></p>
+</code></pre></div>
+</div>
 <p>Most languages also allow us to specify what kind of exception we want to catch.
 For example, we can write code to handle out-of-range indexing and division by
 zero in Python separately:</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<div class="language-py" title="specify_exception.py">
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">denom</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -107,14 +112,19 @@ zero in Python separately:</p>
     <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">denom</span><span class="si">}</span><span class="s1"> has no reciprocal: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
+</div>
+<div class="language-out" title="specify_exception.out">
 <div class="highlight"><pre><span></span><code>1/-5 == -0.2
 0 has no reciprocal: division by zero
 1/5 == 0.2
 index 3 out of range
-</code></pre></div></p>
-<p>So where do exceptions come from?  The answer is that programmers can <a class="gl-ref" href="../glossary/#gl:raise_exception" markdown="1">raise</a> them
+</code></pre></div>
+</div>
+<p>So where do exceptions come from?
+The answer is that programmers can <a class="gl-ref" href="../glossary/#gl:raise_exception" markdown="1">raise</a> them
 explicitly:</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+<div class="language-py" title="raise_exception.py">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;no negatives: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -122,11 +132,13 @@ explicitly:</p>
     <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;exception: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
+</div>
+<div class="language-out" title="raise_exception.out">
 <div class="highlight"><pre><span></span><code>1
 0
 exception: no negatives: -1
-</code></pre></div></p>
-<!-- continue -->
+</code></pre></div>
+</div>
 <p>We can define our own exception types, and many libraries do, but the built-in
 types are enough to cover common cases.</p>
 <p>One final note is that exceptions don&rsquo;t have to be handled where they are
@@ -168,6 +180,7 @@ program.  When the program runs, it checks the assertion&rsquo;s condition.  If 
 true, the program does nothing; if it&rsquo;s false, it halts and prints a
 user-defined error message.  For example, this Python code halts as soon as the
 loop encounters a negative word frequency:</p>
+<div class="language-py" title="assert.py">
 <div class="highlight"><pre><span></span><code><span class="n">frequencies</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">frequencies</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
@@ -175,20 +188,22 @@ loop encounters a negative word frequency:</p>
     <span class="n">total</span> <span class="o">+=</span> <span class="n">freq</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total frequency of first 5 words:&#39;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>Programs intended for widespread use are typically full of assertions: 10&ndash;20%
 of the code they contain is there to check that the other 80&ndash;90% is working
 correctly.</p>
 <h2>Writing Useful Error Messages</h2>
 <p>This is not a useful error message:</p>
+<div class="language-txt" title="useless_error_msg.txt">
 <div class="highlight"><pre><span></span><code>OSError: Something went wrong, try again.
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>It doesn&rsquo;t provide any information on what went wrong, so it is difficult for
 the user to know what to change next time.  A slightly better message is:</p>
+<div class="language-txt" title="better_error_msg.txt">
 <div class="highlight"><pre><span></span><code>OSError: Unsupported file type.
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>This message tells us the problem is with the type of file we&rsquo;re trying to
 process, but it still doesn&rsquo;t tell us what file types are supported, which means
 we have to rely on guesswork or read the source code.  Telling the user that a
@@ -197,9 +212,10 @@ works with files of that type, but since we don&rsquo;t actually check the conte
 the file, this message could confuse someone who has comma-separated values
 saved in a <code>.txt</code> file.  An even better
 message would therefore be:</p>
+<div class="language-txt" title="helpful_error_msg.txt">
 <div class="highlight"><pre><span></span><code>OSError: File must end in .csv
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>This message tells us exactly what the criteria are to avoid the error.</p>
 <p>Error messages are often the first thing people read about a piece of software,
 so they should be its most carefully written documentation.  A web search for
@@ -234,24 +250,29 @@ different people, but putting them all in one module makes review easier.</dd>
 </dl>
 <p>That last suggestion deserves a little elaboration.  Most people write error
 messages directly in their code:</p>
+<div class="language-py" title="error_msg_in_code.py">
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">fname</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span> <span class="o">!=</span> <span class="s1">&#39;.csv&#39;</span><span class="p">:</span>
     <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1">: File must end in .csv&#39;</span><span class="p">)</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>A better approach is to put all the error messages in a dictionary:</p>
+<div class="language-py" title="error_msg_in_dict.py">
 <div class="highlight"><pre><span></span><code><span class="n">ERRORS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;not_csv_suffix&#39;</span> <span class="p">:</span> <span class="s1">&#39;</span><span class="si">{fname}</span><span class="s1">: File must end in .csv&#39;</span><span class="p">,</span>
     <span class="s1">&#39;config_corrupted&#39;</span> <span class="p">:</span> <span class="s1">&#39;</span><span class="si">{config_name}</span><span class="s1"> corrupted&#39;</span><span class="p">,</span>
     <span class="c1"># ...more error messages...</span>
 <span class="p">}</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>and then only use messages from that dictionary:</p>
+<div class="language-py" title="error_msg_use_dict.py">
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">fname</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span> <span class="o">!=</span> <span class="s1">&#39;.csv&#39;</span><span class="p">:</span>
     <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="n">ERRORS</span><span class="p">[</span><span class="s1">&#39;not_csv_suffix&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">))</span>
 </code></pre></div>
+</div>
 <p>Doing this makes it much easier to ensure that messages are consistent.  It also
 makes it much easier to give messages in the user&rsquo;s preferred language:</p>
+<div class="language-py" title="error_msg_dictionary.py">
 <div class="highlight"><pre><span></span><code><span class="n">ERRORS</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">&#39;en&#39;</span> <span class="p">:</span> <span class="p">{</span>
     <span class="s1">&#39;not_csv_suffix&#39;</span> <span class="p">:</span> <span class="s1">&#39;</span><span class="si">{fname}</span><span class="s1">: File must end in .csv&#39;</span><span class="p">,</span>
@@ -266,16 +287,18 @@ makes it much easier to give messages in the user&rsquo;s preferred language:</p
   <span class="c1"># ...other languages...</span>
 <span class="p">}</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>The error report is then looked up and formatted as:</p>
+<div class="language-py" title="error_msg_fmt.py">
 <div class="highlight"><pre><span></span><code><span class="n">ERRORS</span><span class="p">[</span><span class="n">user_language</span><span class="p">][</span><span class="s1">&#39;not_csv_suffix&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
 </code></pre></div>
-<p>{: continue}
-where <code>user_language</code> is a two-letter code for the user&rsquo;s preferred language.</p>
+</div>
+<p>where <code>user_language</code> is a two-letter code for the user&rsquo;s preferred language.</p>
 <h2>Logging</h2>
 <p>Something else you can design into your system to make your life easier later on
 is <a class="gl-ref" href="../glossary/#gl:logging" markdown="1">logging</a>. Instead of writing <code>print</code>
 statements like this:</p>
+<div class="language-py" title="print_msg.py">
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extrapolate</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">case</span><span class="p">):</span>
     <span class="nb">print</span> <span class="s2">&quot;entering extrapolate...&quot;</span>
     <span class="n">trials</span> <span class="o">=</span> <span class="n">count_basis_width</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
@@ -288,8 +311,9 @@ statements like this:</p>
         <span class="n">result</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">run_trial</span><span class="p">(</span><span class="n">trials</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
     <span class="nb">print</span> <span class="s2">&quot;...exiting extrapolate with&quot;</span><span class="p">,</span> <span class="n">result</span>
 </code></pre></div>
-<p>{: continue}
-you use your language&rsquo;s logging library:</p>
+</div>
+<p>you use your language&rsquo;s logging library:</p>
+<div class="language-py" title="log_msg.py">
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
 
 <span class="k">def</span> <span class="nf">extrapolate</span><span class="p">(</span><span class="n">basis</span><span class="p">,</span> <span class="n">case</span><span class="p">):</span>
@@ -304,21 +328,24 @@ you use your language&rsquo;s logging library:</p>
         <span class="n">result</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">run_trial</span><span class="p">(</span><span class="n">trials</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
     <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;...exiting extrapolate with </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
+</div>
 <p>At first glance this is just more verbose. The benefit, though, is that your
 messages are now divided into categories. If you want to get all the messages
 you put:</p>
+<div class="language-py" title="log_config.py">
 <div class="highlight"><pre><span></span><code><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>somewhere near the start of your program. The <code>DEBUG</code> option identifies the
 lowest-level messages in your program—the ones you probably only want to see
 when you&rsquo;re trying to figure out what&rsquo;s gone wrong. In order, the more important
 levels in most logging libraries are <code>INFO</code>,
 <code>WARNING</code>, <code>ERROR</code>, and <code>CRITICAL</code>. If you only want messages at the <code>WARNING</code>
 level and above, you change the configuration to:</p>
+<div class="language-py" title="log_warning.py">
 <div class="highlight"><pre><span></span><code><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>so that <code>DEBUG</code> and <code>INFO</code> messages aren&rsquo;t printed.</p>
 <p>A logging library allows you to control how much your program tells you about
 its execution by making one change, in one place. It also means that you can
@@ -332,10 +359,12 @@ interface but only see errors and above from the image processing functions.
 They also let you control where your messages are sent. By default, they go to
 the screen, but you can send them to a file instead simply by changing the
 configuration:</p>
+<div class="language-py" title="log_basic_config.py">
 <div class="highlight"><pre><span></span><code><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span>
                     <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;/tmp/mylog.txt&quot;</span><span class="p">,</span>
                     <span class="n">filemode</span><span class="o">=</span><span class="s2">&quot;append&quot;</span><span class="p">)</span>
 </code></pre></div>
+</div>
 <p>This is handy if it takes your program a while to get to the point where the
 error occurs. It&rsquo;s also handy if you don&rsquo;t know whether your program contains an
 error or not: if you leave logging turned on every time you run it, then

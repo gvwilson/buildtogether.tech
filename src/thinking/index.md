@@ -24,7 +24,7 @@ using their own filenames or variable names when searching for help online
 because they don't yet have a clear distinction between what belongs to the
 library and application and what is specific to their code.
 
-What ties these things together is that novices don't have a [%i "mental model" %][%g mental_model "mental model" %][%/i%] of the problem. A mental
+What ties these things together is that novices don't have a [%i "mental model" %]mental model[%/i%] of the problem. A mental
 model is a simplified representation of something that's good enough for present
 needs. One example is the ball-and-spring models used to represent molecules in
 chemistry classes: real atoms aren't marbles and atomic bonds aren't springs,

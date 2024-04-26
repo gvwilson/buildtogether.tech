@@ -66,7 +66,6 @@ Git repository in one of two ways <span class="bib-ref">[<a class="bib-ref" href
     do their work in that, and then submit their changes to the main repository.</p>
 </li>
 </ol>
-<!-- continue -->
 <p>The first approach works well for teams of up to half a dozen people, so we will
 focus on it. If the project is larger, or if contributors are worried that they
 might make a mess in the <code>main</code> branch, the second approach is safer.</p>
@@ -90,25 +89,36 @@ work on homework 5.</p>
 working directory (initially <code>~</code>, meaning &ldquo;home directory&rdquo;) to make it easier to
 follow what&rsquo;s happening.  First, she updates her desktop repository to make sure
 she is starting with the most recent set of files:</p>
-<p><div class="highlight"><pre><span></span><code>amira:~<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>bst
+<div class="language-sh" title="git_pull.sh">
+<div class="highlight"><pre><span></span><code>amira:~<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>bst
 amira:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
 amira:~/bst<span class="w"> </span>$<span class="w"> </span>ls
 </code></pre></div>
+</div>
+<div class="language-out" title="git_pull.out">
 <div class="highlight"><pre><span></span><code>LICENSE.md   README.md    hw1/    hw2/    hw3/    hw4/
-</code></pre></div></p>
+</code></pre></div>
+</div>
 <p>Amira creates a new directory for homework 5 and adds a copy of the assignment spec:</p>
-<p><div class="highlight"><pre><span></span><code>amira:~/bst<span class="w"> </span>$<span class="w"> </span>mkdir<span class="w"> </span>hw5
+<div class="language-sh" title="first_commit.sh">
+<div class="highlight"><pre><span></span><code>amira:~/bst<span class="w"> </span>$<span class="w"> </span>mkdir<span class="w"> </span>hw5
 amira:~/bst<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>hw5
 amira:~/bst<span class="w"> </span>$<span class="w"> </span>cp<span class="w"> </span>~/Downloads/Assignment5.txt<span class="w"> </span>hw5/spec.txt
 amira:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
 amira:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Adding homework 5 spec&quot;</span>
 </code></pre></div>
+</div>
+<div class="language-out" title="first_commit.out">
 <div class="highlight"><pre><span></span><code>[main f5f7d30] Adding homework 5 spec
  1 files changed, 132 insertions(+)
-</code></pre></div></p>
-<p>She then pushes her changes to the shared repository:</p>
-<p><div class="highlight"><pre><span></span><code>amira:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
+</div>
+<p>She then pushes her changes to the shared repository:</p>
+<div class="language-sh" title="first_push.sh">
+<div class="highlight"><pre><span></span><code>amira:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+</div>
+<div class="language-out" title="first_push.out">
 <div class="highlight"><pre><span></span><code>Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
 Delta compression using up to 4 threads
@@ -118,15 +128,17 @@ Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:sami/bst.git
    f5f7d30..433a2d5  main -&gt; main
-</code></pre></div></p>
-<!-- continue -->
+</code></pre></div>
+</div>
 <p>And no, Git&rsquo;s
 output here isn&rsquo;t particularly useful to anyone except people who are
 debugging Git&rsquo;s internals.</p>
 <p>Amira&rsquo;s changes are now on her desktop computer and in the GitHub repository but
 not on Sami&rsquo;s laptop. They can get them by running:</p>
+<div class="language-sh" title="second_pull.sh">
 <div class="highlight"><pre><span></span><code>sami:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
+</div>
 <p>But what if Sami is working on some changes to homework 4 (which homework 5
 builds on)? She could just make her changes and push, but that would lead to a
 lot of merge conflicts.  Instead, almost everyone uses
@@ -144,20 +156,24 @@ through several rounds of review and revision before being merged, which makes
 PRs the review system we all wish journals actually had.</p>
 <p>To see this in action, suppose Sami wants to add their email address to
 <code>README.md</code>.  They create a new branch and switch to it:</p>
+<div class="language-sh" title="create_branch.sh">
 <div class="highlight"><pre><span></span><code>sami:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>adding-email
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>then make a change and commit it:</p>
+<div class="language-sh" title="commit_branch.sh">
 <div class="highlight"><pre><span></span><code>sami:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Adding my email address&quot;</span>
 </code></pre></div>
-<!-- continue -->
+</div>
 <p>(Notice that Sami uses the <code>-a</code> option to <code>git commit</code> to add all changes and
 commit them in a single step. This is both convenient and dangerous.)</p>
 <p>Sami&rsquo;s changes are only in their local repository.  They cannot create a pull
 request until those changes are on GitHub, so they push their new branch to
 their repository on GitHub:</p>
+<div class="language-sh" title="git_push_branch.sh">
 <div class="highlight"><pre><span></span><code>sami:~/bst<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>adding-email
 </code></pre></div>
+</div>
 <p>When Sami views their repository in the browser, GitHub notices that they have
 just pushed a new branch and asks them if they want to create a PR.  When they
 click on the button, GitHub displays a page showing the default source and
@@ -200,6 +216,7 @@ pass, so the team can ensure that the software is always as good as its tests.</
 variations on the sample shown below; as with programming style
 (<a href="../research/">Chapter&nbsp;18</a>), the most important thing is being consistent rather than the
 particular rules you follow.</p>
+<div class="language-txt" title="commit_message.txt">
 <div class="highlight"><pre><span></span><code>One-line summary
 
 Detailed explanatory text separated from the summary by a blank line.  (If you
@@ -218,6 +235,7 @@ automatically turns things like `#123` into links.
 
 Closes: #123
 </code></pre></div>
+</div>
 <p>The most important thing to remember when writing a commit message is that its
 purpose is to make work easier to find and understand in the future. You
 shouldn&rsquo;t transcribe large chunks of code or duplicate whatever documentation or
