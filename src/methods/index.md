@@ -18,7 +18,6 @@ Results calculated with Excel are more likely to be wrong than results calculate
     Axiom" %]Flon's Axiom[%/i%] states, "There is not now, nor has there ever
     been, nor will there ever be, any programming language in which it is the
     least bit difficult to write bad code.")
-
     And even if this claim is true, correlation isn't causation.  I think that
     people who do statistics programmatically have probably invested more time
     in mastering their tools than people who use spreadsheets.  Any differences
