@@ -2,8 +2,8 @@
 title: Research Methods
 ---
 
-Back in 2016 [I tweeted][excel-tweet], "If anyone has data showing [%i "Excel" %]Excel[%/i%] is *more* error-prone than [%i "MATLAB" %]MATLAB[%/i%]/[%i "Python" %]Python[%/i%]/[%i "R (programming
-language)" %]R[%/i%] once you normalize for hours spent learning it, please
+Back in 2016 [I tweeted][excel-tweet], "If anyone has data showing Excel[%i "Excel" %] is *more* error-prone than MATLAB[%i "MATLAB" %]/Python[%i "Python" %]/R[%i "R (programming
+language)" %] once you normalize for hours spent learning it, please
 post."  It was clear from the responses and from other discussion online that
 most programmers believe this, but I'm not really sure what "this" is:
 
@@ -14,8 +14,8 @@ There are more errors in published results created with Excel than in results cr
 Results calculated with Excel are more likely to be wrong than results calculated with scripting languages.
 :   This is what I had in mind when I tweeted, and I don't think the answer is
     obvious.  Yes, there are lots of examples of people botching spreadsheets,
-    but there's also a lot of buggy code out there.  ([%i "Flon's
-    Axiom" %]Flon's Axiom[%/i%] states, "There is not now, nor has there ever
+    but there's also a lot of buggy code out there.  (Flon's Axiom[%i "Flon's
+    Axiom" %] states, "There is not now, nor has there ever
     been, nor will there ever be, any programming language in which it is the
     least bit difficult to write bad code.")
     And even if this claim is true, correlation isn't causation.  I think that
@@ -47,37 +47,37 @@ disposal and what they're good for.
 
 ## Controlled Experiments
 
-The first method that empirical research uses is [%i "controlled
-experiments" %]controlled experiments[%/i%]: subjects are given a task and some
+The first method that empirical research uses is controlled experiments[%i "controlled
+experiments" %]: subjects are given a task and some
 aspect of their performance is measured.  Subjects are typically divided into a
-[%i "control group" %][%g control_group "control group" %][%/i%] (who do things as
-normal) and a [%i "treatment group" %][%g treatment_group "treatment group" %][%/i%] (who do things in an alternative way). If the difference between
+[%g control_group "control group" %][%i "control group" %] (who do things as
+normal) and a [%g treatment_group "treatment group" %][%i "treatment group" %] (who do things in an alternative way). If the difference between
 the groups is large enough statistically, the experimenter can say that the
 treatment probably has an effect on outcomes.
 
 There are several traps in this for the unwary [%b DeOliveiraNeto2019 %]:
 
-[%i "experimenter bias" %]Experimenter bias[%/i%].
+Experimenter bias[%i "experimenter bias" %].
 :   People have many biases, both conscious and unconscious.  In order to make
     sure that these don't inadvertently affect the results, subjects should be
     assigned to groups at random. Going even further, experiments in medicine
-    are often [%i "double blind experiments" %][%g double_blind "double blind" %][%/i%]: neither the subject nor the person administering the treatment
+    are often [%g double_blind "double blind" %][%i "double blind experiments" %]: neither the subject nor the person administering the treatment
     knows which subjects are getting the new heart medication and which are
-    getting a [%i "placebo" %][%g placebo "placebo" %][%/i%]. It's usually not
+    getting a [%g placebo "placebo" %][%i "placebo" %]. It's usually not
     possible to achieve this when doing software engineering experiments.
 
-[%i "significance hacking" %]Significance hacking[%/i%].
+Significance hacking[%i "significance hacking" %].
 :   If you measure enough things and look for enough correlations, you will
     almost certainly find *something* that passes a test for statistical
     significance. For example, there is a strong correlation between the number
     of letters in winning words in spelling competitions and the number of
     people killed by venomous spiders [%b Vigen2015 %]. To guard against
-    this, researchers should [%i "pre-registration of experiments" %][%g pre_registration "pre-register" %][%/i%] their analyses, i.e., say in advance what
+    this, researchers should [%g pre_registration "pre-register" %][%i "pre-registration of experiments" %] their analyses, i.e., say in advance what
     they're going to compare against what, and then use various statistical
     techniques that require a higher standard of proof when they are checking
     more possible combinations.
 
-[%i "negative results (failure to publish)" %]Failure to publish negative results[%/i%].
+Failure to publish negative results[%i "negative results (failure to publish)" %].
 :   An experiment isn't a failure if it doesn't find something that is
     statistically significant: ruling something out is just as useful as finding
     something new. However, negative results are not as exciting (and not as
@@ -92,10 +92,10 @@ evidence base over time in multiple experiments, increasing the sample size and
 improving the methodology each time to get a stronger answer for a more specific
 question.
 
-Researchers often rely on [%i "quasi-experiment" %][%g quasi_experiment "quasi-experiments" %][%/i%] when doing this, i.e., they look
+Researchers often rely on [%g quasi_experiment "quasi-experiments" %][%i "quasi-experiment" %] when doing this, i.e., they look
 at pre-existing groups like programmers who have decided for themselves to use a
 new IDE against ones who have not. Quasi-experiments are cheaper and easier to
-set up, but researchers must be careful to account for [%i "confounding variable" %][%g confounding_variables "confounding variables" %][%/i%]. For example, are programmers who choose to use an IDE younger
+set up, but researchers must be careful to account for [%g confounding_variables "confounding variables" %][%i "confounding variable" %]. For example, are programmers who choose to use an IDE younger
 and therefore less experienced than ones who use legacy text editors? If so, how
 does that difference skew the results?
 
@@ -103,7 +103,7 @@ does that difference skew the results?
 
 Quasi-experiments blend into the second major research approach, which uses
 statistics and machine learning to find patterns in whatever data the researcher
-can get her hands on. Doing this is called [%i "data mining" %][%g data_mining "data mining" %][%/i%], and most studies of this kind make use of the wealth
+can get her hands on. Doing this is called [%g data_mining "data mining" %][%i "data mining" %], and most studies of this kind make use of the wealth
 of information available online at sites like [GitHub]][github] and [Stack
 Overflow][stack-overflow] or from millions of crash reports collected online
 [%b Glerum2009 %].  Data mining has produced many valuable insights, but
@@ -113,7 +113,7 @@ interpreted cautiously.
 
 One problem with data mining is that once again, correlation doesn't imply
 causation.  Another is that we usually don't know whether the data we have
-access to is representative.  In 2012, Scott Hanselman coined the term [%i "dark matter developer" %][%g dark_matter_developer "dark matter developers" %][%/i%] to describe programmers who don't blog, don't answer questions
+access to is representative.  In 2012, Scott Hanselman coined the term [%g dark_matter_developer "dark matter developers" %][%i "dark matter developer" %] to describe programmers who don't blog, don't answer questions
 in online forums, don't have their work in public repositories, and so on. Just
 as dark matter makes up most of the universe, dark matter developers make up
 most of our industry, and just as the matter we can see is vanishingly atypical,
@@ -145,7 +145,7 @@ statistics. Before you read too much research, make sure to read this.
 
 ## Qualitative Methods
 
-The third set of approaches are called [%i "qualitative methods" %][%g qualitative_method "qualitative methods" %][%/i%], and involve close analysis
+The third set of approaches are called [%g qualitative_method "qualitative methods" %][%i "qualitative methods" %], and involve close analysis
 of a small number of cases to tease out common patterns.  Articles like
 [%b Sharp2016 %] do an excellent job of explaining how these methods work
 and what their strengths and limitations are.
@@ -192,19 +192,19 @@ development. Their description of their method is worth repeating in full:
 > <br/>
 > That's not my department!" says Wernher von Braun
 >
-> — [%i "Lehrer, Tom" %]Tom Lehrer[%/i%]
+> — Tom Lehrer[%i "Lehrer, Tom" %]
 
 [%b Tedre2008 %] describes three traditions that have shaped how we think
-about computing: the [%i "mathematical tradition in
-computing" %]mathematical[%/i%], which focuses on algorithms and proofs; the
-[%i "scientific tradition in computing" %]scientific[%/i%], which studies
-programs and programmers empirically; and the [%i "engineering tradition in
-computing" %]engineering tradition[%/i%], which centers the fact that computing
+about computing: the mathematical[%i "mathematical tradition in
+computing" %], which focuses on algorithms and proofs; the
+scientific[%i "scientific tradition in computing" %], which studies
+programs and programmers empirically; and the engineering tradition[%i "engineering tradition in
+computing" %], which centers the fact that computing
 matters because we can actually build useful things.
 
 That paper changed how I think about our field, but in the past few years I have
-realized that [%i "humanist tradition in computing" %]another point of
-view[%/i%] is just as important, though not as well respected.  It draws on
+realized that another point of
+view[%i "humanist tradition in computing" %] is just as important, though not as well respected.  It draws on
 humanities and social sciences to explore questions like, "Who does this help?",
 "Who does this hurt?", and, "Who decides?"  Just as the most interesting
 software engineering research these days is look at how the way we think

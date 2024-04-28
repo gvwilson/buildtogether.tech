@@ -15,29 +15,29 @@ modify, which in turn makes the next piece of work easier to tackle.
 
 ## Unit Testing
 
-As the name suggests, a [%i "unit test" %][%g unit_test "unit test" %][%/i%]
+As the name suggests, a [%g unit_test "unit test" %][%i "unit test" %]
 checks the correctness of a single unit of software.  Exactly what constitutes a
 "unit" is subjective, but it typically means the behavior of a single function
 or method in one situation.
 
 A unit test will typically have:
 
--   A [%i "fixture (in unit test)" "unit test!fixture" %][%g fixture "fixture" %][%/i%], which is the thing being tested (e.g., an
+-   A [%g fixture "fixture" %][%i "fixture (in unit test)" "unit test!fixture" %], which is the thing being tested (e.g., an
     array of numbers). The fixture is typically a subset or smaller version of
     the data the function will typically process. In fact, it should be a reprex
     ([%x communicate %]), i.e., exactly the same kind of minimal example
     you would post online if you were asking for help.
 
--   An [%i "actual result (in unit test)" "unit test!actual result" %][%g actual_result "actual result" %][%/i%], which is what the code produces when given the
+-   An [%g actual_result "actual result" %][%i "actual result (in unit test)" "unit test!actual result" %], which is what the code produces when given the
     fixture.
 
--   An [%i "expected result (in unit test)" "unit test!expected result" %][%g expected_result "expected result" %][%/i%] that the actual result is
+-   An [%g expected_result "expected result" %][%i "expected result (in unit test)" "unit test!expected result" %] that the actual result is
     compared to.
 
 Good programmers often run informal unit tests interactively when debugging
 ([%x tooling %]), but they are much more valuable when they can be re-run
 at a moment's notice to make sure that the most recent changes haven't broken
-anything that was working a few minutes ago.  To do this, you can use a [%i "test framework" "unit test!test framework" %][%g test_framework "test framework" %][%/i%] (also called a [%i "test runner" %][%g test_runner "test runner" %][%/i%]).  Dozens of these have been built for almost every language you
+anything that was working a few minutes ago.  To do this, you can use a [%g test_framework "test framework" %][%i "test framework" "unit test!test framework" %] (also called a [%g test_runner "test runner" %][%i "test runner" %]).  Dozens of these have been built for almost every language you
 can think of; most are very similar because they were inspired by the same
 forerunners. The most widely-used test framework for Python is called
 [`pytest`][pytest], which structures tests like this:
@@ -51,9 +51,9 @@ The `pytest` library comes with a command-line tool that is also called
 directory whose names match the pattern `test_*.py`.  It then runs the test
 functions it finds in these files and summarizes their results.
 
-If running all the tests is taking so long that it's disrupting your [%i "flow" %]flow[%/i%] ([%x important %]), you can give `pytest` (and other
+If running all the tests is taking so long that it's disrupting your flow[%i "flow" %] ([%x important %]), you can give `pytest` (and other
 test runners) arguments to specify which subset of tests to run. This speeds up
-development, but you should always re-run the entire [%i "test suite" "unit test!test suite" %][%g test_suite "test suite" %][%/i%] before committing your
+development, but you should always re-run the entire [%g test_suite "test suite" %][%i "test suite" "unit test!test suite" %] before committing your
 changes to version control. If the tests reveal that the change you have just
 made to one part of a program unexpectedly affects some other part, it's a sign
 that you should change your design to remove that long-range interaction: sooner
@@ -70,7 +70,7 @@ almost a third of the programs they tested, some of which had been in daily use
 for two decades.
 
 While they weren't the first people to test with random data, their results
-sparked interest in [%i "fuzz testing" "unit test!fuzzing" %][%g fuzz_testing "fuzz testing" %][%/i%]
+sparked interest in [%g fuzz_testing "fuzz testing" %][%i "fuzz testing" "unit test!fuzzing" %]
 (or "fuzzing" for short), which is now a
 standard part of most testers' repertoire [%b Zeller2019 %].  Despite
 this, [%b Miller2020 %] found that thirty years later, programs are still
@@ -84,18 +84,18 @@ When most developers hear the word "design", they think about either the
 application's structure or its user interface. If you don't think about how
 you're going to test your application while you're designing it, though, the
 odds are very good that you'll build something that cannot (or cannot easily) be
-tested.  Conversely, if you [%i "design for test" "unit test!influence on software design" %][%g design_for_test "design for test" %][%/i%], it'll be a lot easier
+tested.  Conversely, if you [%g design_for_test "design for test" %][%i "design for test" "unit test!influence on software design" %], it'll be a lot easier
 to check whether your finished application actually does what it's supposed to.
 
-Thinking about testability from the start turns out to be a good [%i "software design!influence of testability" "testability!influence on software design" %][%g heuristic "heuristic" %][%/i%] for design in general
+Thinking about testability from the start turns out to be a good [%g heuristic "heuristic" %][%i "software design!influence of testability" "testability!influence on software design" %] for design in general
 [%b Feathers2004 %], since it forces you to think in terms of small
 components with well-defined interfaces. Not only can these be tested more
 easily, they can also be modified or replaced in isolation, which significantly
 reduces the probability of requiring rework in the naïve model presented at the
 start of this chapter.
 
-For example, let's consider a typical three-tier web site that uses the [%i "model-view-controller architecture" %][%g mvc "Model-View-Controller" %][%/i%]
-(MVC) [%i "design pattern!model-view-controller" %][%g design_pattern "design pattern" %][%/i%]. The model, which is stored in a relational database, is the data
+For example, let's consider a typical three-tier web site that uses the [%g mvc "Model-View-Controller" %][%i "model-view-controller architecture" %]
+(MVC) [%g design_pattern "design pattern" %][%i "design pattern!model-view-controller" %]. The model, which is stored in a relational database, is the data
 that the application manipulates, such as purchase orders and game states. The
 controller encapsulates the application's business rules: who's allowed to
 cancel games while they're in progress, how much interest to add on
@@ -115,8 +115,8 @@ confirm it, and books like [%b Olsen2007 Nystrom2014 Casciaro2020 %] are
 great places to get started.
 </div>
 
-The MVC architecture presents several [%i "model-view-controller
-architecture!testing" %]challenges for testing[%/i%]:
+The MVC architecture presents several challenges for testing[%i "model-view-controller
+architecture!testing" %]:
 
 Unit testing libraries are designed to run within a single process.
 :   As the word "library" implies, they're made up of code that's meant to be
@@ -143,7 +143,7 @@ actual program, this library passes the text of an HTTP response back to our
 script, which then checks that the right values are present (about which more in
 a moment). The library's job is to emulate the environment the web app under
 test would see if it was being invoked by the real server: environment variables
-are set, standard input and output are replaced by [%i "string I/O" %][%g string_io "string I/O" %][%/i%] objects, and so on, so that the application has no (easy)
+are set, standard input and output are replaced by [%g string_io "string I/O" %][%i "string I/O" %] objects, and so on, so that the application has no (easy)
 way to tell how it's being invoked.
 
 Why go through this rigmarole? Why not just have a top-level function in the web
@@ -170,7 +170,7 @@ login, then somewhere on the page there ought to be an element like this:
 
 [%inc current_user.html %]
 
-We can find that pretty easily with a [%i "CSS selector!use in testing" %][%g css_selector "CSS selector" %][%/i%] that looks for a `div` with the ID
+We can find that pretty easily with a [%g css_selector "CSS selector" %][%i "CSS selector!use in testing" %] that looks for a `div` with the ID
 `currentuser`.  We can then move the `div` around without breaking any of our
 tests; if we were a little more polite about formatting its internals (i.e., if
 we used something symbolic to highlight the user name and trusted CSS to do the
@@ -180,19 +180,19 @@ We've still only addressed half of our overall problem, though: our web
 application is still talking to a database, and reinitializing it each time a
 test runs is slow.  We can solve this by moving the database into memory. Most
 applications rely on an external database server, which is a long-lived process
-that manages data on disk. An alternative is an [%i "embedded database!use in testing" %][%g embedded_database "embedded database" %][%/i%], in which the
+that manages data on disk. An alternative is an [%g embedded_database "embedded database" %][%i "embedded database!use in testing" %], in which the
 database manipulation code runs inside the user's application as a normal
 library; [SQLite][sqlite] is probably the best known of these.
 
 The advantage of using an embedded database from a testing point of view is that
 it can be told to store data in memory, rather than on disk. This would be a
 silly thing to do in a production environment (after all, the whole point of a
-database is that it persists), but in a testing environment, an [%i "in-memory database!use in testing" %][%g in_memory_database "in-memory database" %][%/i%] can speed things up by a factor of thousands, since the hard
+database is that it persists), but in a testing environment, an [%g in_memory_database "in-memory database" %][%i "in-memory database!use in testing" %] can speed things up by a factor of thousands, since the hard
 drive never has to come into play. The cost of doing this is that you have to
 either commit to using one database in both environments, or avoid using the
 "improvements" that different databases have added to SQL.
 
-A third choice is to replace the database with a [%i "mock object" %][%g mock_object "mock object" %][%/i%].
+A third choice is to replace the database with a [%g mock_object "mock object" %][%i "mock object" %].
 A mock object has the same interface as the
 function, object, class, or library that it replaces, but is designed to be used
 solely for testing.  For example, Node's `mock-fs` library provides the same
@@ -228,9 +228,9 @@ pressed, the back end will respond the right way. But how do we test that the
 browser will call the right function with the right parameters when the button
 is clicked?
 
-The answer is to use a tool like [Selenium][selenium] to [%i "browser
-automation!for testing" "unit test!browser automation" %]automate the browser's
-actions[%/i%]. Similar tools exist for desktop and mobile applications; all of
+The answer is to use a tool like [Selenium][selenium] to automate the browser's
+actions[%i "browser
+automation!for testing" "unit test!browser automation" %]. Similar tools exist for desktop and mobile applications; all of
 them rely on the fact that the browser or the screen manager is just another
 piece of software. With a little bit of work, we can tell them to move the
 cursor to a specific (X,Y) location or a particular button or menu, to generate
@@ -238,7 +238,7 @@ a mouse click, or to pretend that the user just typed the letter 'G'. Once we've
 done that, we can check that the web page has the right elements or that the
 database has a new record just as we would with back-end tests.
 
-Most GUI testing frameworks have two other useful features. The first is [%i "browser automation!record and playback" %]record and playback[%/i%]: you can
+Most GUI testing frameworks have two other useful features. The first is record and playback[%i "browser automation!record and playback" %]: you can
 step through a workflow manually, and the tool can then produce a script that
 will repeat those steps. These scripts tend to be fragile—i.e., small changes
 to the UI will break them—but if you edit them to replace things like absolute
@@ -259,12 +259,12 @@ you might as well use it to make your life easier.
 Programs don't just have to do the right thing; they have to do it quickly
 enough to be usable.  How fast that needs to be depends on the program, but if a
 text editor takes nine seconds to display each character, people are going to
-write their reports some other way. You should therefore measure [%i "unit
-test!performance" %]how long your tests take to run[%/i%] so that you can tell
+write their reports some other way. You should therefore measure how long your tests take to run[%i "unit
+test!performance" %] so that you can tell
 when the application is slowing down and do something about it.
 
-The simplest kind of [%i "performance testing!manual" %]performance
-testing[%/i%] is simply to measure how much time elapses between the start and
+The simplest kind of performance
+testing[%i "performance testing!manual" %] is simply to measure how much time elapses between the start and
 end of a test. You can do this manually:
 
 [%inc manual_timing.py %]
@@ -288,7 +288,7 @@ probably saved my users from a lot of unnecessary frustration.
 ### Profiling
 
 If you find a performance problem, the next step is to use a
-[%i "profiler" "unit test!profiling" %][%g "profiler" "profiler" %][%/i%]
+[%g "profiler" "profiler" %][%i "profiler" "unit test!profiling" %]
 to figure out where the time is actually going.
 While a coverage tool checks which lines of code are
 executed, a profiler measures how long each line, block, or function takes to
@@ -312,7 +312,7 @@ very easy to see.
 
 The last thing you need (and you *do* need it) is some idea of how well you are
 testing.  How much of your code do your tests actually check, and what parts of
-your code aren't being tested?  To find out, you can check the [%i "coverage!code" "code coverage" "unit test!code coverage" %][%g code_coverage "code coverage" %][%/i%] of your tests, i.e., measure the number of lines, statements, or
+your code aren't being tested?  To find out, you can check the [%g code_coverage "code coverage" %][%i "coverage!code" "code coverage" "unit test!code coverage" %] of your tests, i.e., measure the number of lines, statements, or
 possible paths through the code that the tests are actually exercising.
 
 If you are using Python, you can check your tests' coverage with the `coverage`
@@ -335,7 +335,7 @@ So how much testing is enough?  The answer depends on what the software is being
 used for.  If it is for a safety-critical application such as a medical device,
 you should aim for 100% code coverage, i.e., every single line in the
 application should be tested.  In fact, we should probably go further and aim
-for 100% [%i "coverage!path" "path coverage" "unit test!path coverage" %][%g path_coverage "path coverage" %][%/i%] to ensure that every possible path through the
+for 100% [%g path_coverage "path coverage" %][%i "coverage!path" "path coverage" "unit test!path coverage" %] to ensure that every possible path through the
 code has been checked.  Similarly, if the software has become popular and is
 being used by thousands of people all over the world, we should probably check
 that it's not going to embarrass us.
@@ -351,8 +351,8 @@ be sure we were checking the result of each one correctly?
 
 ## What's Hard to Test
 
-Some things are intrinsically harder to test than others. Take [%i "visualization!difficulty of testing" "unit
-test!visualization" %]visualizations[%/i%]: any change to the dimension of the
+Some things are intrinsically harder to test than others. Take visualizations[%i "visualization!difficulty of testing" "unit
+test!visualization" %]: any change to the dimension of the
 plot, however small, can change many pixels in a [%g raster_image "raster
 image" %], and cosmetic changes such as moving the legend up a couple of
 pixels will cause all of the tests to fail.
@@ -365,8 +365,9 @@ designing the library so that it can draw axes without data points, points
 without axes, and so on will minimize the number of tests you need to rewrite
 as the library changes.
 
-Computer graphics, data science, and anything else that uses [%i "floating-point arithmetic!difficulty of testing" "unit test!floating-point
-arithmetic" %]floating-point arithmetic[%/i%] is also hard to test. One problem
+Computer graphics, data science, and anything else that uses
+floating-point arithmetic[%i "floating-point arithmetic!difficulty of testing" "unit test!floating-point arithmetic" %]
+is also hard to test. One problem
 is that floating-point numbers are approximations, just as 0.33333333 is an
 approximation to 1/3.  When we work with them, we have to think in terms of
 error bars, just as scientists working in a lab do; rather than checking if the

@@ -2,7 +2,7 @@
 title: How to Talk People Into Things
 ---
 
-[%i "persuasion" %]Persuading[%/i%] people to do things is almost as
+Persuading[%i "persuasion" %] people to do things is almost as
 essential to teamwork as running a good meeting. These simple rules have
 served me well.
 
@@ -34,7 +34,8 @@ Start small.
     else involved in whatever it is you want help with.  Don't be surprised or
     disappointed if that's where things end: everyone is busy or tired or has
     projects of their own, or maybe just has a different mental model of how
-    collaboration is supposed to work.  Remember the [%i "90-9-1 rule" %][%g 90_9_1_rule "90-9-1 rule" %][%/i%] and set your expectations accordingly.
+    collaboration is supposed to work.  Remember the [%g 90_9_1_rule "90-9-1 rule" %][%i "90-9-1 rule" %]
+    and set your expectations accordingly.
 
 Don't build a project: build a community.
 :   There is a softball team here in Toronto that never actually plays games:

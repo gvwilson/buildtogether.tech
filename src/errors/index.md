@@ -4,7 +4,7 @@ title: Error Handling
 
 > When Mister Safety Catch Is Not On, Mister Crossbow Is Not Your Friend.
 >
-> — [%i "Pratchett, Terry" %]Terry Pratchett[%/i%]
+> — Terry Pratchett[%i "Pratchett, Terry" %]
 
 We are imperfect people living in an imperfect world.  People will misunderstand
 how to use our programs, and even if we test thoroughly as described in
@@ -13,10 +13,10 @@ therefore plan from the start to detect and handle errors.
 
 ## Handling Errors
 
-[%i "internal error" "error!internal" %][%g internal_error "Internal errors" %][%/i%]
+[%g internal_error "Internal errors" %][%i "internal error" "error!internal" %]
 are mistakes in the program itself,
 such as calling a function with `None` instead of a list.
-[%i "external error" "error!external" %][%g external_error "External errors" %][%/i%]
+[%g external_error "External errors" %][%i "external error" "error!external" %]
 are usually caused by interactions between the program and the outside world:
 a user may mis-type a filename, the network might be down, and so on.
 
@@ -30,7 +30,7 @@ we don't always want the program to stop: if a user mis-types her password,
 prompting her to try again is friendlier than halting and requiring her to
 restart the program.
 
-Most modern programming languages use [%i "exception" %][%g exception "exceptions" %][%/i%] for error handling.  In Python, for example,
+Most modern programming languages use [%g exception "exceptions" %][%i "exception" %] for error handling.  In Python, for example,
 exceptions are handled using the keywords `try` and `except`.  If nothing
 unexpected happens inside the `try` block, the `except` block isn't run, but if
 something does go wrong, the program jumps immediately to the body of the
@@ -38,7 +38,7 @@ something does go wrong, the program jumps immediately to the body of the
 
 We often want to know exactly what went wrong, so Python and other languages
 store information about the error in an object (which is also called an
-exception).  We can [%i "exception!handling" "catch exception" %][%g catch_exception "catch" %][%/i%] an exception and inspect it as follows:
+exception).  We can [%g catch_exception "catch" %][%i "exception!handling" "catch exception" %] an exception and inspect it as follows:
 
 [%inc catch_exception.py %]
 [%inc catch_exception.out %]
@@ -51,7 +51,7 @@ zero in Python separately:
 [%inc specify_exception.out %]
 
 So where do exceptions come from?
-The answer is that programmers can [%i "exception!raise" "raise exception" %][%g raise_exception "raise" %][%/i%] them
+The answer is that programmers can [%g raise_exception "raise" %][%i "exception!raise" "raise exception" %] them
 explicitly:
 
 [%inc raise_exception.py %]
@@ -68,8 +68,8 @@ handle the error.  It keeps working its way up through the call stack until it
 finds a matching `except`.  If there isn't one, Python takes care of the
 exception itself.
 
-This behavior is designed to support a pattern called "[%i "throw low, catch
-high" %]throw low, catch high[%/i%]": write most of your code without exception
+This behavior is designed to support a pattern called "throw low, catch high[%i "throw low, catch
+high" %]": write most of your code without exception
 handlers, since there's nothing useful you can do in the middle of a small
 utility function, but put a few handlers in the outermost functions of your
 program to catch and report all errors.  This also makes libraries more
@@ -87,7 +87,7 @@ program, so there should always be an `except` somewhere to deal with unexpected
 cases.
 
 The one rule we should *always* follow is to check for errors
-[%i "exception!when to check" %]as early as possible[%/i%] so that we don't waste
+as early as possible[%i "exception!when to check" %] so that we don't waste
 the user's time.  Few things are as frustrating as being told at the end of an
 hour-long calculation that the program doesn't have permission to write to an
 output directory.  It's a little extra work to check things like this up front,
@@ -99,8 +99,8 @@ will be.
 
 The first step in building confidence in our programs is to assume that mistakes
 will happen and guard against them.  This is called
-[%i "defensive programming" %][%g defensive_programming "defensive programming" %][%/i%], and the
-most common way to do it is to add [%i "assertion" %][%g assertion "assertions" %][%/i%] to our code so that it checks itself as it runs.
+[%g defensive_programming "defensive programming" %][%i "defensive programming" %], and the
+most common way to do it is to add [%g assertion "assertions" %][%i "assertion" %] to our code so that it checks itself as it runs.
 An assertion is a statement that something must be true at a certain point in a
 program.  When the program runs, it checks the assertion's condition.  If it's
 true, the program does nothing; if it's false, it halts and prints a
@@ -130,8 +130,8 @@ we have to rely on guesswork or read the source code.  Telling the user that a
 file isn't a [%g csv "CSV" %] file makes it clear that the program only
 works with files of that type, but since we don't actually check the content of
 the file, this message could confuse someone who has comma-separated values
-saved in a `.txt` file.  An even [%i "error message!writing helpful" %]better
-message[%/i%] would therefore be:
+saved in a `.txt` file.  An even better
+message[%i "error message!writing helpful" %] would therefore be:
 
 [%inc helpful_error_msg.txt %]
 
@@ -179,8 +179,8 @@ messages directly in their code:
 
 [%inc error_msg_in_code.py %]
 
-A better approach is to put all the error messages in a [%i "error
-message!internationalizing" %]dictionary[%/i%]:
+A better approach is to put all the error messages in a dictionary[%i "error
+message!internationalizing" %]:
 
 [%inc error_msg_in_dict.py %]
 
@@ -202,7 +202,7 @@ where `user_language` is a two-letter code for the user's preferred language.
 ## Logging
 
 Something else you can design into your system to make your life easier later on
-is [%i "logging" %][%g logging "logging" %][%/i%]. Instead of writing `print`
+is [%g logging "logging" %][%i "logging" %]. Instead of writing `print`
 statements like this:
 
 [%inc print_msg.py %]
@@ -220,7 +220,7 @@ you put:
 somewhere near the start of your program. The `DEBUG` option identifies the
 lowest-level messages in your program—the ones you probably only want to see
 when you're trying to figure out what's gone wrong. In order, the more important
-[%i "logging!levels" %]levels[%/i%] in most logging libraries are `INFO`,
+levels[%i "logging!levels" %] in most logging libraries are `INFO`,
 `WARNING`, `ERROR`, and `CRITICAL`. If you only want messages at the `WARNING`
 level and above, you change the configuration to:
 
@@ -253,14 +253,14 @@ some idea of what it was doing beforehand.
 <div class="callout" markdown="1">
 ### Logging for security
 
-One of the recommendations in [%x security %] was to [%i "logging!for
-security" %]log actions[%/i%] to help you find suspicious activity.  When you do
+One of the recommendations in [%x security %] was to log actions[%i "logging!for
+security" %] to help you find suspicious activity.  When you do
 this, make sure the log records who, what, and when; in particular, make sure
 you have a record of every time permissions were changed or new accounts were
 created.
 </div>
 
-Most logging libraries also support [%i "logging!rotating files" %][%g rotating_file "rotating files" %][%/i%], i.e., they will write to `log.1` on the first day,
+Most logging libraries also support [%g rotating_file "rotating files" %][%i "logging!rotating files" %], i.e., they will write to `log.1` on the first day,
 `log.2` on the second day, and so on until they reach (for example) `log.7`,
 then wrap around and overwrite `log.1`. Web servers and other long-lived
 programs are usually set up to do this so that they don't fill up the disk with
@@ -272,7 +272,7 @@ gives you a lot more insight into what your program is actually doing.
 
 You will sometimes inspect logs yourself, but you will also frequently want to
 search them for patterns. All of the logs you produce should therefore be in a
-[%i "logging!output format" %]machine-readable format[%/i%] like CSV, JSON,
+machine-readable format[%i "logging!output format" %] like CSV, JSON,
 or [%g yaml "YAML" %]; you can easily write a small program to
 pretty-print the data you want for manual inspection.
 

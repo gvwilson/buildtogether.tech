@@ -30,13 +30,14 @@ experience, it makes a lot less difference than most people think…
 
 …as long as you use the right one, that is. Twenty years ago there was a pretty
 clear tradeoff between how quickly you can get a program running and how fast it
-ran.  [%i "programming language!interpreted" %][%g interpreted_language "Interpreted languages" %][%/i%] like [%i "Perl" %]Perl[%/i%] optimized programmers' time; [%i "programming language!compiled" %][%g compiled_language "compiled languages" %][%/i%] like [%i "C" %]C[%/i%] optimized the machine's.
+ran.  [%g interpreted_language "Interpreted languages" %][%i "programming language!interpreted" %]
+like Perl[%i "Perl" %] optimized programmers' time; [%g compiled_language "compiled languages" %][%i "programming language!compiled" %] like C[%i "C" %] optimized the machine's.
 
 Today, the balance has shifted in favor of higher-level languages. One reason is
 that processors have gotten faster but people haven't, so one programmer-hour is
 worth many more computer-hours than before. Another reason is that
-[%i "just-in-time compiler" %][%g jit "just-in-time compilers" %][%/i%] (JITs) and
-[%i "generational garbage collection" "garbage collection!generational" %][%g generational_garbage_collection "generational garbage collection" %][%/i%]
+[%g jit "just-in-time compilers" %][%i "just-in-time compiler" %] (JITs) and
+[%g generational_garbage_collection "generational garbage collection" %][%i "generational garbage collection" "garbage collection!generational" %]
 have made higher-level languages intrinsically faster. The biggest, though, is that
 the execution time of a modern application depends less on squeezing cycles out
 of processors than it used to. The bottleneck in a web site is almost always
@@ -46,32 +47,32 @@ its speed has less effect than you'd think.
 
 That said, there are three things to keep in mind:
 
-Some languages are [%i "programming language!ease of learning" %]easier to learn[%/i%] than others.
+Some languages are easier to learn[%i "programming language!ease of learning" %] than others.
 :   [%b Stefik2013 %] did a controlled experiment to see how quickly
     people could learn to recognize correct and incorrect syntax in several
-    different languages. They found that [%g curly_brace_language "curly-brace languages" %] like [%i "Java" %]Java[%/i%] and [%i "Perl" %]Perl[%/i%] were as hard for people
+    different languages. They found that [%g curly_brace_language "curly-brace languages" %] like Java[%i "Java" %] and Perl[%i "Perl" %] were as hard for people
     to learn as a language with a randomly designed syntax. (They rolled
     *Dungeons & Dragons* dice to pick random names and characters for a made-up
-    language.) Other languages like [%i "Ruby" %][Ruby][ruby][%/i%] and [%i "Python" %][Python][python][%/i%] were significantly easier to learn, and
-    they are now building a language called [%i "Quorum" %][Quorum][quorum][%/i%] by testing the usability of every
+    language.) Other languages like [Ruby][ruby][%i "Ruby" %] and [Python][python][%i "Python" %] were significantly easier to learn, and
+    they are now building a language called [Quorum][quorum][%i "Quorum" %] by testing the usability of every
     language feature.
 
 Static typing helps, but only a little.
-:   A [%i "static typing" "typing!static" "programming language!statically typed" %][%g static_typing "statically-typed" %][%/i%] language like [%i "Java" %]Java[%/i%] requires programmers to specify the data type of each
-    variable; a [%i "dynamic typing" "typing!dynamic" "programming language!dynamically typed" %][%g dynamic_typing "dynamically-typed" %][%/i%]
-    one like [%i "Python" %]Python[%/i%] doesn't require them, though you can add
-    them if you want, while [%i "TypeScript" %]TypeScript[%/i%] adds types as
-    a layer on top of [%i "JavaScript" %]JavaScript[%/i%].
+:   A [%g static_typing "statically-typed" %][%i "static typing" "typing!static" "programming language!statically typed" %] language like Java[%i "Java" %] requires programmers to specify the data type of each
+    variable; a [%g dynamic_typing "dynamically-typed" %][%i "dynamic typing" "typing!dynamic" "programming language!dynamically typed" %]
+    one like Python[%i "Python" %] doesn't require them, though you can add
+    them if you want, while TypeScript[%i "TypeScript" %] adds types as
+    a layer on top of JavaScript[%i "JavaScript" %].
     [%b Endrikat2014 %] found that declaring types does add complexity to
     programs, but it pays off fairly quickly by acting as documentation and by
-    making [%i "auto-completion" %][%g auto_completion "auto-completion" %][%/i%]
+    making [%g auto_completion "auto-completion" %][%i "auto-completion" %]
     more accurate.
 
 The most important thing about a language is its community.
 :   Some programming communities work hard to welcome newcomers and treat
     everyone respectfully. Others are more likely to call naïve questions
-    "stupid" or to make excuses when [%i "Linux!toxic leadership" %]their
-    leaders harass people[%/i%] [%b Cohen2018 %]. As a junior programmer,
+    "stupid" or to make excuses when their
+    leaders harass people[%i "Linux!toxic leadership" %] [%b Cohen2018 %]. As a junior programmer,
     you will learn more from the former than from the latter.
 
 [%b Stefik2017 %] is a good short summary of what we know and why we
@@ -81,38 +82,38 @@ evidence.
 ## Package Management
 
 There is no point building software if you can't install it.  Inspired by the
-[%i "Comprehensive TeX Archive Network (CTAN)" %][Comprehensive TeX Archive
-Network][ctan][%/i%], most languages now have an online archive from which
+[Comprehensive TeX Archive
+Network][ctan][%i "Comprehensive TeX Archive Network (CTAN)" %], most languages now have an online archive from which
 developers can download packages.  Each package typically has a name and one or
 more version(s); each version may have a list of dependencies, and the package
 may specify a version or range of versions for each dependency.
 
-A [%i "package manager" %][%g package_manager "package manager" %][%/i%] is a
+A [%g package_manager "package manager" %][%i "package manager" %] is a
 program that keeps track of which packages are installed on your computer and
 how they depend on each other.  Package managers became popular out of necessity
 in the 1990s along with Linux: so many distributions were being updated so often
 that people needed tools to keep track of what they had.
 
-Some package managers, like [%i "APT" "package manager!APT" %][APT][apt][%/i%]
-for [%i "Linux" %]Linux[%/i%] and [%i "Homebrew" "package
-manager!Homebrew" %][Homebrew][homebrew][%/i%] for [%i "MacOS" %]MacOS[%/i%],
-can handle many languages. Others, like [%i "pip" "package
-manager!pip" %][pip][pip][%/i%] for [%i "Python" %]Python[%/i%] and [%i "NPM" "package manager!NPM" %][NPM][npm][%/i%] for [%i "JavaScript" %]JavaScript[%/i%], are language-specific. No matter which one you
+Some package managers, like [APT][apt][%i "APT" "package manager!APT" %]
+for Linux[%i "Linux" %] and [Homebrew][homebrew][%i "Homebrew" "package
+manager!Homebrew" %] for MacOS[%i "MacOS" %],
+can handle many languages. Others, like [pip][pip][%i "pip" "package
+manager!pip" %] for Python[%i "Python" %] and [NPM][npm][%i "NPM" "package manager!NPM" %] for JavaScript[%i "JavaScript" %], are language-specific. No matter which one you
 use, the biggest challenge you'll face is finding the packages you need: at the
 time of writing, [this search][npm-xml-search] turns up over 700 XML parsers for
 a JavaScript. To help narrow the search, NPM allows the results to be sorted by
 popularity, quality, and maintenance. This obviously creates a feedback
 loop—if NPM labels a package "more popular" then more people will find it,
-which raises its popularity score even further—but [%i "NPMS" "package
-manager!package ratings" %][NPMS][npms][%/i%] is open about how these scores are
+which raises its popularity score even further—but [NPMS][npms][%i "NPMS" "package
+manager!package ratings" %] is open about how these scores are
 calculated, so package authors can find out what they need to do in order to
 improve their scores.
 
 Whatever package manager you use, your project should follow these rules:
 
 Keep a record.
-:   NPM automatically updates a project's [%i "Node.js!package.json
-    file" %]`package.json`[%/i%] file to show which packages have been installed
+:   NPM automatically updates a project's `package.json`[%i "Node.js!package.json
+    file" %] file to show which packages have been installed
     explicitly, and its `package-lock.json` file keeps track of exactly which
     versions of their dependencies have been installed as well, so in theory,
     someone else can duplicate your environment exactly. If you are using pip
@@ -134,9 +135,9 @@ Keep an eye on security updates.
 <div class="callout" markdown="1">
 ### Docker
 
-[%i "Docker" %][Docker][docker][%/i%] uses some clever tricks to run one
+[Docker][docker][%i "Docker" %] uses some clever tricks to run one
 operating system on top of another to create a
-[%i "virtual machine" %][%g "virtual_machine" "virtual machine" %][%/i%]
+[%g "virtual_machine" "virtual machine" %][%i "virtual machine" %]
 (VM) that is isolated from everything
 beneath it.  It and other tools like it are used by most cloud computing
 services and to run continuous integration systems ([%x automation %]), but
@@ -150,7 +151,7 @@ packaging reliably.
 You are going to spend a lot of time editing code, documentation, and reports,
 so choosing a good editor is as important as choosing a comfortable chair.
 There are literally thousands to consider, from very small plain-text editors
-such as [%i "Notepad" "editor!Notepad" %]Notepad[%/i%] (which comes with [%i "Windows" %]Windows[%/i%]) to very large ones like [%i "Emacs" "editor!Emacs" %]Emacs[%/i%] (which some people claim is actually Lisp-based
+such as Notepad[%i "Notepad" "editor!Notepad" %] (which comes with Windows[%i "Windows" %]) to very large ones like Emacs[%i "Emacs" "editor!Emacs" %] (which some people claim is actually Lisp-based
 operating system in disguise).
 
 <div class="callout" markdown="1">
@@ -170,33 +171,33 @@ if you are looking for a project to tackle, this would be a good one.
 You might already have a favorite editor. If you're like most programmers, you
 will change jobs, languages, operating systems, and nationality before you'll
 switch to another, because it has taken weeks or months for your hands to master
-the current one. However, if it is not an [%i "IDE" %][%g ide "integrated development environment" %][%/i%] (IDE) that combines an editor with other
+the current one. However, if it is not an [%g ide "integrated development environment" %][%i "IDE" %] (IDE) that combines an editor with other
 programming tools then getting work done will take longer and hurt more than it
 needs to.
 
-IDEs were invented in the 1970s, but didn't really catch on until [%i "Borland" %]Borland[%/i%] released [%i "Turbo Pascal" %]Turbo Pascal[%/i%]
+IDEs were invented in the 1970s, but didn't really catch on until Borland[%i "Borland" %] released Turbo Pascal[%i "Turbo Pascal" %]
 in the 1980s.  They usually include these tools:
 
--   A [%i "console" "IDE!console" %][%g console "console" %][%/i%] so that you can
+-   A [%g console "console" %][%i "console" "IDE!console" %] so that you can
     type in expressions or call functions and see the results without having to
     start (or restart) your program.
 
--   A [%i "code browser" %][%g code_browser "code browser" %][%/i%] that helps you
+-   A [%g code_browser "code browser" %][%i "code browser" %] that helps you
     navigate the packages, classes, methods, and data in your program.
 
--   A [%i "GUI designer" %][%g gui_designer "GUI designer" %][%/i%] that lets you
+-   A [%g gui_designer "GUI designer" %][%i "GUI designer" %] that lets you
     build GUIs by dragging and dropping components;
 
--   A [%i "test runner" %]test runner[%/i%] to display the results of tests and
+-   A test runner[%i "test runner" %] to display the results of tests and
     let you jump directly to ones that have failed. This is usually a GUI built
     on top of whatever unit testing framework you are using
     ([%x testing %]), just as graphical interfaces for version control are usually
     built on top of the command-line tools.
 
-The most popular IDE today is probably [%i "VS Code" "Microsoft Visual Studio
-Code" "IDE!VS Code" %][Microsoft Visual Studio Code][vs-code][%/i%], often
+The most popular IDE today is probably [Microsoft Visual Studio Code][vs-code][%i "VS Code" "Microsoft Visual Studio
+Code" "IDE!VS Code" %], often
 referred to simply as "VS Code".  Along with all the tools above, it has
-hundreds of [%i "plugin!for IDE" %][%g plugin "plugins" %][%/i%] of varying
+hundreds of [%g plugin "plugins" %][%i "plugin!for IDE" %] of varying
 quality to support database design, reverse engineering, dozens of different
 programming languages, and more.  These all make you more productive than their
 disconnected counterparts. Since most of these store project data (including
@@ -205,7 +206,7 @@ you all adopt the same IDE. This will also let you help one another solve
 problems and share plugins.
 
 But calling VS Code is the world's most popular IDE is misleading.  If you open
-[%i "IDE!in browser" %]developer tools[%/i%]. in Firefox, Chrome, or Edge, you
+developer tools[%i "IDE!in browser" %]. in Firefox, Chrome, or Edge, you
 will be shown an HTML browser that's smart enough to tell you which bits of CSS
 are in effect where, a console that displays messages from the JavaScript
 running in the page, a breakpointing debugger ([%x debugging %]), a network
@@ -215,7 +216,7 @@ yet—but it will make all of your front-end work a lot easier.
 ## Refactoring
 
 After a debugger, the most under-appreciated power of most IDEs is their ability
-to [%i "refactoring" %][%g refactoring "refactor" %][%/i%] code, i.e., to change
+to [%g refactoring "refactor" %][%i "refactoring" %] code, i.e., to change
 its structure without changing what it does [%b Fowler2018 %].  It is just
 as much a part of programming as writing code in the first place: nobody gets
 things right the first time, and needs or insights can change over time
@@ -246,8 +247,8 @@ productive. Some aren't part of the standard undergraduate curriculum yet, even
 though good developers have been relying on them for a decade or more. Others
 may be touched on, but only briefly, so a quick recap won't hurt.
 
-The first is a [%i "documentation generator" %][%g doc_generator "documentation generator" %][%/i%] like [%i "JSDoc" "documentation
-generator!JSDoc" %][JSDoc][jsdoc][%/i%]. This is a compiler of a sort, but
+The first is a [%g doc_generator "documentation generator" %][%i "documentation generator" %] like [JSDoc][jsdoc][%i "JSDoc" "documentation
+generator!JSDoc" %]. This is a compiler of a sort, but
 instead of translating source code into something executable, it extracts
 information from specially-formatted comments and strings, and turns it into
 human-readable documentation.  The justification for this is that when code and
@@ -259,13 +260,13 @@ classes, and methods this way; it's a good habit, and one you should cultivate.
 
 Another set of tools complement the style checkers discussed in [%x automation %].
 Style checkers do static analysis, i.e., they look at the
-text of your program while it's at rest.  Other tools do [%i "dynamic analysis" %][%g dynamic_analysis "dynamic analysis" %][%/i%]: tools like
-[%i "Valgrind" "dynamic analysis!Valgrind" %]Valgrind[%/i%] watch your [%i "C" %]C[%/i%] or [%i "C++" %]C++[%/i%] program run and look for things like
+text of your program while it's at rest.  Other tools do [%g dynamic_analysis "dynamic analysis" %][%i "dynamic analysis" %]: tools like
+Valgrind[%i "Valgrind" "dynamic analysis!Valgrind" %] watch your C[%i "C" %] or C++[%i "C++" %] program run and look for things like
 memory leaks, or inconsistent locking that might lead to deadlocks or race
 conditions.
 
 Real development projects rely on a lot of other tools as well: schedule
-builders like [%i "Microsoft Project" %]Microsoft Project[%/i%], requirements
+builders like Microsoft Project[%i "Microsoft Project" %], requirements
 tracing tools, and so on. Most are bigger hammers than undergraduate projects
 really require, but good programmers don't just use tools, they build them.  For
 example, I have written two dozen short programs to help me write and maintain
@@ -279,9 +280,9 @@ over and over again, write a program to do it for you.
 
 A lot of open source projects and commercial products began with one programmer
 solving a problem for themselves and then discovering that other people found it
-useful as well. [%i "Grand Perspective" %][Grand
-Perspective][grand-perspective][%/i%] displays a tree map to show what's using
-disk space on a Mac; [%i "Carnac" %][Carnac][carnac][%/i%] shows what special
+useful as well. [Grand
+Perspective][grand-perspective][%i "Grand Perspective" %] displays a tree map to show what's using
+disk space on a Mac; [Carnac][carnac][%i "Carnac" %] shows what special
 keys you're pressing on Windows so that if you're doing a demo, people can see
 the keyboard shortcuts you're using, and so on.  Building one small thing well
 is a lot more useful, and a lot more likely to be used, than building half of
@@ -292,11 +293,11 @@ something larger.
 ## Modeling
 
 If you want to go one big step further, you can start using modeling tools like
-[%i "Alloy" "modeling tools!Alloy" %][Alloy][alloy][%/i%]
-[%b Jackson2016 %] and [%i "TLA+" "modeling
-tools!TLA+" %][TLA+][tla-plus][%/i%] [%b Wayne2018 %].  Instead of
-analyzing source code, you use these tools to build and analyze a [%g model "model" %] of what the code is supposed to do so that you can look
-for flaws in your algorithms.
+[Alloy][alloy][%i "Alloy" "modeling tools!Alloy" %]
+[%b Jackson2016 %] and [TLA+][tla-plus][%i "TLA+" "modeling tools!TLA+" %] [%b Wayne2018 %].
+Instead of analyzing source code,
+you use these tools to build and analyze a [%g model "model" %] of what the code is supposed to do
+so that you can look for flaws in your algorithms.
 
 Alloy focuses on describing complex relationships, such as the integrity of data
 structures; TLA+ is designed to help you reason about sequences of concurrent

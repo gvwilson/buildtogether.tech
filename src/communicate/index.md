@@ -15,10 +15,10 @@ lab notebook, kept in a text file on your laptop, or in your head; wherever and
 however you maintain it, it lists the things you're supposed to do, when they're
 due, and (possibly) how urgent they are.
 
-At its simplest, an [%i "issue tracker" "issue" %][%g issue_tracker "issue tracker" %][%/i%]
+At its simplest, an [%g issue_tracker "issue tracker" %][%i "issue tracker" "issue" %]
 is a shared to-do list. Issue tracking systems are also called
-[%i "ticketing system" %]ticketing systems[%/i%] and [%i "bug
-tracker" %]bug trackers[%/i%] because most software projects use them to keep
+ticketing systems[%i "ticketing system" %] and bug trackers[%i "bug
+tracker" %] because most software projects use them to keep
 track of the bugs that developers and users find. These days, issue trackers are
 almost invariably web-based. To create a new issue, you enter a title and a
 short description; the system then assigns it a unique serial number. You can
@@ -48,8 +48,8 @@ final report.
 Of course, a issue tracker is only as useful as what you put into it.  If you're
 describing a bug in a large application, you should include enough information
 to allow someone to reproduce the problem. This is why industrial-strength
-systems like [%i "Jira (issue tracker)" "issue
-tracker!Jira" %][Jira][jira][%/i%] can have a couple of dozen [%i "issue!fields" %]fields[%/i%] for each issue, including:
+systems like [Jira][jira][%i "Jira (issue tracker)" "issue
+tracker!Jira" %] can have a couple of dozen fields[%i "issue!fields" %] for each issue, including:
 
 -   what version of the software you were using;
 
@@ -83,21 +83,21 @@ the duplicate file finder reviewed in [%x git-team %]:
 
 The ID on the first line is assigned by the issue tracker, an often serves as a
 shorthand name for the issue in conversation. ("Hey, is anyone working on number
-fifty-five yet?") The date is in [%i "issue!timestamps" %][%g utc "UTC" %][%/i%]
+fifty-five yet?") The date is in [%g utc "UTC" %][%i "issue!timestamps" %]
 so that it is unambiguous: while your team may all be in one place, it's
 increasingly likely that you are scattered across several time zones.
 
-The [%i "issue!good titles" %]title[%/i%] on line 3 is probably the most
+The title[%i "issue!good titles" %] on line 3 is probably the most
 important part of the issue. Projects will accumulate hundreds of issues over
 time; a good subject line makes it much easier to find the ones you need. The
 `type`, `severity`, and `labels` fields also improve
-[%i "discoverability!of issues" %][%g discoverability "discoverability" %][%/i%];
+[%g discoverability "discoverability" %][%i "discoverability!of issues" %];
 while `type` and `severity` could be labels, having them in fields of their own
 makes it easier to sort and filter issues.
 
-Finally, the [%i "issue!description of" %]description[%/i%] briefly
+Finally, the description[%i "issue!description of" %] briefly
 summarizes the problem. If the author hadn't already identified the cause, it
-should include a [%i "reproducible example (reprex)" %][%g reprex "reproducible example" %][%/i%] (also called a reprex). This helps the person understand what the
+should include a [%g reprex "reproducible example" %][%i "reproducible example (reprex)" %] (also called a reprex). This helps the person understand what the
 issue is much more than, "The program crashes when I open strange files," but
 experience shows that if people are required to come up with a reprex when
 filing an issue, they will often solve their own problem along the way.  We'll
@@ -109,14 +109,14 @@ talk more about the value of minimal reproducible examples in
 
 As we will see in [%x process %], one purpose of a schedule is to tell you
 when to start cutting corners. Similarly, one of the main reasons to keep
-[%i "issue tracker!helping triage" "triage!using issue tracker" %]issues[%/i%] in
+issues[%i "issue tracker!helping triage" "triage!using issue tracker" %] in
 one place is to help you prioritize work when time starts to run short.
 </div>
 
 ## Labeling Issues
 
 The bigger a project gets, the harder it is to find things.  Issue trackers
-therefore let project members add [%i "issue!classifying" %][%g issue_label "labels" %][%/i%] to issues to make things easier to search
+therefore let project members add [%g issue_label "labels" %][%i "issue!classifying" %] to issues to make things easier to search
 and organize.  Labels are also often called tags; whatever term is used, each
 one is just a descriptive word or two.
 
@@ -177,7 +177,7 @@ Duplicate
 Some projects use labels corresponding to upcoming assignments instead of
 Current, Next, and Eventually.  This approach works well in the short term, but
 becomes unwieldy as labels with names like `exercise-14` pile up.  Instead, a
-project team will usually create a [%i "milestone (in issue tracker)" "issue tracker!milestones" %][%g milestone "milestone" %][%/i%], which is a set of issues
+project team will usually create a [%g milestone "milestone" %][%i "milestone (in issue tracker)" "issue tracker!milestones" %], which is a set of issues
 and pull requests in a single project repository.  GitHub milestones can have a
 due date and display aggregate progress toward completion, so the team can
 easily see when work is due and how much is left to be done.
@@ -185,8 +185,8 @@ easily see when work is due and how much is left to be done.
 ## Other Ways to Communicate
 
 Issues are the best way to keep track of where you are, but there are lots of
-other ways the team can and should communicate. These can be [%i "communication!synchronous" %]synchronous[%/i%], like chat and video calls, or
-[%i "communication!asynchronous" %]asynchronous[%/i%], like issues and
+other ways the team can and should communicate. These can be synchronous[%i "communication!synchronous" %], like chat and video calls, or
+asynchronous[%i "communication!asynchronous" %], like issues and
 email. The former are better for quick back-and-forth and for maintaining social
 connections, but they can also be a constant stream of interruptions, which
 lowers productivity ([%x important %]). Synchronous tools also tend to bias
@@ -195,15 +195,15 @@ language, or have better network connections, and finding things afterward in
 archives of stream-of-consciousness exchanges is harder than finding things in
 asynchronous media.
 
-But who am I kidding? You're going to use [%i "communication!instant
-messaging" "instant messaging!inevitable use of" %]instant messaging[%/i%] no
+But who am I kidding? You're going to use instant messaging[%i "communication!instant
+messaging" "instant messaging!inevitable use of" %] no
 matter what I say.  If more than two people are in the conversation, follow the
 same rules you would for a short meeting: post a summary of any decisions you
 made where everyone can see it.
 
 If you prefer fewer interruptions and longer periods of thought, you can always
-go back to [%i "communication!email" "email (for team
-communication)" %]email[%/i%], which has been used to run projects since the
+go back to email[%i "communication!email" "email (for team
+communication)" %], which has been used to run projects since the
 1970s.  It brings content directly to people while allowing everyone to deal
 with issues when it's convenient for them, and supports long-running
 conversations. Email really comes into its own, though, when messages are routed
@@ -217,7 +217,7 @@ and find out what was said a month ago—or, just as importantly, if someone
 ### Filters are your friend
 
 Every email client allows you to set up
-[%i "email!filters" %][%g "mail_filter" "filters" %][%/i%]
+[%g "mail_filter" "filters" %][%i "email!filters" %]
 that automatically flag messages matching
 certain patterns or file them in particular mailboxes. I have fourteen of these
 set up right now to organize messages belonging to particular projects; it only
@@ -225,37 +225,37 @@ took a couple of minutes, and it means that when I check mail in the morning or
 after lunch, everything is set up for me to focus on one topic at a time.
 </div>
 
-[%i "software portal!communication tools" %]Software portals[%/i%] provide
+Software portals[%i "software portal!communication tools" %] provide
 many other ways to communicate, which project members use in a wide variety of
-ways [%b Treude2011 %].  [%i "wiki" "communication!wiki" %]Wikis[%/i%]
+ways [%b Treude2011 %].  Wikis[%i "wiki" "communication!wiki" %]
 seem like a good way to keep notes, create documentation, and so on. Their main
 strength is the fact that content is automatically and immediately visible on
 the web.  These days, you will probably get more mileage out of a bunch of
-[%i "Markdown" %]Markdown[%/i%] pages under version control—you have to set up a
+Markdown[%i "Markdown" %] pages under version control—you have to set up a
 repository anyway, and version control systems are much better at reconciling
 conflicts between concurrent authors than wikis.
 
-[%i "communication!blog" "blog!as team journal" %]Blogs[%/i%], on the other
+Blogs[%i "communication!blog" "blog!as team journal" %], on the other
 hand, have proven more useful. One kind of project blog consists of articles
 written by the team's members as a journal of their progress. This is most
 useful for people who are watching the project from the outside, like
 instructors.
 
-The second kind of [%i "blog!automatically generated" %]blog[%/i%] is one
+The second kind of blog[%i "blog!automatically generated" %] is one
 created automatically by tools. In many project management systems, every
 project has a blog.  Every time someone checks code into version control,
 creates or closes an issue, or sends email, an entry is added to that blog. This
 allows the project's members to see changes scroll by in their usual blog
 reader, which is a handy way to keep track of what their teammates are doing.
 
-If you are going to create a blog, use a [%i "static site generator" %][%g static_site_generator "static site generator" %][%/i%] to format and publish
-content consistently.  On GitHub, for example, you can create a site with [%i "GitHub Pages" %][GitHub Pages][ghp][%/i%] using a tool called [%i "Jekyll" "static site generator!Jekyll" %][Jekyll][jekyll][%/i%]; lots of
+If you are going to create a blog, use a [%g static_site_generator "static site generator" %][%i "static site generator" %] to format and publish
+content consistently.  On GitHub, for example, you can create a site with [GitHub Pages][ghp][%i "GitHub Pages" %] using a tool called [Jekyll][jekyll][%i "Jekyll" "static site generator!Jekyll" %]; lots of
 different themes are available, and there are many good tutorials online.
 
 <div class="callout" markdown="1">
 ### Comments as communication
 
-People don't usually think of [%i "comments!as communication" "communication!comments" %]comments[%/i%]
+People don't usually think of comments[%i "comments!as communication" "communication!comments" %]
 as a form of communication like email or
 instant messaging, but if they are used properly, the only significant
 difference is that the comments are right there in the code where the recipients
@@ -275,16 +275,16 @@ This, on the other hand, tells the next person why we're doing it:
 ## Reporting Up
 
 As well as reporting progress to your teammates,
-you may have to [%i "reporting!to your manager" %]report[%/i%] it regularly to your instructor, who
-is effectively your manager. [%i "Evans, Julia" %][Julia
-Evans][evans-julia][%/i%] has described [eight things your manager might not
+you may have to report[%i "reporting!to your manager" %] it regularly to your instructor, who
+is effectively your manager. [Julia
+Evans][evans-julia][%i "Evans, Julia" %] has described [eight things your manager might not
 know][evans-manager], all of which apply to student teams:
 
 1.  What's slowing the team down.
 
 1.  Exactly what individual people on the team are working on.
 
-1.  Where the [%i "technical debt" %][%g technical_debt "technical debt" %][%/i%] is.
+1.  Where the [%g technical_debt "technical debt" %][%i "technical debt" %] is.
 
 1.  How to help you get better at your job.
 
@@ -297,7 +297,7 @@ know][evans-manager], all of which apply to student teams:
 1.  How compensation/promotions work at the company.  (For students, this one
     translates to, "How grading actually works.")
 
-[%i "Kaplan-Moss, Jacob" %][Jacob Kaplan-Moss][kaplan-moss-jacob][%/i%] has a
+[Jacob Kaplan-Moss][kaplan-moss-jacob][%i "Kaplan-Moss, Jacob" %] has a
 similar guide to [giving a status update to executives][kaplan-moss-executives],
 and [Ask a Manager][ask-a-manager] is full of good advice and discussion as
 well. If you follow those guidelines, you get briefs like this:
@@ -323,14 +323,14 @@ team member.
 ## Documentation
 
 An old proverb says, "Trust, but verify."  The equivalent in programming is, "Be
-clear, but [%i "documentation!as communication" %]document[%/i%]."  No matter
+clear, but document[%i "documentation!as communication" %]."  No matter
 how well software is written, it always embodies decisions that aren't explicit
 in the final code or accommodates complications that aren't going to be obvious
 to the next reader.  Putting it another way, the best function names in the
 world aren't going to answer the questions "Why does the software do this?"  and
 "Why doesn't it do this in a simpler way?"
 
-In most cases, [%i "documentation!embedded" %]embedded documentation[%/i%] in
+In most cases, embedded documentation[%i "documentation!embedded" %] in
 the form of a short [%g docstring "docstring" %] or [%g doc_comment "doc comment" %] to remind ourselves of each function's
 purpose is probably as much documentation as we need.  (In fact, it's probably
 better than what most people do.)  That one- or two-liner should begin with an
@@ -348,7 +348,7 @@ examples of good one-line docstrings include:
 You can tell our one-liners are useful if you can read them aloud in the order
 the functions are called in place of the function's name and parameters.
 
-Once you start writing code for other people (or your future self) your [%i "documentation!what to include" %]documentation[%/i%] should include:
+Once you start writing code for other people (or your future self) your documentation[%i "documentation!what to include" %] should include:
 
 -   The name and purpose of every public class, function, and constant in our
     code.
@@ -371,16 +371,16 @@ As [%x thinking %] explains, we can divide people in any domain into
 novices, competent practitioners, and experts.  Each of these three groups needs
 a different kind of documentation:
 
--   A [%i "novice!documentation needs" "documentation!for
-    novices" %]novice[%/i%] needs a tutorial that introduces her to key ideas one
+-   A novice[%i "novice!documentation needs" "documentation!for
+    novices" %] needs a tutorial that introduces her to key ideas one
     by one and shows how they fit together.
 
--   A [%i "competent practitioner!documentation needs" "documentation!for
-    competent practitioners" %]competent practitioner[%/i%] needs reference guides,
+-   A competent practitioner[%i "competent practitioner!documentation needs" "documentation!for
+    competent practitioners" %] needs reference guides,
     cookbooks, and Q&A sites; these give her solutions close enough to what she
     needs that she can tweak them the rest of the way.
 
--   [%i "expert!documentation needs" "documentation!for experts" %]Experts[%/i%]
+-   Experts[%i "expert!documentation needs" "documentation!for experts" %]
     need this material as well—nobody's memory is perfect—but they may also
     paradoxically want tutorials.  The difference between them and novices is
     that experts want tutorials on how things work and why they were designed
@@ -393,7 +393,7 @@ things they actually want to do rather than printing the numbers from 1 to 10,
 and should include regular check-ins so that people can tell if they're making
 progress.
 
-Tutorials help novices build a [%i "mental model" %]mental model[%/i%], but
+Tutorials help novices build a mental model[%i "mental model" %], but
 competent practitioners and experts will be frustrated by their slow pace and
 low information density.  They will want single-point solutions to specific
 problems, like how to find cells in a spreadsheet that contain a certain string
@@ -407,7 +407,7 @@ queries and tell if the results are on the right track or not.
 
 As projects grow, documentation within functions alone may be insufficient for
 users to apply code to their own problems.  One strategy to assist other people
-with understanding a project is with an [%i "FAQ" %]FAQ[%/i%].  A good FAQ
+with understanding a project is with an FAQ[%i "FAQ" %].  A good FAQ
 uses the terms and concepts that people bring to the software rather than the
 vocabulary of its authors; putting it another way, the questions should be
 things that people actually search for online, not the things the program's
@@ -417,7 +417,7 @@ Creating and maintaining an FAQ is a lot of work, and unless the community is
 large and active, a lot of that effort may turn out to be wasted, because it's
 hard for the authors or maintainers of a piece of software to anticipate what
 newcomers will be mystified by.  A better approach is to leverage sites like
-[%i "Stack Overflow" %][Stack Overflow][stack-overflow][%/i%], which is where
+[Stack Overflow][stack-overflow][%i "Stack Overflow" %], which is where
 most programmers are going to look for answers anyway.
 
 The Stack Overflow guide to [asking a good
@@ -457,5 +457,5 @@ Allow for a chorus of explanations.
     that suggest different approaches or are written for different prior levels
     of understanding. This is one of the things that has made Stack Overflow so
     successful: if users are different from one another, they are best served by
-    a [%i "chorus of explanation" %]chorus of explanations[%/i%]
+    a chorus of explanations[%i "chorus of explanation" %]
     [%b Caulfield2016 %].

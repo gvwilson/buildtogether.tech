@@ -8,7 +8,7 @@ didn't finish her stuff until the very last minute, which meant that no one else
 had time to spot the two big mistakes she'd made.  And Surinder didn't deliver
 at all—again.  If something doesn't change, you're going to fail this course.
 
-[%i "conflict (interpersonal)" %]Conflicts[%/i%] like this come up all the
+Conflicts[%i "conflict (interpersonal)" %] like this come up all the
 time.  We can deal with them in four ways:
 
 1.  Cross our fingers and hope that things will get better on their own, even
@@ -43,15 +43,15 @@ vaccination][wapost-facebook-vaccine]. Similarly, one of the designers of the
 game *Ultima Online* [reported][ultima-online-players], "…we asked players what
 percentage of the player base were degenerate player killers.  Players responded
 with 10%.  The metrics told us the answer was closer to 0.1%." These findings
-and many others tell us that [%i "toxic people!rarity of" %]a small number of
-people[%/i%] cause a disproportionate amount of grief in our communities
+and many others tell us that a small number of
+people[%i "toxic people!rarity of" %] cause a disproportionate amount of grief in our communities
 (online and otherwise), and that they seem much more common than they are
 because incidents of abuse and conflict loom large in our memories.
 
 The irony is that *The Walking Dead* and *Mad Max* have it completely backward:
 when a real disaster strikes, most people actually rise to the occasion. As
-[%b Solnit2010 %] describes, [%i "toxic people!misperception
-of" %]neighbors don't turn on each other[%/i%] in the aftermath of an earthquake
+[%b Solnit2010 %] describes, neighbors don't turn on each other[%i "toxic people!misperception
+of" %] in the aftermath of an earthquake
 or a hurricane—instead, they are more likely to look out for each other than
 under normal circumstances. That doesn't make for exciting viewing, though, and
 the powerful have always wanted the rest of us to believe that the only
@@ -62,7 +62,7 @@ alternative to their rule is chaos.
 
 The first rule for meetings in [%x important %] was to agree on what the
 rules are so that everyone knows what's expected of them. A shared understanding
-of [%i "conflict (interpersonal)!handling" %]how to handle conflict[%/i%]
+of how to handle conflict[%i "conflict (interpersonal)!handling" %]
 helps in the same way; as with first aid training, having some idea of what to
 do makes you more likely to actually do something when the time comes.
 
@@ -122,7 +122,7 @@ sure the offender gets a copy as well, and ask the instructor to arrange a
 meeting to resolve the issue.
 
 One technique your instructor may ask you to use in a meeting of this kind is
-[%i "active listening" %][%g active_listening "active listening" %][%/i%]. When
+[%g active_listening "active listening" %][%i "active listening" %]. When
 one person makes a point, the person on the other side of the issue explains it
 back to them, as in, "So what I think Igor is saying is…" This confirms that the
 second person has actually paid attention to what the first person said. It can
@@ -133,7 +133,7 @@ moments.
 <div class="callout" markdown="1">
 ### Hitchhikers
 
-[%i "hitchhiker" %][%g hitchhiker "Hitchhikers" %][%/i%] who show up but never
+[%g hitchhiker "Hitchhikers" %][%i "hitchhiker" %] who show up but never
 actually do anything are particularly difficult to manage, in part because they
 are usually very good at appearing reasonable.  They will nod as you present our
 case, then say, "Well, yes, but…" and list a bunch of minor exceptions or cases
@@ -155,7 +155,7 @@ everyone; in such cases, the best guide is to do the kindest thing possible.
 
 ## Escalation
 
-What can you do if [%i "conflict (interpersonal)!escalating" %]conflict[%/i%]
+What can you do if conflict[%i "conflict (interpersonal)!escalating" %]
 becomes more personal and heated?
 
 1.  Be short, simple, and firm.
@@ -184,7 +184,7 @@ worked in a data visualization startup. Individually, we were all smart, decent
 people. Put us together, though, and somehow our IQs and personalities canceled
 out, so that collectively we were as dumb as a sack full of hammers.
 
-There's not a lot you can do in cases like this except [%i "teams!dissolving" %]start over[%/i%].  Instructors can allow for this by
+There's not a lot you can do in cases like this except start over[%i "teams!dissolving" %].  Instructors can allow for this by
 announcing at the start of the course that teams will be dissolved and re-formed
 halfway through the project, *unless* every member on the team submits a
 separate signed request to stay together.  There's a bit of psychology here: if

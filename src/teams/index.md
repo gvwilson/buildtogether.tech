@@ -3,8 +3,8 @@ title: Teams
 ---
 
 Most people learn better together than they do on their own
-[%b Michaelson2004 %].  As long as their teams [%i "teams!learning
-benefits of" %]work well[%/i%], they achieve higher grades, retain information
+[%b Michaelson2004 %].  As long as their teams work well[%i "teams!learning
+benefits of" %], they achieve higher grades, retain information
 longer, are less likely to drop out of school, and graduate with better
 communication skills and a better understanding of what will be expected of them
 in their subsequent careers.
@@ -24,7 +24,7 @@ are a good start; this chapter will look at what else you can do.
 
 I once heard an anthropologist ask, "How big is a sports team?"  When people
 said it depends on the sport, she explained that in fact they all have about
-[%i "teams!effective size of" %]half a dozen members[%/i%].  Anything larger
+half a dozen members[%i "teams!effective size of" %].  Anything larger
 than that splits into smaller groups: the forwards and backs in rugby, the
 infield and outfield in baseball, and so on.  She went on to explain that
 hunting parties in non-agricultural societies are usually that size as well, as
@@ -44,20 +44,20 @@ of work; more importantly, one or the other person is likely to take a dominant
 role.  If you put six or eight people in a team, on the other hand, you may not
 be able to divide up the work in a way that will keep everyone engaged and busy.
 Teams that size or larger also increase the odds that at least one member will
-be a [%i "hitchhiker" %]hitchhiker[%/i%], and make scheduling meetings much
+be a hitchhiker[%i "hitchhiker" %], and make scheduling meetings much
 more difficult.
 
-Many students prefer to [%i "teams!selecting" %]select[%/i%] their teammates,
+Many students prefer to select[%i "teams!selecting" %] their teammates,
 and students with high grades tend to want teammates with a similar profile.
 [%b Post2020 %] found that matching students by grade led to a small
 improvement in outcomes, with a larger impact on team grades than on individual
 ones. The same study found that members of self-selected teams were more likely
-to already have [%i "teams!effect of having friends on" %]friends[%/i%] on
+to already have friends[%i "teams!effect of having friends on" %] on
 their team, but that this was *negatively* correlated with outcomes (possibly
 because people are less willing to hold friends accountable for missed work).
 
-One surprising finding is that having students with [%i "teams!benefits of
-diverse ability levels" %]a range of grades[%/i%] in the same team either has no
+One surprising finding is that having students with a range of grades[%i "teams!benefits of
+diverse ability levels" %] in the same team either has no
 effect or improves outcomes *for everyone*
 [%b Mosher2013 Donovan2018 Farland2019 Auvinen2020 %].  It's easy to see
 how this benefits teams of weak students: they are likely to get coaching from
@@ -83,8 +83,8 @@ is on it. Your performance will depend as much on your ability to get along with
 others as it will on your raw technical ability, so you might as well start
 practicing those skills now.
 
-If instructors create teams, they should [%i "teams!isolating at-risk
-students" %]avoid isolating at-risk students[%/i%].  Women and members of racial
+If instructors create teams, they should avoid isolating at-risk students[%i "teams!isolating at-risk
+students" %].  Women and members of racial
 minority groups are more likely to drop out of computer science than other
 students, particularly in first and second year, and one of the main reasons is
 feeling isolated or out of place. Research has shown that putting at-risk
@@ -93,8 +93,8 @@ students together in the first couple of years can mitigate this problem
 students have a stronger commitment to whatever program they're in, but it still
 helps to prevent some of the problems discussed in the next section.
 
-The biggest headache when instructors select teams is [%i "teams!taking
-schedules into account" %]scheduling[%/i%].  COVID-19 has made distributed work
+The biggest headache when instructors select teams is scheduling[%i "teams!taking
+schedules into account" %].  COVID-19 has made distributed work
 more normal, but the last university I taught at had three campuses spread
 across a large metropolitan area, and some students commuted an hour and a half
 each way to get to classes.  Instructors should therefore take students'
@@ -121,12 +121,12 @@ on into working time or vice versa.
 
 ## Who Does What
 
-All right, you've formed a team: now what? How do you decide [%i "teams!allocating work" "allocating work!in teams" %]who does what[%/i%]? How do
+All right, you've formed a team: now what? How do you decide who does what[%i "teams!allocating work" "allocating work!in teams" %]? How do
 you make sure that everyone actually does what they're supposed to? And most
 importantly, how do you do this fairly?
 
-Some jobs have [%i "allocating work!effect of social status" %]higher social
-status[%/i%] than others, and what is or isn't considered important usually
+Some jobs have higher social
+status[%i "allocating work!effect of social status" %] than others, and what is or isn't considered important usually
 reflects racial and gender divides within society—so much so that sociologists
 use the phrase "[women's work][womens-work]" to describe the phenomenon. It is
 also known as "[quarterback syndrome][quarterback-syndrome]": two thirds of NFL
@@ -140,7 +140,7 @@ latter, regardless of ability or value delivered to the employer. This creates a
 feedback loop: white and Asian men pursue certain career paths because they have
 high status (they want to be "real programmers"), and the fact that they are
 pursuing those careers is what maintains their higher status. It also creates a
-[%i "allocating work!confirmation loop" "confirmation loop!allocating work" %][%g confirmation_loop "confirmation loop" %][%/i%]: since women and people of color
+[%g confirmation_loop "confirmation loop" %][%i "allocating work!confirmation loop" "confirmation loop!allocating work" %]: since women and people of color
 get fewer chances to do certain tasks, they are less good at them, which
 "confirms" the initial bias.
 
@@ -155,7 +155,7 @@ programming—after all, why play a game that's unfair?
 <div class="callout" markdown="1">
 ### In the beginning
 
-[%i "history of computing" %]Programming[%/i%] was originally considered a
+Programming[%i "history of computing" %] was originally considered a
 female occupation, but as it became more lucrative it came to be viewed as
 "naturally" male.  [%b Abbate2012 %] and [%b Ensmenger2012 %]
 describe how this happened, while [%b Hicks2018 %] looks at how Britain
@@ -170,8 +170,8 @@ change society tomorrow.
 
 There are many ways to divide project work between team members, and as
 [%b Conway1968 %] observed, the software you get will reflect the division
-of labor, a phenomenon known as [%i "Conway's Law" %][%g conways_law "Conway's Law" %][%/i%] or [%i "sociotechnical congruence" %][%g sociotechnical_congruence "socio-technical congruence" %][%/i%] [%b Cataldo2008 %]. In a
-[%i "modular decomposition" "allocating work!modular decomposition" %][%g modular_decomposition "modular decomposition" %][%/i%], each person is
+of labor, a phenomenon known as [%g conways_law "Conway's Law" %][%i "Conway's Law" %] or [%g sociotechnical_congruence "socio-technical congruence" %][%i "sociotechnical congruence" %] [%b Cataldo2008 %]. In a
+[%g modular_decomposition "modular decomposition" %][%i "modular decomposition" "allocating work!modular decomposition" %], each person is
 responsible for one part of the program. For example, one person might design
 and build the GUI, while another writes the database interface, and a third
 implements the business rules. Having people own parts of the code like this
@@ -181,7 +181,7 @@ a bad strategy in a course project:
 1.  It increases the risk of people from marginalized groups being assigned
     lower-status work.
 
-2.  It leads to [%i "big bang integration" %][%g big_bang "big bang integration" %][%/i%], in which all the components meet each other for the
+2.  It leads to [%g big_bang "big bang integration" %][%i "big bang integration" %], in which all the components meet each other for the
     first time right at the end of the project. Big bang almost always fails.
 
 3.  Each team member only really understands one aspect of the project. This can
@@ -190,7 +190,7 @@ a bad strategy in a course project:
 4.  If someone drops out or fails to complete their module, the project as a
     whole will fail.
 
-[%i "functional decomposition" "allocating work!functional decomposition" %][%g functional_decomposition "Functional decomposition" %][%/i%], in which each
+[%g functional_decomposition "Functional decomposition" %][%i "functional decomposition" "allocating work!functional decomposition" %], in which each
 person is responsible for one type of task, is usually more successful. With
 this strategy, one person does the testing, another handles the documentation, a
 third does the bulk of the coding, and the fourth takes care of build and
@@ -208,7 +208,7 @@ since there's often little relationship between how outspoken people are and how
 well they work.
 
 <div class="callout" markdown="1">
-### The [%i "Dunning-Kruger effect" %]Dunning-Kruger effect[%/i%]
+### The Dunning-Kruger effect[%i "Dunning-Kruger effect" %]
 
 [%b Kruger1999 %] reported that people who know a subject well can usually
 estimate their knowledge accurately, but people who don't will often
@@ -220,14 +220,14 @@ way to tell if someone really knows what they're talking about or if what
 they're actually reporting is their self-esteem.
 </div>
 
-[%i "feature decomposition" "allocating work!feature decomposition" %][%g feature_decomposition "Feature decomposition" %][%/i%] is a variation on
+[%g feature_decomposition "Feature decomposition" %][%i "feature decomposition" "allocating work!feature decomposition" %] is a variation on
 modular decomposition that works well in practice. Instead of owning an entire
 subsystem for the life of the project, each team member handles the design,
 coding, testing, and documentation for one small feature after another.  Working
 this way is central to agile development ([%x process %])) and is a good
 way to cope with the never-ending timeslicing of student life.
 
-Finally, there is [%i "rotating decomposition" "allocating work!rotating decomposition" %][%g rotating_decomposition "rotating decomposition" %][%/i%]: everyone
+Finally, there is [%g rotating_decomposition "rotating decomposition" %][%i "rotating decomposition" "allocating work!rotating decomposition" %]: everyone
 does one task for a few weeks, then a different task for the new few, and so
 on. This is initially less productive in absolute terms than either of the
 preceding strategies, since the team has to pay for ramp-up several times
@@ -236,7 +236,7 @@ robust (having a team member drop out is less harmful), and if everyone on the
 team is familiar with every aspect of the software, they can all contribute to
 design and debugging sessions.
 
-Any of these strategies is better than [%i "chaotic decomposition" "allocating work!chaotic decomposition" %][%g chaotic_decomposition "chaotic decomposition" %][%/i%], which unfortunately is the most common approach. If people
+Any of these strategies is better than [%g chaotic_decomposition "chaotic decomposition" %][%i "chaotic decomposition" "allocating work!chaotic decomposition" %], which unfortunately is the most common approach. If people
 have different ideas about who's supposed to do what, some things won't be done
 at all while others will be done several times over. (You can tell if your
 decomposition is chaotic by counting how many times people says, "I thought
@@ -258,7 +258,7 @@ responsibilities and everyone else's at any particular moment.
 ## Team Contracts
 
 No matter what decomposition you use, your team should write, sign, and submit a
-[%i "team contract" %][%g team_contract "team contract" %][%/i%] outlining what
+[%g team_contract "team contract" %][%i "team contract" %] outlining what
 everyone has agreed to do to make the project a success. In my experience, this
 is most effective if each team creates their own as part of their first
 assignment so that they actually have to think about what they're promising
@@ -336,7 +336,7 @@ turn around at the end of the project and ask people to rate one another, since
 they won't have known while they were working what they were going to be rated
 on.
 
-Asking people on a team to [%i "peer evaluation" %]rate their peers[%/i%] is
+Asking people on a team to rate their peers[%i "peer evaluation" %] is
 a common practice in industry.  Instructors sometimes shy away from it because
 they're afraid students will gives everyone in the team a high rating in order
 to boost grades. However, this actually occurs fairly infrequently
@@ -372,14 +372,14 @@ Not everything needs to be completely correct.
     Cinematic Universe, the answer is probably no.
 
 The devil doesn't need more advocates.
-:   We remember when [%i "contrarian (why not to be)" %]contrarians[%/i%]
+:   We remember when contrarians[%i "contrarian (why not to be)" %]
     turn out to be right because it happens so infrequently, but because those
     moments are memorable, some people fall into the habit of taking the
     opposite point of view no matter what is being discussed.
 
 You wouldn't have gotten this far if you weren't good at this.
-:   Some people have [%i "self-confidence (lack of)" %]so little
-    confidence[%/i%] in their ability despite their good grades that they won't
+:   Some people have so little
+    confidence[%i "self-confidence (lack of)" %] in their ability despite their good grades that they won't
     make any decision, no matter how small, until they have checked with someone
     else. This is often a result of social conditioning: in particular, women
     are more likely to doubt themselves, while men often over-estimate their
@@ -391,7 +391,7 @@ Not everything worth doing should be done.
     invent our own little language for designing GUIs? This energy and
     enthusiasm are hard to argue with, but argue you must.  Otherwise, for every
     step you move forward, the project's goalposts will recede by two. This is
-    called [%i "feature creep (danger of)" %][%g feature_creep "feature creep" %][%/i%], and has ruined many projects that might otherwise have
+    called [%g feature_creep "feature creep" %][%i "feature creep (danger of)" %], and has ruined many projects that might otherwise have
     delivered something small but useful.  My solution these days is to keep a
     [%g to_dont_list "to-don't" %] list of things that would be fun and
     worthwhile, but that I'm *not* going to tackle.
@@ -399,10 +399,10 @@ Not everything worth doing should be done.
 Success is a habit.
 :   The more you follow a routine, the more your brain will be able to focus on
     the right things at the right time. [%b Gawande2011 %] found that
-    [%i "checklists!benefits of" %]checklists[%/i%] improve results even for
+    checklists[%i "checklists!benefits of" %] improve results even for
     experts, and [%x important %] talked about the value of to-do lists for
-    managing your time. Making these a habit reduce [%i "cognitive
-    load!impact of checklists" %]cognitive load[%/i%] ([%x thinking %]) and
+    managing your time. Making these a habit reduce cognitive load[%i "cognitive
+    load!impact of checklists" %] ([%x thinking %]) and
     gives you more mental capacity for dealing with the work itself.
 
 Acting like an asshole doesn't make you cool—it just makes you an asshole.
@@ -412,13 +412,13 @@ Acting like an asshole doesn't make you cool—it just makes you an asshole.
     many other people, that language has often been followed by bullying or
     discrimination. They're right not to trust you if those are the signals you
     choose to send. (And no, calling someone out for being vulgar or aggressive
-    is not the same as [%i "tone policing" %]tone policing[%/i%].)
+    is not the same as tone policing[%i "tone policing" %].)
 
 Sometimes it's hard to care.
 :   You have a teammate who doesn't read the assignment specs, hasn't bothered
     to learn the tools and libraries you're supposed to be using, and commits
     code that doesn't even compile.  Before treating them like a hitchhiker, try
     to find out if there's a reason for their behavior: if he's caring for a
-    family member or struggling with [%i "mental health" %]mental
-    health[%/i%] issues, the most compassionate thing to do is to help them get
+    family member or struggling with mental
+    health[%i "mental health" %] issues, the most compassionate thing to do is to help them get
     back on their feet.

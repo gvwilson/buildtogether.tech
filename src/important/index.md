@@ -12,14 +12,14 @@ and resolving arguments.
 ### Not writing software takes less time
 
 [%b Sedano2017 %] found that software development projects have
-[%i "waste (in software development)" %]nine types of waste[%/i%]:
+nine types of waste[%i "waste (in software development)" %]:
 building the wrong feature or product,
 mismanaging the backlog,
 rework,
 unnecessarily complex solutions,
-extraneous [%i "cognitive load" %]cognitive load[%/i%] ([%x thinking %]),
+extraneous cognitive load[%i "cognitive load" %] ([%x thinking %]),
 psychological distress,
-waiting and [%i "multitasking" %]multitasking[%/i%],
+waiting and multitasking[%i "multitasking" %],
 knowledge loss,
 and ineffective communication.
 *None of these are software issues,*
@@ -43,14 +43,14 @@ once I'd had some sleep.
 My mistake was to confuse "long hours" with "getting things done".
 You can't produce software (or anything else) without doing some work,
 but you can easily do lots of work without producing anything of value.
-Scientific study of [%i "overwork" %]overwork[%/i%] goes back to at least the 1890s—see
+Scientific study of overwork[%i "overwork" %] goes back to at least the 1890s—see
 [%b Robinson2005 %] for a short, readable summary.
 The most important results are:
 
 1.  Working more than eight hours a day for more than a couple of weeks of time
     lowers your total productivity,
     not just your hourly productivity—i.e., you get less done *in total*
-    in [%i "crunch mode" %][%g crunch_mode "crunch mode" %][%/i%]
+    in [%g crunch_mode "crunch mode" %][%i "crunch mode" %]
     than when you work regular hours.
 
 1.  Working over 21 hours in a stretch
@@ -65,10 +65,10 @@ However,
 while most smokers will at least acknowledge that their habit is killing them,
 people in the software industry still talk and act as if
 they were somehow immune to science.
-To quote [%i "Robinson, Evan" %]Robinson[%/i%]'s article:
+To quote Robinson[%i "Robinson, Evan" %]'s article:
 
 <div class="callout" markdown="1">
-When [%i "Ford, Henry" %]Henry Ford[%/i%] famously adopted a 40-hour workweek in 1926,
+When Henry Ford[%i "Ford, Henry" %] famously adopted a 40-hour workweek in 1926,
 he was bitterly criticized by members of the National Association of Manufacturers.
 But his experiments,
 which he'd been conducting for at least 12 years,
@@ -115,7 +115,7 @@ that will take hours to track down later.
 As Robinson writes:
 
 <div class="callout" markdown="1">
-[%i "productivity" %]Productivity[%/i%] varies over the course of the workday,
+Productivity[%i "productivity" %] varies over the course of the workday,
 with the greatest productivity occurring in the first four to six hours.
 After enough hours,
 productivity approaches zero;
@@ -135,7 +135,7 @@ That's been studied too,
 and the results aren't pleasant.
 Your ability to think drops by 25 points for each 24 hours you're awake.
 Put it another way,
-the average person's IQ is only 75 after one [%i "all-nighters" %]all-nighter[%/i%],
+the average person's IQ is only 75 after one all-nighter[%i "all-nighters" %],
 which puts them in the bottom 5% of the population.
 Two all nighters in a row and their effective IQ is 50—the level at which
 people are considered incapable of independent living.
@@ -163,7 +163,7 @@ whom don't coordinate due dates across their courses.
 The best way to handle this situation—or more honestly, the least bad way—is
 to prioritize carefully.
 Get a piece of paper and draw
-[%i "effort-importance grid" %][%g effort_importance_grid "a 3×3 grid" %][%/i%].
+[%g effort_importance_grid "a 3×3 grid" %][%i "effort-importance grid" %].
 The X axis is effort: label its divisions "minutes", "hours", and "days".
 The Y axis is time: label it "low", "medium", and "high".
 You should wind up with something like [%f effort-importance %].
@@ -209,7 +209,7 @@ which means you'd better start at least that far ahead of the deadline.
 
 The point of all this organization and preparation is
 to be able to immerse yourself in your problem.
-[%b Csikszentmihalyi1991 %] popularized the term [%i "flow" %][%g flow "flow" %][%/i%] for this;
+[%b Csikszentmihalyi1991 %] popularized the term [%g flow "flow" %][%i "flow" %] for this;
 athletes call it "being in the zone",
 while musicians talk about losing themselves in what they're playing.
 The good news is that you're much more productive in this state
@@ -226,7 +226,7 @@ the cost of self-interruptions may be even worse than the cost for external inte
 <div class="callout" markdown="1">
 ### Open offices suck
 
-[%i "open offices (evils of)" %]Open offices[%/i%] were created
+Open offices[%i "open offices (evils of)" %] were created
 so that (mostly male) managers could keep an eye on (mostly female) office workers,
 and to reduce air conditioning costs [%b Eley1995 %].
 They lower productivity in every other way we can measure [%b Bernstein2018 %];
@@ -241,7 +241,7 @@ Finally,
 you will be more productive in the long run if your back doesn't ache,
 and being away from the keyboard
 gives your brain a chance to reflect on what you've just been doing.
-You should therefore take a five-minute [%i "breaks (importance of regular)" %]break[%/i%] every hour.
+You should therefore take a five-minute break[%i "breaks (importance of regular)" %] every hour.
 Checking email doesn't count:
 get up and stretch,
 refill your water bottle,
@@ -253,14 +253,14 @@ by taking a short walk…
 
 The previous section explained how to be productive individually,
 but what about being productive with others?
-The most important thing is running [%i "meetings" %]meetings[%/i%] efficiently,
+The most important thing is running meetings[%i "meetings" %] efficiently,
 and the key to doing that is to distinguish between:
 
--   [%i "meetings!status" "status meeting" %][%g status_meeting "Status meetings" %][%/i%]
+-   [%g status_meeting "Status meetings" %][%i "meetings!status" "status meeting" %]
     for keeping everyone up to date on what everyone else is doing
     and for making simple decisions when the options are well understood.
 
--   [%i "meetings!discussion" %][%g discussion_meeting "Discussion meetings" %][%/i%]
+-   [%g discussion_meeting "Discussion meetings" %][%i "meetings!discussion" %]
     for weighing alternatives and making complex decisions.
 
 -   Co-working sessions like brainstorming sessions and programming sprints
@@ -357,7 +357,7 @@ No distractions.
 Take minutes.
 :   As discussed below,
     someone other than the moderator should take
-    [%i "minutes (of meetings)" %]point-form notes[%/i%]
+    point-form notes[%i "minutes (of meetings)" %]
     about the most important information that was shared
     and about every decision that was made or every task that was assigned to someone.
 
@@ -404,7 +404,7 @@ Other people may be so accustomed to this
 that they don't speak up even when they have valuable points to make.
 
 You can combat this
-by giving everyone [%i "meetings!three sticky notes" "three sticky notes (in meetings)" %]three sticky notes[%/i%]
+by giving everyone three sticky notes[%i "meetings!three sticky notes" "three sticky notes (in meetings)" %]
 (or coins, or paperclips—anything inedible will do) at the start of the meeting.
 Every time someone speaks,
 they have to give up one sticky note.
@@ -418,7 +418,7 @@ People who have given up trying to be heard suddenly have space to contribute,
 and the overly-frequent speakers realize how talkative they have been.
 
 Another useful technique is called
-[%i "meetings!interruption bingo" "interruption bingo (in meetings)" %]interruption bingo[%/i%].
+interruption bingo[%i "meetings!interruption bingo" "interruption bingo (in meetings)" %].
 Draw a grid and label the rows and columns with the participants' names;
 each time person A interrupts person B,
 add a tally mark to the appropriate cell.
@@ -433,7 +433,7 @@ well,
 you just learned something about your teammate…
 
 Online meetings provide special challenges for regulating how often individuals speak.
-[%b Troy2018 %] discusses why [%i "meetings (online)" %]online meetings[%/i%]
+[%b Troy2018 %] discusses why online meetings[%i "meetings (online)" %]
 are often frustrating,
 and points out that in most online meetings,
 the first person to speak during a pause gets the floor.
@@ -484,9 +484,9 @@ To guard against this,
 groups need to spell out who has the authority to make which decisions
 and how to achieve consensus.
 In short,
-they need explicit [%i "governance" %][%g governance "governance" %][%/i%].
+they need explicit [%g governance "governance" %][%i "governance" %].
 
-[%i "Martha's Rules" %][%g marthas_rules "Martha's Rules" %][%/i%] [%b Minahan1986 %]
+[%g marthas_rules "Martha's Rules" %][%i "Martha's Rules" %] [%b Minahan1986 %]
 are a practical way to do this in groups of up to a few dozen people,
 and work very well for smaller teams too:
 
@@ -506,7 +506,7 @@ and work very well for smaller teams too:
     unless the sponsor or their delegate is present.
 
 4.  After the sponsor presents the proposal
-    a [%i "sense vote" %][%g sense_vote "sense vote" %][%/i%] is cast:
+    a [%g sense_vote "sense vote" %][%i "sense vote" %] is cast:
     -   Thumbs up: who likes the proposal?
     -   Thumbs down: who is uncomfortable with the proposal?
     -   Thumbs sideways: who can live with?
@@ -531,7 +531,7 @@ Every group that uses Martha's Rules must make two procedural decisions:
 
 How are proposals put forward?
 :   The easiest way to do this in a software project
-    is to file an issue in the project's [%i "issue tracker" %]issue tracker[%/i%]
+    is to file an issue in the project's issue tracker[%i "issue tracker" %]
     tagged *Proposal*.
     Team members can comment on it there
     so that the sponsor can revise it before bringing it to a vote.
@@ -551,8 +551,8 @@ Rules that people don't know about can't help them.
 Once your team agrees on a decision-making procedure,
 document it for newcomers
 (and to prevent disputes among people already in the team).
-You can put this in the project's [%i "README file" %]`README`[%/i%] file ([%x starting %])
-or in a separate file called [%i "CONTRIBUTING file" %]`CONTRIBUTING`[%/i%].
+You can put this in the project's `README`[%i "README file" %] file ([%x starting %])
+or in a separate file called `CONTRIBUTING`[%i "CONTRIBUTING file" %].
 Wherever it goes,
 remember that the easier it is for people to figure out how to contribute,
 the more likely they are to do so [%b Steinmacher2014 %].
@@ -562,19 +562,19 @@ the more likely they are to do so [%b Steinmacher2014 %].
 
 The rules laid out above were created
 by and for people near the middle of the bell curve with respect to focus and attention span.
-People who are [%i "neurodivergence" %][%g "neurodivergent" "neurodivergent" %][%/i%],
+People who are [%g "neurodivergent" "neurodivergent" %][%i "neurodivergence" %],
 i.e., whose brains work differently from the average
 when it comes to sociability, learning, attention, and mood
 may find that other approaches work better for them.
 
 But while society accepts that
 people of different heights need different desks and seating to be comfortable,
-there is still a lot of [%i "neurodivergence (stigma associated with)" %]stigma[%/i%]
+there is still a lot of stigma[%i "neurodivergence (stigma associated with)" %]
 associated with differences in mental function,
 which are often classified according to
 [how inconvenient they are to other people][adhd-thread].
 One example is how tests for
-[%i "ADHD" %][%g "adhd" "attention-deficit/hyperactivity disorder" %][%/i%]
+[%g "adhd" "attention-deficit/hyperactivity disorder" %][%i "ADHD" %]
 (ADHD) are phrased.
 "Subject is overly talkative": compared to who?
 "Subject does X when it is inappropriate": by whose rules?
@@ -587,7 +587,7 @@ Decisions that affect people should only be made
 with the full participation of those who will be affected.
 If you are neurodivergent,
 you probably have a set of strategies for managing time and attention.
-If you are [%i "neurotypical" %][%g "neurotypical" "neurotypical" %][%/i%]
+If you are [%g "neurotypical" "neurotypical" %][%i "neurotypical" %]
 and have neurodivergent teammates,
 ask them what works well for them rather than ignoring the difference
 or guessing what they might want.

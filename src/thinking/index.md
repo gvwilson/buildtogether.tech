@@ -11,12 +11,12 @@ that.
 
 ## Different Kinds of Learners
 
-Research starting in the 1980s showed that most [%i "neurotypical" %]neurotypical[%/i%] adults undergo a series of fairly
-predictable [%i "cognitive transition" %][%g cognitive_transition "cognitive transitions" %][%/i%] on their way from being a novice to being an expert in any
+Research starting in the 1980s showed that most neurotypical[%i "neurotypical" %] adults undergo a series of fairly
+predictable [%g cognitive_transition "cognitive transitions" %][%i "cognitive transition" %] on their way from being a novice to being an expert in any
 domain [%b Benner2000 %]. (We say "most" and "neurotypical" because as
 with anything involving people, there will be outliers.)
 
-For our purposes, we will say that people are [%i "novice" %][%g novice "novices" %][%/i%], [%i "competent practitioner" %][%g competent_practitioner "competent practitioners" %][%/i%], or [%i "expert" %][%g expert "experts" %][%/i%]. Some characteristics that most novices share include
+For our purposes, we will say that people are [%g novice "novices" %][%i "novice" %], [%g competent_practitioner "competent practitioners" %][%i "competent practitioner" %], or [%g expert "experts" %][%i "expert" %]. Some characteristics that most novices share include
 doing things by rote (i.e., following a series of steps without understanding
 why they work), asking questions that don't make sense ("What color is the
 database?") and not being able to tell what is and isn't relevant—for example,
@@ -24,7 +24,7 @@ using their own filenames or variable names when searching for help online
 because they don't yet have a clear distinction between what belongs to the
 library and application and what is specific to their code.
 
-What ties these things together is that novices don't have a [%i "mental model" %]mental model[%/i%] of the problem. A mental
+What ties these things together is that novices don't have a mental model[%i "mental model" %] of the problem. A mental
 model is a simplified representation of something that's good enough for present
 needs. One example is the ball-and-spring models used to represent molecules in
 chemistry classes: real atoms aren't marbles and atomic bonds aren't springs,
@@ -34,7 +34,7 @@ dioxide and water and a host of other things.
 What about experts? They can typically solve problems at a glance, and are
 usually much better at debugging than competent practitioners because they are
 better able to reason backward from effects to causes. They also tend to be
-*less* good as teachers because of [%i "expert blind spot" %][%g expert_blind_spot "expert blind spot" %][%/i%]: they know their subject so well that they've
+*less* good as teachers because of [%g expert_blind_spot "expert blind spot" %][%i "expert blind spot" %]: they know their subject so well that they've
 forgotten how hard it is for newcomers.
 
 To explain where these differences come from, imagine that the knowledge in your
@@ -68,14 +68,14 @@ any more than we can explain how we recognize faces.
 <div class="callout" markdown="1">
 ### Learning styles aren't a thing
 
-You may have heard of "[%i "learning styles" "pseudoscience!learning
-styles" %]learning styles[%/i%]", i.e., that some people learn better visually,
+You may have heard of "learning styles[%i "learning styles" "pseudoscience!learning
+styles" %]", i.e., that some people learn better visually,
 while others do so more quickly or more accurately by listening, reading, or
 otherwise using language. It's bullshit: while lots of companies make and sell
 materials based on this myth, no one has ever shown that tuning what or how we
 teach to match people's preferences has any impact on outcomes
-[%b DeBruyckere2015 %]. Like [%i "Myers-Briggs Type
-Indicator" %]Myers-Briggs personality types[%/i%] ([%x fairness %]),
+[%b DeBruyckere2015 %]. Like Myers-Briggs personality types[%i "Myers-Briggs Type
+Indicator" %] ([%x fairness %]),
 learning styles belong with healing crystals and astrology.
 
 </div>
@@ -86,18 +86,18 @@ with.  Novices, competent practitioners, and experts are at different stages of
 cognitive development, so they need different kinds of teaching
 [%b Kalyuga2003 %]. Novices need to be told what to learn next: since they
 don't have yet a mental model of the problem, they don't know what to ask for.
-As [%b Kirschner2006 %] and many others have shown, [%i "discovery-based learning" %]discovery-based learning[%/i%] in which people are
+As [%b Kirschner2006 %] and many others have shown, discovery-based learning[%i "discovery-based learning" %] in which people are
 told "go figure out how to solve this problem" is less effective for novices
 than guided learning because they don't know what to ask next.
 
 Once someone is a competent practitioner, though, being told step-by-step what
 to tackle next is both unnecessary and frustrating.  Competent practitioners
-should be [%i "mentoring" %]mentored[%/i%] instead of lectured: they should
+should be mentored[%i "mentoring" %] instead of lectured: they should
 tackle problems on their own, but have someone at hand to get them unstuck if it
 takes them more than a few minutes to figure out what to do next.
 
 Finally, the most effective way to "teach" experts is to have them reflect or
-[%i "introspection" %]introspect[%/i%] on their own practice
+introspect[%i "introspection" %] on their own practice
 [%b Schon1984 %]. This usually happens in three stages:
 
 1.  You do some work and get feedback on it.  For example, someone in grade
@@ -137,10 +137,10 @@ it, they're treating the problem as two parallel single-digit problems. As for
 but they're adding it back into the ones column instead of carrying it over to
 the tens column.
 
-Each of these wrong answers has [%i "diagnostic power (of formative assessment)" %][%g diagnostic_power "diagnostic power" %][%/i%]. Like a good unit test, this
+Each of these wrong answers has [%g diagnostic_power "diagnostic power" %][%i "diagnostic power (of formative assessment)" %]. Like a good unit test, this
 multiple choice question doesn't just tell us that something is wrong: it points
 us at the source of the problem. Using questions like these in class in order to
-diagnose misunderstandings so that they can be corrected is called [%i "formative assessment" %][%g formative_assessment "formative assessment" %][%/i%]
+diagnose misunderstandings so that they can be corrected is called [%g formative_assessment "formative assessment" %][%i "formative assessment" %]
 because it forms (or shapes) the learning as it is taking place.
 
 A good formative assessment question takes 30--60 seconds to do (so that it
@@ -200,14 +200,14 @@ the things we didn't.
 %]
 
 [%f thinking-cognitive-architecture %] shows a very (very) simple model of
-the cognitive architecture of the human brain. On the left is [%i "long-term memory" %][%g long_term_memory "long-term memory" %][%/i%] (LTM), which
+the cognitive architecture of the human brain. On the left is [%g long_term_memory "long-term memory" %][%i "long-term memory" %] (LTM), which
 is where you store things like the spelling of your name and how that awful
 clown scared you when you were ten years old. It is very large—you can keep
 adding to it as long as you live—but you don't have direct conscious access to
 it.
 
-Instead, evolution has given you a second subsystem called [%i "short-term memory" %][%g short_term_memory "short-term memory" %][%/i%] (STM) or
-[%i "working memory" %][%g working_memory "working memory" %][%/i%]. (More
+Instead, evolution has given you a second subsystem called [%g short_term_memory "short-term memory" %][%i "short-term memory" %] (STM) or
+[%g working_memory "working memory" %][%i "working memory" %]. (More
 sophisticated models distinguish between these two concepts, but this simple
 model is good enough for our needs.)  You are constantly fetching things from
 LTM into STM to use them, then re-encoding them and writing them back to LTM.
@@ -215,20 +215,20 @@ This is one of the differences between your brain and a computer: reading data
 from a hard drive doesn't alter it, but every time you access something in LTM,
 you may write it back in a different or augmented form. We call this "learning".
 
-Here's the problem: [%i "short-term memory!limited capacity of" %]STM is
-very small[%/i%].  [%b Miller1956 %] famously estimated that it could
+Here's the problem: STM is
+very small[%i "short-term memory!limited capacity of" %].  [%b Miller1956 %] famously estimated that it could
 hold 7±2 things at one time; more modern estimates put the number closer to 4±1
 [%b Didau2016 %]. This means that STM is a bottleneck for learning: if too
 many new ideas are presented too quickly, the new arrivals will knock older ones
 out of STM before you have a chance to encode them and store them in LTM, so
 learning won't take place.
 
-This realization and others have produced the theory of [%i "cognitive load theory" %][%g cognitive_load "cognitive load" %][%/i%], which (among other things)
+This realization and others have produced the theory of [%g cognitive_load "cognitive load" %][%i "cognitive load theory" %], which (among other things)
 divides the things you have to do while learning into three categories. The
-[%i "intrinsic load" "cognitive load!intrinsic" %][%g intrinsic_load "intrinsic load" %][%/i%] is the thinking that is required by the learning task itself. The
-[%i "germane load" "cognitive load!germane" %][%g germane_load "germane" %][%/i%]
+[%g intrinsic_load "intrinsic load" %][%i "intrinsic load" "cognitive load!intrinsic" %] is the thinking that is required by the learning task itself. The
+[%g germane_load "germane" %][%i "germane load" "cognitive load!germane" %]
 (or relevant) load is the other thinking that the problem requires, but which
-isn't the focus of the lesson, while the [%i "extraneous load" "cognitive load!extraneous" %][%g extraneous_load "extraneous load" %][%/i%] is everything you're
+isn't the focus of the lesson, while the [%g extraneous_load "extraneous load" %][%i "extraneous load" "cognitive load!extraneous" %] is everything you're
 being asked to do that is irrelevant.
 
 For example, suppose you are learning the grammar of Frisian. If I ask you to
@@ -249,13 +249,13 @@ significant.
    caption="Reducing germane load while increasing extraneous load."
 %]
 
-Cognitive load theory explains why tools like [%i "Scratch" %][Scratch][scratch][%/i%] work so well: they reduce germane load by
+Cognitive load theory explains why tools like [Scratch][scratch][%i "Scratch" %] work so well: they reduce germane load by
 getting rid of the commas, curly braces, and other distractions so that learners
 can focus on mastering concepts like assignment and loops. It also explains why
 working with code written in a mix of styles is so painful: each minor
 difference adds extraneous load.
 
-In order to handle larger sets of information, our minds create [%i "chunking" "short-term memory!chunking" %][%g chunking "chunks" %][%/i%] that only
+In order to handle larger sets of information, our minds create [%g chunking "chunks" %][%i "chunking" "short-term memory!chunking" %] that only
 take up one slot in STM.  For example, most of us remember words as single items
 rather than as sequences of letters.  Similarly, the pattern made by five spots
 on cards or dice is remembered as a whole rather than as five separate pieces of
@@ -278,12 +278,12 @@ communicate with [%b Sajaniemi2006 %].
 
 ## Learning Strategies
 
-All of this leads to six [%i "learning strategies" %]strategies[%/i%] that
+All of this leads to six strategies[%i "learning strategies" %] that
 have been proven to help people learn faster and better
 [%b Weinstein2018 %].  While researchers still disagree on *why* they
 work, everyone now agrees that they *do*.
 
-[%i "spaced practice" "learning strategies!spaced practice" %]Spaced practice[%/i%].
+Spaced practice[%i "spaced practice" "learning strategies!spaced practice" %].
 :   Ten hours of study spread out over five days is more effective than two
     five-hour days, and far better than one ten-hour day.  You should therefore
     create a study schedule that spreads study activities over time: block off
@@ -295,7 +295,7 @@ work, everyone now agrees that they *do*.
     any gaps or mistakes in previous sets of notes while there's still time to
     correct them or ask questions.
 
-[%i "retrieval practice" "learning strategies!retrieval practice" %]Retrieval practice[%/i%].
+Retrieval practice[%i "retrieval practice" "learning strategies!retrieval practice" %].
 :   The limiting factor for long-term memory is not retention (what is stored)
     but recall (what can be accessed).  Recall of specific information improves
     with practice, so outcomes in real situations can be improved by taking
@@ -317,7 +317,7 @@ work, everyone now agrees that they *do*.
     swapping flash cards with a partner helps you discover important ideas that
     you may have missed or misunderstood.
 
-[%i "interleaving" "learning strategies!interleaving" %]Interleaving[%/i%].
+Interleaving[%i "interleaving" "learning strategies!interleaving" %].
 :   One way you can space your practice is to interleave study of different
     topics: instead of mastering one subject, then a second and third, shuffle
     study sessions.  Even better, switch up the order: `A-B-C-B-A-C` is better
@@ -329,7 +329,7 @@ work, everyone now agrees that they *do*.
     or practice tests to gauge your progress, you should see improvement after
     only a couple of days.
 
-[%i "elaboration" "learning strategies!elaboration" %]Elaboration[%/i%].
+Elaboration[%i "elaboration" "learning strategies!elaboration" %].
 :   Explaining things to yourself as you go through them helps you understand
     and remember them.  One way to do this is to follow up each answer on a
     practice quiz with an explanation of why that answer is correct, or
@@ -347,13 +347,13 @@ work, everyone now agrees that they *do*.
     line with a class, having a different person explain each line in turn and
     say why it is there and what it accomplishes.
 
-    [%i "note-taking (as a learning strategy)" %]Note-taking[%/i%] is a form
+    Note-taking[%i "note-taking (as a learning strategy)" %] is a form
     of real-time elaboration: it forces you to organize and reflect on material
     as it's coming in, which in turn increases the likelihood that you will
     transfer it to long-term memory.  Many studies have shown that taking notes
     while learning improves retention [%b Aiken1975 Bohay2011 %].
 
-[%i "concrete examples" "learning strategies!concrete examples" %]Concrete examples[%/i%].
+Concrete examples[%i "concrete examples" "learning strategies!concrete examples" %].
 :   One particularly useful form of elaboration is the use of concrete examples.
     Whenever you have a statement of a general principle, try to provide one or
     more examples of its use, or conversely take each particular problem and
@@ -368,7 +368,7 @@ work, everyone now agrees that they *do*.
     examples actually embody the principle being discussed or which principles
     are used in an example that they haven't listed.
 
-[%i "dual coding" "learning strategies!dual coding" %]Dual coding[%/i%].
+Dual coding[%i "dual coding" "learning strategies!dual coding" %].
 :   Different subsystems in our brains handle and store linguistic and visual
     information, so if complementary information is presented through both
     channels, they can reinforce one another.  However, learning is less
@@ -382,7 +382,7 @@ work, everyone now agrees that they *do*.
     a program.)  Drawing a diagram without labels and then coming back later to
     label it is excellent retrieval practice.
 
-One powerful finding in learning research is the [%i "hypercorrection effect" %][%g hypercorrection_effect "hypercorrection effect" %][%/i%] [%b Metcalfe2016 %].  Most people don't like to be told
+One powerful finding in learning research is the [%g hypercorrection_effect "hypercorrection effect" %][%i "hypercorrection effect" %] [%b Metcalfe2016 %].  Most people don't like to be told
 they're wrong, so it would be reasonable to assume that the more confident
 someone is in the answer they've given on a test, the harder it is to change
 their mind if they were actually wrong.  It turns out that the opposite is true:
@@ -391,15 +391,15 @@ to repeat the error if they are corrected.
 
 ## Motivation
 
-One of the strongest predictors of whether or not a [%i "neurotypical" %]neurotypical[%/i%] adult will learn something or not is
-whether they are [%i "intrinsic motivation" "motivation!intrinsic" %]intrinsically motivated[%/i%] to learn it, i.e., whether
-they're learning it to satisfy their own goals.  If someone is [%i "extrinsic motivation" "motivation!extrinsic" %]extrinsically
-motivated[%/i%]—for example, if they're taking a course because it's a degree
+One of the strongest predictors of whether or not a neurotypical[%i "neurotypical" %] adult will learn something or not is
+whether they are intrinsically motivated[%i "intrinsic motivation" "motivation!intrinsic" %] to learn it, i.e., whether
+they're learning it to satisfy their own goals.  If someone is extrinsically
+motivated[%i "extrinsic motivation" "motivation!extrinsic" %]—for example, if they're taking a course because it's a degree
 requirement but they have no real interest in the topic—the learning probably
 won't stick [%b Wlodkowski2017 %].  While motivation is deeply personal,
 these three factors influence most people:
 
-[%i "self-efficacy" "motivation!self-efficacy" %]Self-efficacy[%/i%].
+Self-efficacy[%i "self-efficacy" "motivation!self-efficacy" %].
 :   Also called self-determination, this is the degree to which you feel you are
     in control of your own life. People don't enjoy being treated like robots;
     anything the teacher does to put control back in their hands will increase
@@ -409,8 +409,8 @@ these three factors influence most people:
 
 Utility.
 :   Students will learn more if they think the material is useful, but it has to
-    be useful to *them*.  One reason to create [%i "learner persona" %]learner
-    personas[%/i%] like the ones in [%x intro %] is to remind
+    be useful to *them*.  One reason to create learner
+    personas[%i "learner persona" %] like the ones in [%x intro %] is to remind
     instructors of the second rule of teaching: "You are not your learners."
     (The first is, "Be kind.")
 
@@ -420,13 +420,13 @@ Community.
     for programming as I see in baseball forums and fan discussions of *Avatar:
     The Last Airbender*.)
 
-What about [%i "demotivation" %]demotivation[%/i%]? Again, it turns out that
+What about demotivation[%i "demotivation" %]? Again, it turns out that
 the same few things turn most people off:
 
 Unpredictability.
 :   If what you do seems to have no effect on the outcome, you soon learn to
-    stop trying.  This is called [%i "learned helplessness" %]learned
-    helplessness[%/i%], and anyone who has ever wrestled with an intermittent
+    stop trying.  This is called learned
+    helplessness[%i "learned helplessness" %], and anyone who has ever wrestled with an intermittent
     bug or a poorly-written grading rubric is familiar with it.
 
 Unfairness.

@@ -2,11 +2,11 @@
 title: Automation
 ---
 
-Everyone is talking about [%i "DevOps" %][%g devops "DevOps" %][%/i%] these days,
+Everyone is talking about [%g devops "DevOps" %][%i "DevOps" %] these days,
 even though (or perhaps because) no one can quite agree what it is.  The term
 mostly seems to refer to practices that minimize the time between a developer
 implementing a change and that change being tested, integrated, tested again,
-and deployed.  Those practices have one thing in common: [%i "automation" %]automating[%/i%] as many steps as possible to make them fast and
+and deployed.  Those practices have one thing in common: automating[%i "automation" %] as many steps as possible to make them fast and
 reliable.  You may not be required to do this for your project, but if you have
 time, you should try to do a little—it will save time when you are up against
 the end-of-term deadline, and more importantly, prevent mistakes when you are
@@ -15,9 +15,9 @@ stretched thin.
 ## Build Manager
 
 The foundation for almost all automation in software development is a
-[%i "build manager" %][%g build_manager "build manager" %][%/i%]—a tool that will
+[%g build_manager "build manager" %][%i "build manager" %]—a tool that will
 transform what you've typed into what you want to deliver. The origin build
-manager is [%i "Make" "build manager!Make" %][Make][make][%/i%], which was
+manager is [Make][make][%i "Make" "build manager!Make" %], which was
 invented in 1975 by a summer intern at Bell Labs to compile programs in which
 some modules depended on others. To use it, you create a Makefile that specifies
 the dependencies between the files in your project and the commands needed to
@@ -28,12 +28,12 @@ update them. For example:
 tells Make that `game.exe` can't be built until `game.bc`, `graphics.bc`, and
 `utils.bc` exist, and that once they do, the way to create `game.exe` is to run
 the `tx` compiler with several options.  Below that is a
-[%i "Make!pattern rule" %][%g pattern_rule "pattern rule" %][%/i%] telling Make
+[%g pattern_rule "pattern rule" %][%i "Make!pattern rule" %] telling Make
 how to create any `.bc` file from a `.grace` file with the same root name;
 the cryptic expression `$<` is Make's way of saying "the first thing the target depends on".
 
 Make has been used by hundreds of thousands of programmers for more than thirty
-years, but has some [%i "Make!shortcomings" %]fundamental flaws[%/i%]. The
+years, but has some fundamental flaws[%i "Make!shortcomings" %]. The
 first is its syntax, which looks like something produced by a cat dancing on the
 keyboard. The second is that it runs commands by handing them over to whatever
 operating system it is running on, which make portability a constant headache.
@@ -48,11 +48,11 @@ build systems aren't just configured: they're programmed. For example, this
 book's Makefile checks the consistency of cross-references and glossary
 entries, makes sure all the bibliography citations are in place, and copies
 files to my web site, and is more complex than many programs I've written.
-Thinking of it as a "configuration" file is a mistake: you *have* to [%i "automation!as programming" %]approach builds as a programming problem[%/i%].
+Thinking of it as a "configuration" file is a mistake: you *have* to approach builds as a programming problem[%i "automation!as programming" %].
 
 The current generation of build managers dispense with custom configuration file
 syntax, but most still don't have debuggers. The `package.json` file used by
-[Node.js][nodejs] serves as both a [%i "package manifest" "Node.js!package.json file" %][%g package_manifest "package manifest" %][%/i%] and a build
+[Node.js][nodejs] serves as both a [%g package_manifest "package manifest" %][%i "package manifest" "Node.js!package.json file" %] and a build
 file—as the example below shows, some of its entries describe the package or
 its dependencies, while others store commands that can be re-run by typing
 things like `npm run test`:
@@ -64,8 +64,8 @@ things like `npm run test`:
 to express dependencies between tasks, i.e., there's no way to say, "A depends
 on B which depends on C".
 
-[%i "build manager!Snakemake" "Snakemake" %][Snakemake][snakemake][%/i%] and
-[%i "build manager!Rake" "Rake" %][Rake][rake][%/i%] take the idea of "build
+[Snakemake][snakemake][%i "build manager!Snakemake" "Snakemake" %] and
+[Rake][rake][%i "build manager!Rake" "Rake" %] take the idea of "build
 file as data structure" one step further. Their users describe dependencies as
 small Python or Ruby programs respectively, making use of an extensive support
 library that handles dependencies, invokes appropriate compilers, and so on.
@@ -74,18 +74,18 @@ front-end JavaScript frameworks and static site generators, a simple build tool
 is so simple to create that hundreds have proliferated. As a result, none has
 achieved [%g critical_mass "critical mass" %].
 
-Whatever you choose or are told to use, please [%i "build manager!rules for
-using" %]follow these rules[%/i%]:
+Whatever you choose or are told to use, please follow these rules[%i "build manager!rules for
+using" %]:
 
 Pick something that plays nicely with your other tools.
 :   For example, most Java editors and IDEs integrate with a build tool called
-    [%i "build manager!Ant" "Ant" "Java!build manager" %][Ant][ant][%/i%],
+    [Ant][ant][%i "build manager!Ant" "Ant" "Java!build manager" %],
     which means they can jump directly to compilation errors when they occur.
 
 Be very cautious about adding dependencies.
 :   "Reduce, re-use, recycle" is as important for software as it is for daily
     life, but every library you depend on is one more way for your project to
-    accumulate [%i "technical debt" %]technical debt[%/i%].  Recent
+    accumulate technical debt[%i "technical debt" %].  Recent
     research shows that we are all biased toward solving problems by adding
     things instead of taking them away [%b Meyvis2021 %]; checking the
     packages your project depends on before every release and cutting any you
@@ -112,8 +112,8 @@ still work? If it does, you're on your way.
 ### Never break the build
 
 Once you have a build system in place, never commit anything to version control
-that breaks the [%i "version control!and build manager" "build manager!and
-version control" %]build[%/i%]. This is one of the golden rules of working in a
+that breaks the build[%i "version control!and build manager" "build manager!and
+version control" %]. This is one of the golden rules of working in a
 team: if your code won't compile, or doesn't pass whatever automated tests you
 have, then putting it into the repository means putting every other person on
 your team into exactly the same broken state you're in. When you're working on
@@ -125,22 +125,22 @@ machine to another, or as a way to back things up at the end of the day. Do
 ## Checking Style
 
 One task you should add to your build system right at the start of the project
-is something that runs a [%i "style checker" %][%g style_checker "style checker" %][%/i%] to make sure your code follows the team's formatting rules.
-(Style checkers are often called [%i "linter" %][%g linter "linters" %][%/i%]
+is something that runs a [%g style_checker "style checker" %][%i "style checker" %] to make sure your code follows the team's formatting rules.
+(Style checkers are often called [%g linter "linters" %][%i "linter" %]
 because an early one called `lint` looked for problems in C programs.)  Some of
 these rules are as simple as "no method can be longer than 100 lines" or "class
-names must be written in CamelCase".  Modern tools like [%i "style
-checker!ESLint" "ESLint" %][ESLint][eslint][%/i%] for [%i "JavaScript!style
-checker" %]JavaScript[%/i%], [%i "Checkstyle" "style
-checker!Checkstyle" %][Checkstyle][checkstyle][%/i%] for [%i "Java!style
-checker" %]Java[%/i%], or [%i "style checker!Black" "Black" %][Black][black][%/i%] for [%i "Python!style checker" %]Python[%/i%]
+names must be written in CamelCase".  Modern tools like [ESLint][eslint][%i "style
+checker!ESLint" "ESLint" %] for JavaScript[%i "JavaScript!style
+checker" %], [Checkstyle][checkstyle][%i "Checkstyle" "style
+checker!Checkstyle" %] for Java[%i "Java!style
+checker" %], or [Black][black][%i "style checker!Black" "Black" %] for Python[%i "Python!style checker" %]
 can do a lot more: they can find code that is never called, parameters that are
 never used, duplicated code that could be refactored, and a lot more.  Code
 reviews are much more straightforward when the code you're looking at is
 guaranteed to be clean, so if something violates style rules, treat it as a
 broken build.
 
-Style checkers are just one kind of [%i "static analysis" %][%g static_analysis "static analysis" %][%/i%] tool, since they work by parsing the source
+Style checkers are just one kind of [%g static_analysis "static analysis" %][%i "static analysis" %] tool, since they work by parsing the source
 code for your program rather than by watching the program run. Compilers also do
 a lot of static analysis; the non-fatal warnings they produce are a lot more
 useful than many students realize, and a "zero warnings" policy can prevent a
@@ -149,9 +149,9 @@ definitions in code helps programmers understand software as well.
 
 ## Continuous Integration
 
-Build tools will do a lot more for you if you adopt some kind of [%i "continuous integration" %][%g ci "continuous integration" %][%/i%] system such as [%i "Travis CI" "continuous integration!Travis CI" %][Travis CI][travis-ci][%/i%] or
-[%i "GitHub Actions" "continuous integration!GitHub Actions" %][GitHub
-Actions][github-actions][%/i%].  These can be set up to run either at regular
+Build tools will do a lot more for you if you adopt some kind of [%g ci "continuous integration" %][%i "continuous integration" %] system such as [Travis CI][travis-ci][%i "Travis CI" "continuous integration!Travis CI" %] or
+[GitHub
+Actions][github-actions][%i "GitHub Actions" "continuous integration!GitHub Actions" %].  These can be set up to run either at regular
 intervals (e.g., every hour or at three a.m.), or every time someone checks into
 version control (which I find more useful). Each time they run, they check a
 fresh copy of the project out of version control, build it, re-run all the
@@ -197,7 +197,7 @@ the fact that you specify what you want in YAML rather than in Python,
 JavaScript, or some other language.  [%b Zampetti2020 %] looks at how
 *not* to use CI, and can serve as a good checklist of things to avoid.
 
-If you don't want to go this far, you can add [%i "pre-commit hook" "Git!pre-commit hook" %][%g pre_commit_hook "pre-commit" %][%/i%] or [%i "post-commit hook" "Git!post-commit hook" %][%g post_commit_hook "post-commit hooks" %][%/i%] to your repository to specify actions to run on your machine before
+If you don't want to go this far, you can add [%g pre_commit_hook "pre-commit" %][%i "pre-commit hook" "Git!pre-commit hook" %] or [%g post_commit_hook "post-commit hooks" %][%i "post-commit hook" "Git!post-commit hook" %] to your repository to specify actions to run on your machine before
 and after each commit. When I set these up, I almost always have them run
 commands via the build manager so that I can also run checks whenever I want.
 

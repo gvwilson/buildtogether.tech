@@ -4,9 +4,9 @@ title: How to Hand Over and Move On
 
 Thousands of books have been written about how to start projects, but only a
 handful about how to end them.  The advice below is based on my experience of
-doing that; see [this post][petrov-handing-over] from [%i "Petrov,
-Andrey" %]Andrey Petrov[%/i%] for some more ideas or [this
-talk][carpentrycon-talk] for some personal reflections.
+doing that; see [this post][petrov-handing-over] from
+Andrey Petrov[%i "Petrov, Andrey" %] for some more ideas
+or [this talk][carpentrycon-talk] for some personal reflections.
 
 Be sure you mean it.
 :   Letting go will be hard on you, but saying you're going to and not actually

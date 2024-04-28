@@ -34,7 +34,7 @@ royalties?
 
 Who owns what is just one of the rights that societies recognize.  Others
 guaranteed by the
-[%i "Universal Declaration of Human Rights" "human rights" %][Universal Declaration of Human Rights][udhr][%/i%]
+[Universal Declaration of Human Rights][udhr][%i "Universal Declaration of Human Rights" "human rights" %]
 include the right to say what you want, the right to live free from fear, and
 the right to be treated the same way as everyone else regardless of your race,
 sex, orientation, religion, or disability.  Most countries have signed this
@@ -51,7 +51,7 @@ you and other people have.
 
 ## Intellectual Property
 
-[%i "intellectual property" %][%g intellectual_property "Intellectual property" %][%/i%] (IP) is a catch-all term that covers four separate kinds of
+[%g intellectual_property "Intellectual property" %][%i "intellectual property" %] (IP) is a catch-all term that covers four separate kinds of
 rights: copyrights, patents, trade secrets, and trademarks. Each of these has
 evolved over several centuries to address the economic and moral concerns of
 people powerful enough to influence law-making. What ties them together is that,
@@ -60,14 +60,14 @@ copy. IP exists to ensure that creators can earn enough from producing
 intangible goods that they can keep doing it. Each kind of IP therefore gives
 its holder a limited monopoly over some kind of information.
 
-[%i "copyright" "intellectual property!copyright" %][%g copyright "Copyrights" %][%/i%] apply to any original expression that
+[%g copyright "Copyrights" %][%i "copyright" "intellectual property!copyright" %] apply to any original expression that
 anyone creates. While people can't (yet) own facts, they *can* own any
 representation of those facts that contains an element of creativity.  As a
 result of this broad scope, there are several exceptions to copyright, making it
 the weakest protection available. When placed in the proper context, however,
 copyright is a powerful tool for IP protection.
 
-[%i "patent" "intellectual property!patent" %][%g patent "Patents" %][%/i%] apply
+[%g patent "Patents" %][%i "patent" "intellectual property!patent" %] apply
 to inventions, technological improvements, certain designs, business methods,
 and a few other things. They grant a monopoly—the right to exclude others from
 using the patented idea—for a fixed period of time (usually twenty years).
@@ -79,12 +79,12 @@ Patents are intended to be a bargain between the inventor and the public: the
 inventor discloses how the invention works (so that other people can learn from)
 and in exchange society ensures that she is the only one who can profit from it
 for a reasonable time. If an inventor doesn't want anyone to know how her
-invention works she can treat it as a [%i "trade secret" "intellectual property!trade secret" %][%g trade_secret "trade secret" %][%/i%].  This isn't a property
-right as such, but rather the practice of relying on things like [%i "non-disclosure agreement" %][%g non_disclosure_agreement "non-disclosure agreements" %][%/i%] (NDA) to keep something secret. There is less risk of someone
+invention works she can treat it as a [%g trade_secret "trade secret" %][%i "trade secret" "intellectual property!trade secret" %].  This isn't a property
+right as such, but rather the practice of relying on things like [%g non_disclosure_agreement "non-disclosure agreements" %][%i "non-disclosure agreement" %] (NDA) to keep something secret. There is less risk of someone
 being inspired by your idea to create something better, but if the idea *does*
 leak, the inventor has less legal protection.
 
-Finally, [%i "trademark" "intellectual property!trademark" %][%g trademark "trademarks" %][%/i%] allow people to tell whether a product is
+Finally, [%g trademark "trademarks" %][%i "trademark" "intellectual property!trademark" %] allow people to tell whether a product is
 authentic or not. Given that everyone has limited time in which to make
 decisions, a brand name acts as a form of mental shorthand: if company XYZ has a
 reputation for high quality or low prices, or if a particular medication has
@@ -93,7 +93,7 @@ itself has commercial value.
 
 ## Software Licenses
 
-A [%i "license!software" "software license" %][%g license "license" %][%/i%]
+A [%g license "license" %][%i "license!software" "software license" %]
 dictates how project materials can be used and redistributed.  If the license or
 a publication agreement makes it difficult for people to contribute, the project
 is less likely to attract new members, so the choice of license is crucial to
@@ -121,27 +121,27 @@ users may wind up operating under different licensing structures.
 <div class="callout" markdown="1">
 ### Leave it to the professionals
 
-[%i "license!why not to write your own" %]Don't write your own license.[%/i%]
+Don't write your own license.[%i "license!why not to write your own" %]
 Legalese is a highly technical language, and words don't mean what you think
 they do.  What's more, it's often hard to understand the interactions between
 multiple licenses on different kinds of material [%b Almeida2017 %].
 </div>
 
 Just as the project's Code of Conduct is usually placed in a root-level file
-called [%i "CONDUCT file" %]`CONDUCT.md`[%/i%], its license is usually put in
-a file called [%i "LICENSE file" %]`LICENSE.md`[%/i%] that is also in the
+called `CONDUCT.md`[%i "CONDUCT file" %], its license is usually put in
+a file called `LICENSE.md`[%i "LICENSE file" %] that is also in the
 project's root directory.  To make license selection for code as easy as
 possible, GitHub allows us to select one of several common software licenses
 when creating a repository.  Unfortunately, their list does not include common
 licenses for data or written works like papers and reports.
 
-The [%i "Open Source Initiative" %][Open Source Initiative][osi][%/i%]
-maintains [a list][osi-license-list] of [%i "software license!open" %][%g open_license "open licenses" %][%/i%], and [choosealicense.com][choose-license]
+The [Open Source Initiative][osi][%i "Open Source Initiative" %]
+maintains [a list][osi-license-list] of [%g open_license "open licenses" %][%i "software license!open" %], and [choosealicense.com][choose-license]
 will help us find a license that suits our needs.  In order to choose the right
 one, we need to understand the difference between two kinds of license.  The
-[%i "MIT License" "software license!MIT License" %][%g mit_license "MIT License" %][%/i%] and its close sibling the [%i "BSD License" "software license!BSD License" %][%g bsd_license "BSD License" %][%/i%] say that people can do whatever
+[%g mit_license "MIT License" %][%i "MIT License" "software license!MIT License" %] and its close sibling the [%g bsd_license "BSD License" %][%i "BSD License" "software license!BSD License" %] say that people can do whatever
 they want to with the software as long as they cite the original source, and
-that the authors accept no responsibility if things go wrong.  The [%i "GNU Public License (GPL)" "software license!GNU Public License (GPL)" %][%g gpl "GNU Public License" %][%/i%] (GPL) gives people similar rights, but requires them to
+that the authors accept no responsibility if things go wrong.  The [%g gpl "GNU Public License" %][%i "GNU Public License (GPL)" "software license!GNU Public License (GPL)" %] (GPL) gives people similar rights, but requires them to
 share their own work on the same terms:
 
 > You may copy, distribute and modify the software as long as you track
@@ -158,15 +158,15 @@ to distribute the source code for their own work as well.
 The GPL was created to prevent companies from taking advantage of open software
 without contributing anything back.  The last thirty years have shown that this
 restriction isn't necessary: many projects have survived and thrived without
-this safeguard.  We therefore [%i "software license!why to use the MIT
-License" %]recommend[%/i%] that projects choose the MIT license, as it places the
+this safeguard.  We therefore recommend[%i "software license!why to use the MIT
+License" %] that projects choose the MIT license, as it places the
 fewest restrictions on future action.
 
-The [%i "Hippocratic License" "software license!Hippocratic License" %][%g hippocratic_license "Hippocratic License" %][%/i%] is a newer license;
+The [%g hippocratic_license "Hippocratic License" %][%i "Hippocratic License" "software license!Hippocratic License" %] is a newer license;
 where the GPL requires people to share their work, the Hippocratic License
 requires them to do no harm.  More precisely, it forbids people from using the
 software in ways that violate the
-[%i "Universal Declaration of Human Rights" %]Universal Declaration of Human Rights[%/i%].
+Universal Declaration of Human Rights[%i "Universal Declaration of Human Rights" %].
 We have learned the hard way that software and science can be mis-used; adopting
 the Hippocratic License is a small step toward preventing this.
 
@@ -189,18 +189,18 @@ precedent to the contrary.
 
 The MIT license, the GPL, and the Hippocratic License are intended for use with
 software.  When it comes to data and reports, the most widely used family of
-licenses are those produced by [%i "Creative Commons" %][Creative
-Commons][creative-commons][%/i%].  These have been written and checked by
+licenses are those produced by [Creative
+Commons][creative-commons][%i "Creative Commons" %].  These have been written and checked by
 lawyers and are well understood by the community.
 
-The most liberal option is referred to as [%i "Creative Commons!CC0 license" "CC0 license" %][%g cc0 "CC0" %][%/i%] where the "0" stands for "zero restrictions".
+The most liberal option is referred to as [%g cc0 "CC0" %][%i "Creative Commons!CC0 license" "CC0 license" %] where the "0" stands for "zero restrictions".
 This puts work in the public domain, i.e., allows anyone who wants to use it to
 do so however they want with no restrictions.  CC0 is usually the best choice
 for data, since it simplifies aggregate analysis involving datasets from
 different sources.
 
 The next step up is the Creative Commons--Attribution license, usually referred
-to as [%i "Creative Commons!CC-BY license" "CC-BY license" %][%g cc_by "CC-BY" %][%/i%]. This allows people to do whatever they want to with the
+to as [%g cc_by "CC-BY" %][%i "Creative Commons!CC-BY license" "CC-BY license" %]. This allows people to do whatever they want to with the
 work as long as they cite the original source.  This is the best license to use
 for papers and report, since you want people to share them widely but also want
 to get credit for your work.
@@ -208,7 +208,7 @@ to get credit for your work.
 Other Creative Commons licenses incorporate various restrictions, and are
 usually referred two using the two-letter abbreviations listed below:
 
--   [%i "Creative Commons!no commercial use" %]NC (no commercial use)[%/i%]
+-   NC (no commercial use)[%i "Creative Commons!no commercial use" %]
     does *not* mean that people cannot charge money for something that includes
     our work, though some publishers still try to imply that in order to scare
     people away from open licensing.  Instead, the NC clause means that people
@@ -216,11 +216,11 @@ usually referred two using the two-letter abbreviations listed below:
     permission, which we can give under whatever terms we want.  (We use the
     CC-BY-NC license for this work.)
 
--   [%i "Creative Commons!no derivative works" %]ND (no derivative works)[%/i%]
+-   ND (no derivative works)[%i "Creative Commons!no derivative works" %]
     prevents people from creating modified versions of our work.
     Unfortunately, this also inhibits translation and reformatting.
 
--   [%i "Creative Commons!share-alike" %]SA (share-alike)[%/i%] requires people
+-   SA (share-alike)[%i "Creative Commons!share-alike" %] requires people
     to share work that incorporates ours on the same terms that we used.  Again,
     it is fine in principle but in practice makes aggregation and recombination
     difficult.

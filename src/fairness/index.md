@@ -5,10 +5,10 @@ title: Fair Play
 This book is about course projects, which are often designed to prepare you for
 real jobs ([%x starting %]).  Since the transition from being a student to
 working full time is one of the most important in your career, this chapter
-looks at the [%i "hiring process" %]hiring process[%/i%] and what happens
+looks at the hiring process[%i "hiring process" %] and what happens
 afterward.
 
-There is no way to discuss these topics without talking about [%i "fairness" %]fairness[%/i%] and [%i "bias" %]bias[%/i%] in the tech
+There is no way to discuss these topics without talking about fairness[%i "fairness" %] and bias[%i "bias" %] in the tech
 industry.  I was interviewing for a new job as I was writing this book, and
 while some companies' interviewing processes were designed to create a level
 playing field, others were not (and that's putting it politely).  How companies
@@ -32,34 +32,34 @@ back down to an "acceptable" 15%.
 Harvard's decision to turn away more capable people in favor of less capable
 ones doesn't make sense if you think that a university's job is to find and
 train the smartest people it can.  It makes more sense when you realize that
-[%i "institutional priorities" %]most institutions' first priority[%/i%] is
+most institutions' first priority[%i "institutional priorities" %] is
 to perpetuate themselves: if it wasn't, they probably wouldn't still be around.
 
 Similarly, the hiring process at many tech companies isn't designed to find the
 best programmers: instead, it is designed (or more often has just evolved) to
-find people who are like those doing the hiring.  "[%i "cultural fit (as
-unconscious bias)" %]Cultural fit[%/i%]" almost always means "like me":
-consciously or not, we are all [%i "unconscious bias" %]biased[%/i%] toward
+find people who are like those doing the hiring.  "Cultural fit[%i "cultural fit (as
+unconscious bias)" %]" almost always means "like me":
+consciously or not, we are all biased[%i "unconscious bias" %] toward
 those who look like us, talk like us, and make the same pop culture references
 as us, which has nothing to do with on-the-job ability
 [%b Greenwald1995 Jost2009 %].
 
-One way this bias shows up is in [%i "whiteboard coding
-questions" %]whiteboard coding questions[%/i%] about linked lists, dynamic
+One way this bias shows up is in whiteboard coding questions[%i "whiteboard coding
+questions" %] about linked lists, dynamic
 programming, and other topics from computer science classes on data structures
 and algorithms.  As [Hillel Wayne][wayne-hillel] discovered when he looked at
 [their history][wayne-linked-lists], they might have indicated how much
 experience someone had using C or Pascal in the 1980s, but they have no more to
 do with on-the-job performance than the essay questions used by Ivy League
 schools have to do with your ability to learn.  When [April Christina
-Curley][curley-april], a recruiter at [%i "Google!unfair hiring
-practices" %]Google[%/i%], began coaching Black students how to prepare for
+Curley][curley-april], a recruiter at Google[%i "Google!unfair hiring
+practices" %], began coaching Black students how to prepare for
 interviews with Google that included questions like these, the company shut her
 down—even though schools like Stanford had been running coaching sessions for
 their students for years [%b Tiku2021 %].
 
-[%b Behroozi2019 Behroozi2020a Behroozi2020b %] summarize [%i "hiring
-process!mistakes" %]many other things that often go wrong in hiring[%/i%], from
+[%b Behroozi2019 Behroozi2020a Behroozi2020b %] summarize many other things that often go wrong in hiring[%i "hiring
+process!mistakes" %], from
 long delays waiting for feedback to asking candidates to spend several days
 working for free on programming assignments.  These aren't just signs of
 dysfunctional company culture: they also make hiring harder for some people than
@@ -85,26 +85,26 @@ weekends were theirs to do with as they wished, everyone else's would be too.
 As a student looking for your first full-time job you probably won't have any
 control over the hiring process, but seeing whether the company does it well or
 not gives you valuable information about how well run it is.
-Here are [%i "hiring process!healthy" %]a few positive indicators[%/i%]:
+Here are a few positive indicators[%i "hiring process!healthy" %]:
 
 Write inclusive, accessible job ads.
 :   [%b Gaucher2011 %] is just one of many studies showing that gendered
     wording in job ads reinforces gender inequality in male-dominated
-    occupations. [%i "Gender Decoder" %][Gender
-    Decoder][gender-decoder][%/i%] and [%i "GenderMag" %][GenderMag][gendermag][%/i%] can help you find bugs like this
+    occupations. [Gender
+    Decoder][gender-decoder][%i "Gender Decoder" %] and [GenderMag][gendermag][%i "GenderMag" %] can help you find bugs like this
     in ads and software [%b Hilderbrand2020 %]. Tools for finding and
     eliminating racial bias and other problems aren't as common, but
-    [%b Washington2020 %] will tell you what to aim for, and if [%i "WebAIM WAVE" %][WebAIM WAVE][wave][%/i%] doesn't give your online
+    [%b Washington2020 %] will tell you what to aim for, and if [WebAIM WAVE][wave][%i "WebAIM WAVE" %] doesn't give your online
     job ads a clean bill of health, please fix them.
 
 Post a public description of the hiring process.
-:   [%i "Automattic!hiring process" "hiring
-    process!Automattic" %][Automattic's][automattic-hiring][%/i%] description is
+:   [Automattic's][automattic-hiring][%i "Automattic!hiring process" "hiring
+    process!Automattic" %] description is
     a good example: it lays out what's going to happen in what order, how much
     time is expected, and the principles everything is based on.
 
 Use blinded screening.
-:   Everyone has [%i "implicit bias" %][%g implicit_bias "implicit biases" %][%/i%], and many of the rules scientists follow when running
+:   Everyone has [%g implicit_bias "implicit biases" %][%i "implicit bias" %], and many of the rules scientists follow when running
     experiments are designed to prevent their biases contaminating their results
     ([%x research %]).  The same is true of hiring, and so is the
     solution. For example, my first-round interview with Automattic was done
@@ -137,9 +137,9 @@ If the answers are "no", what can you and your classmates do to fix things?
 
 I have interviewed people who didn't ask a single question about the company,
 what an average day would look like, or how their career might evolve.
-[%i "Evans, Julia" %][Julia Evans][evans-julia][%/i%] has a good list of
+[Julia Evans][evans-julia][%i "Evans, Julia" %] has a good list of
 [questions to ask in interviews][evans-interviews], and
-[%i "Baxter, T. Carter" %][T. Carter Baxter][baxter-t-carter][%/i%] has
+[T. Carter Baxter][baxter-t-carter][%i "Baxter, T. Carter" %] has
 [another][baxter-interviews].  There won't be time to get to them all, but
 asking two or three will impress your interviewer as well as giving you valuable
 information.
@@ -148,8 +148,8 @@ information.
 ## On the Job
 
 Unfair treatment doesn't end after people are hired.  Study after study has
-shown that [%i "discrimination" %]men and women are treated differently on the
-job[%/i%]: women have to work twice as hard to be given half as much credit,
+shown that men and women are treated differently on the
+job[%i "discrimination" %]: women have to work twice as hard to be given half as much credit,
 they are listened to less often or given less credit for new ideas, and what is
 seen as confidence in men is seen as pushiness or stridency in women
 [%b Gavett2017 %].  People of color are undermined and discounted in the
@@ -172,13 +172,13 @@ Share data on how well the company has been doing recently.
     know the answer, they should be able to get it; if the company doesn't have
     that data or won't share it, you've just learned something.
 
-Have an [%i "org chart!importance of" %]org chart[%/i%].
+Have an org chart[%i "org chart!importance of" %].
 :   As we said in [%x important %], every organization has a power
     structure: the only question is whether it's public and accountable, or
     whether the organization runs on who you know and how willing people are to
     barge in on strangers.
 
-Have [%i "performance review!importance of written criteria for" %]written criteria for performance reviews[%/i%].
+Have written criteria for performance reviews[%i "performance review!importance of written criteria for" %].
 :   The ones shown in [%x eval-personal %] are a good model, and these
     *are* something a company can share before hiring you. If a company doesn't
     have criteria, or if performance reviews are only done when an employee asks
@@ -208,10 +208,10 @@ diverse management are more profitable, and so on [%b Zhan2020 %].
 Men who want an excuse to continue to be assholes sometimes try to be clever
 with words and talk about "diversity of thought," meaning, "I should be allowed
 to be offensive as long as I don't raise my voice."  This is an example of the
-[%i "paradox of tolerance" %][paradox of
-tolerance][paradox-of-tolerance][%/i%]: if a group is tolerant without limit,
+[paradox of
+tolerance][paradox-of-tolerance][%i "paradox of tolerance" %]: if a group is tolerant without limit,
 it will eventually be undermined by the intolerant taking advantage of that. As
-[%i "Baldwin, James" %]James Baldwin[%/i%] said, "We can disagree and still
+James Baldwin[%i "Baldwin, James" %] said, "We can disagree and still
 love each other unless your disagreement is rooted in my oppression and denial
 of my humanity and right to exist."
 </div>
@@ -227,13 +227,13 @@ callously as it treats everyone else.
 Standing up to a bad boss or an unfair professor is easier in theory than in
 practice, though, because the student's evaluation of the professor doesn't
 affect the professor nearly as much as the professor's evaluation of the student
-affects the student.  This imbalance is why management fads like "[%i "radical candor (as bullshit)" %]radical candor[%/i%]" are [%g bullshit "bullshit" %] (in the technical sense of the word
+affects the student.  This imbalance is why management fads like "radical candor[%i "radical candor (as bullshit)" %]" are [%g bullshit "bullshit" %] (in the technical sense of the word
 [%b Frankfurt2005 %]). The idea that everyone should say what they think
 is appealing in theory; in practice, managers will brush aside the fact that
 they can fire people who say things they don't like and blame the marginalized
 for not speaking out more or more loudly.
 
-The only effective way to address power disparities like these is [%i "collective action" %]collective action[%/i%]: many people with relatively
+The only effective way to address power disparities like these is collective action[%i "collective action" %]: many people with relatively
 little power can defend their rights if they band together.  Forty years of
 sustained disinformation from the rich and powerful have made many people
 believe that collectives are intrinsically inefficient or that they stifle
@@ -242,15 +242,15 @@ proponents unrestricted capitalism all organize their companies along socialist
 lines [%b Phillips2019 %].
 
 As an example of what working together looks like, consider the difference
-between a ride-sharing company like [%i "Uber" %]Uber[%/i%] and the
-house-cleaning company [%i "Up & Go" %]Up & Go[%/i%].  Uber uses its control
+between a ride-sharing company like Uber[%i "Uber" %] and the
+house-cleaning company Up & Go[%i "Up & Go" %].  Uber uses its control
 of the app that connects customers with drivers to extract profits by squeezing
 drivers. In contrast, the people who work for Up & Go own the app as a group; 5%
 of what customers pay goes to its upkeep, and the rest goes to the workers
 [%b Thompson2019 %].  There might be one less billionaire in the world,
 but everyone else benefits.
 
-Up & Go is an example of a [%i "commons" %][%g commons "commons" %][%/i%]:
+Up & Go is an example of a [%g commons "commons" %][%i "commons" %]:
 something managed jointly by a community according to rules they have evolved
 themselves.  All three parts of that definition are essential: a commons isn't
 just a shared pasture or an open source software stack; it also includes the
@@ -281,12 +281,12 @@ whose behavior most needs to change won't listen.
 
 You might think there isn't a lot you can do as a student or as a junior
 programmer to fix what's broken in our industry, but there is.  An
-[%i "ally" %][%g ally "ally" %][%/i%] is a someone with unearned advantages who tries to
+[%g ally "ally" %][%i "ally" %] is a someone with unearned advantages who tries to
 understand their own privilege and create an environment that's fair for
 everyone.  As [this guide][dlf-active-bystander] from the [Digital Library
 Foundation][dlf] explains, there are several ways to be an
-[%i "active bystander" %][%g active_bystander "active bystander" %][%/i%], i.e., several ways to
-[%i "lending privilege" %][%g lending_privilege "lend your privilege" %][%/i%] to
+[%g active_bystander "active bystander" %][%i "active bystander" %], i.e., several ways to
+[%g lending_privilege "lend your privilege" %][%i "lending privilege" %] to
 defuse situations and defend people who are being attacked.
 
 <div class="callout" markdown="1">
@@ -308,8 +308,8 @@ However, [%b Dobbin2019 %] also found that what *did* make a difference
 was showing people how to intervene, since this made them more likely to do so
 (in the same way that having some first aid training makes you more likely to
 take action in a crisis).  An example of this kind of training is the guidelines
-in [%b Aurora2018 %] for responding to [%i "Code of Conduct!responding
-to violations" %]Code of Conduct violations[%/i%] ([%x starting %]). On a
+in [%b Aurora2018 %] for responding to Code of Conduct violations[%i "Code of Conduct!responding
+to violations" %] ([%x starting %]). On a
 smaller scale, your instructor can have you work through scenarios like this one
 with your teammates and the rest of your class:
 
@@ -332,11 +332,11 @@ Neither of these scenarios is about programming, but I hope you understand by
 now that the success or failure of your project depends on a lot more than just
 the code you write.  Learning how to handle situations like these may also help
 you become more compassionate: if you've never had to worry about them, the odds
-are that (in [%i "Scalzi, John" %]John Scalzi[%/i%]'s memorable analogy)
+are that (in John Scalzi[%i "Scalzi, John" %]'s memorable analogy)
 you've been playing at the lowest difficulty level there is your whole life, and
 as a result don't realize how much harder things are for others whose default
-setting isn't "[%i "easy mode (as a metaphor for privilege)" %]easy
-mode[%/i%]" [%b Scalzi2012 %].
+setting isn't "easy
+mode[%i "easy mode (as a metaphor for privilege)" %]" [%b Scalzi2012 %].
 
 <div class="callout" markdown="1">
 ### How far back should we go?
@@ -405,13 +405,13 @@ fatal consequences.
 In March 2019, a right-wing terrorist killed 51 people at prayer in
 Christchurch, New Zealand. Every one of the sources he cited in his manifesto
 was making money through a store hosted by a company called
-[%i "Shopify!support for alt-right sites" %]Shopify[%/i%];
+Shopify[%i "Shopify!support for alt-right sites" %];
 the company didn't end its relationship with any of them.
 </div>
 
 Ethical failures by programmers now hurt us all.  For example, your school might
 use a piece of software called
-[%i "Proctorio (invasive surveillance)" %]Proctorio[%/i%],
+Proctorio[%i "Proctorio (invasive surveillance)" %],
 which records video and audio of you and your
 screen while you write an exam, then uses algorithms to determine if you're
 cheating.  Nobody outside the company can check those algorithms to see if
@@ -420,8 +420,8 @@ the victim of online harassment or stalking should have to agree to invasive
 surveillance in order to pass a course.
 
 Many of these failures have their roots in a lack of compassion—i.e., in an
-inability to imagine the world through others' eyes.  As [%i "Hoye,
-Mike" %][Mike Hoye][hoye-mike][%/i%] has pointed out, some wayfinding apps for
+inability to imagine the world through others' eyes.  As [Mike Hoye][hoye-mike][%i "Hoye,
+Mike" %] has pointed out, some wayfinding apps for
 phones have an option to avoid checkpoints; it's unlikely that the people who
 added that feature ever lost a loved one to a drunk driver.
 

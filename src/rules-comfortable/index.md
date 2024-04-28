@@ -28,7 +28,7 @@ A comfortable chair.
 A good microphone.
 :   You can have a very productive meeting with video turned off, but if you
     don't have decent audio you're sunk. It's therefore worth investing in a
-    decent [%i "microphone" %]microphone[%/i%]. Mine cost me forty dollars; I
+    decent microphone[%i "microphone" %]. Mine cost me forty dollars; I
     spent another twelve dollars to get a gooseneck stand to keep it ten
     centimeters away from both my keyboard and my mouth.
 
@@ -60,8 +60,8 @@ A squirt bottle of glass cleaner and a box of kleenex.
     and clean my screen.
 
 A rubber duck.
-:   One of the creators of Unix kept a [%i "debugging!rubber duck" "rubber
-    duck debugging" %]rubber duck[%/i%] next to his computer.  If a bug took more
+:   One of the creators of Unix kept a rubber duck[%i "debugging!rubber duck" "rubber
+    duck debugging" %] next to his computer.  If a bug took more
     than a few minutes to track down, he put the duck on his desk and explained
     the problem to it, because speaking out loud forces you to marshal your
     thoughts, which in turn highlights any contradictions or missed steps that

@@ -20,7 +20,7 @@ Remember that companies work in weeks, not seasons.
 
 Be open.
 :   Research is of no use to practitioners who cannot easily find it and read
-    it. While [%i "Wales, Jimmy" %]Jimmy Wales[%/i%] (the founder of [%i "Wikipedia" %]Wikipedia[%/i%]) may not actually have said, "Open
+    it. While Jimmy Wales[%i "Wales, Jimmy" %] (the founder of Wikipedia[%i "Wikipedia" %]) may not actually have said, "Open
     information drives out closed," the principle holds: with so much
     information freely available on the Internet, any paywall or login barrier
     put between you and your hoped-for audience will send a large number of
@@ -50,7 +50,7 @@ Apologize in advance for the state of academic publishing.
     be used to lift researchers out of penury, but it is functionally
     indistinguishable from a system that was. The best way to prepare your
     industry partners for its Kafkaesque production pipelines and interminable
-    delays is to have them watch [%i "Gilliam, Terry" %]Terry Gilliam[%/i%]'s
+    delays is to have them watch Terry Gilliam[%i "Gilliam, Terry" %]'s
     movie *Brazil*.
 
 ## If You Are a Practitioner in Industry
@@ -80,7 +80,7 @@ Remember that academic success is measured in publications, not sales.
     comfort zone.)
 
 Do the background reading.
-:   [%i "Mencken, H.L." %]H.L. Mencken[%/i%] once wrote that, "There is
+:   H.L. Mencken[%i "Mencken, H.L." %] once wrote that, "There is
     always a well-known solution to every human problem—neat, plausible, and
     wrong." Your problem is almost certainly one of those, and is almost
     certainly more complex than you first realize. While Rule #4 tells

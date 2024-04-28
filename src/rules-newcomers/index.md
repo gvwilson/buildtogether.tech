@@ -11,7 +11,7 @@ how to do this.
 
 What exactly do we mean by "community"? In the case of open source and open
 science, the most usual meaning is a
-[%i "community of practice" %][%g "community_of_practice" "community of practice" %][%/i%]
+[%g "community_of_practice" "community of practice" %][%i "community of practice" %]
 [%b Lave1991 Wenger1999 %] with three characteristics:
 
 1.  Participants have a common product or purpose that they work on or
@@ -42,7 +42,7 @@ Make governance explicit.
     authority lies with those willing to shout loudest and longest
     [%b Cohen2018 %].  Large, well-established projects that incorporate
     as non-profits are required to promulgate bylaws; smaller projects should
-    have some explicit [%i "governance" %]governance[%/i%] that explains who
+    have some explicit governance[%i "governance" %] that explains who
     gets a say in what and how to become someone whose vote counts
     ([%x important %]).
 
@@ -57,7 +57,7 @@ Keep knowledge up to date and findable.
     material up to date, community members should at least remove or clearly
     mark outdated information.
 
-Have and enforce a [%i "Code of Conduct" %]Code of Conduct[%/i%].
+Have and enforce a Code of Conduct[%i "Code of Conduct" %].
 :   We discussed this rule in [%x starting %], but it bears repeating here.
     Your project's culture is defined by the worst behavior it tolerates
     [%b Gruenert2015 %], and every instance of bad behavior will drive
@@ -66,7 +66,7 @@ Have and enforce a [%i "Code of Conduct" %]Code of Conduct[%/i%].
 Develop forms of legitimate peripheral participation.
 :   Newcomers become members of a community by participating in simple, low-risk
     tasks that existing community members believe are valuable. Through this
-    [%i "legitimate peripheral participation" %][%g lpp "legitimate peripheral participation" %][%/i%], newcomers become acquainted with the community's
+    [%g lpp "legitimate peripheral participation" %][%i "legitimate peripheral participation" %], newcomers become acquainted with the community's
     tasks, vocabulary, and governance so that they can ease into the
     project. For example, submitting pull requests on GitHub can be daunting for
     newcomers; asking people to file issues about bugs they have found requires

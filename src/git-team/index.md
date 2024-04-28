@@ -2,17 +2,17 @@
 title: Using Git Together
 ---
 
-[%i "version control!collaboration" %]Version control[%/i%] really comes into
+Version control[%i "version control!collaboration" %] really comes into
 its own when we are working with other people.  People can share work through a
 Git repository in one of two ways [%b Irving2021 %]:
 
-1.  Everyone has read and write access to a [%i "version
-    control!using a shared repository" %]single shared
-    repository[%/i%].
+1.  Everyone has read and write access to a single shared
+    repository[%i "version
+    control!using a shared repository" %].
 
 2.  Everyone can read from the project's main repository, but only a few people
     can commit changes to it.  The project's other contributors
-    [%i "version control!using forked repositories" %][%g fork_git "fork" %][%/i%]
+    [%g fork_git "fork" %][%i "version control!using forked repositories" %]
     the main repository to create one that they own,
     do their work in that, and then submit their changes to the main repository.
 
@@ -26,8 +26,8 @@ might make a mess in the `main` branch, the second approach is safer.
 When you're working on your own, it's natural to fall into a rhythm of updating
 your laptop from your repository in the morning and committing whatever you've
 managed to accomplish when you wrap up for the day. You need to break this habit
-when you become part of a team. Instead, [%i "version control!when to
-commit" %]you should commit[%/i%] when you finish a chunk of work that moves the
+when you become part of a team. Instead, you should commit[%i "version control!when to
+commit" %] when you finish a chunk of work that moves the
 project forward or is fit for someone else to review. A good rule is "never
 break the build" ([%x automation %]), i.e., never commit anything that
 doesn't run well enough to pass all existing tests.
@@ -59,8 +59,8 @@ She then pushes her changes to the shared repository:
 [%inc first_push.sh %]
 [%inc first_push.out %]
 
-And no, [%i "Git!interface (indistinguishable from hoax)" %]Git's
-output[%/i%] here isn't particularly useful to anyone except people who are
+And no, Git's
+output[%i "Git!interface (indistinguishable from hoax)" %] here isn't particularly useful to anyone except people who are
 debugging Git's internals.
 
 Amira's changes are now on her desktop computer and in the GitHub repository but
@@ -71,14 +71,14 @@ not on Sami's laptop. They can get them by running:
 But what if Sami is working on some changes to homework 4 (which homework 5
 builds on)? She could just make her changes and push, but that would lead to a
 lot of merge conflicts.  Instead, almost everyone uses
-[%i "pull request" "Git!pull request" %][%g pull_request "pull requests" %][%/i%] (PR).
+[%g pull_request "pull requests" %][%i "pull request" "Git!pull request" %] (PR).
 A PR is essentially a note saying, "Someone would like to merge branch A into branch B".
 The PR does not contain the changes, but instead points at two particular
 branches.  That way, the difference displayed is always up to date if either
 branch changes.
 
 But a PR can store more than just the source and destination branches: it can
-also store [%i "Git!comments" %]comments[%/i%] people have made
+also store comments[%i "Git!comments" %] people have made
 about the proposed merge.  Users can comment on the PR as a whole, or on
 particular lines, and mark comments as out of date if the author of the PR
 updates the code that the comment is attached to.  Complex changes can go
@@ -110,8 +110,8 @@ destination of the PR and a pair of editable boxes for the pull request's title
 and a longer comment.
 
 If they scroll down, Sami can see a summary of the changes that will be in the
-PR.  When they click "Create Pull Request", Git gives it a unique [%i "pull
-request!serial number" %]serial number[%/i%].  This is *not* a commit ID;
+PR.  When they click "Create Pull Request", Git gives it a unique serial number[%i "pull
+request!serial number" %].  This is *not* a commit ID;
 instead, each PR in a particular repository is given a sequential ID.
 
 Clicking on the "Pull requests" tab in the repository brings up a list of PRs
@@ -135,7 +135,7 @@ resolve the conflict.  It also means that if the change affects the project's
 code, we can run everything to make sure it still works.
 
 But what if Sami merges another PR while Amira is resolving this one?  In theory
-this [%i "conflict (in Git)!repeating" %]cycle[%/i%] could go on forever; in
+this cycle[%i "conflict (in Git)!repeating" %] could go on forever; in
 practice, it reveals a communication problem that the team needs to address.  If
 two or more people are constantly making incompatible changes to the same files,
 they should discuss who's supposed to be doing what, or rearrange the project's
@@ -151,8 +151,8 @@ pass, so the team can ensure that the software is always as good as its tests.
 
 ## Commit Messages
 
-A [DuckDuckGo][duckduckgo] search for "how to write a good [%i "Git!commit
-message" %]commit message[%/i%]" turns up several thousand articles. Most are
+A [DuckDuckGo][duckduckgo] search for "how to write a good commit message[%i "Git!commit
+message" %]" turns up several thousand articles. Most are
 variations on the sample shown below; as with programming style
 ([%x research %]), the most important thing is being consistent rather than the
 particular rules you follow.
@@ -169,7 +169,7 @@ or not.
 ## Code Reviews
 
 There's no point creating PRs if they are all merged as-is. The reason they
-exist is to allow [%i "code review!effectiveness of" %][%g code_review "code review" %][%/i%].  One study after another since the mid-1970s has proven that code
+exist is to allow [%g code_review "code review" %][%i "code review!effectiveness of" %].  One study after another since the mid-1970s has proven that code
 review is the most cost-effective way to find bugs in software
 [%b Cohen2010 %]. It is also the most effective way to share knowledge
 between team members: if you read someone else's code, you have a chance to
@@ -192,7 +192,7 @@ many.
 There are lots of guides online for doing code reviews, most of them based on
 their authors' personal experience. A notable exception is the [SmartBear
 guide][smartbear-code-review], which draws on a large study of code review in
-industry. The [%i "code review!procedure" %]rules below[%/i%] present some of
+industry. The rules below[%i "code review!procedure" %] present some of
 their findings with modifications for students' situations.
 
 Have the instructor do a demonstration review.
@@ -203,8 +203,8 @@ Have the instructor do a demonstration review.
 
 Authors should clean up code before review.
 :   If the person creating the PR goes through and adds some more comments,
-    cleans up some variable names, and does a bit of [%i "refactoring!for
-    code review" %]refactoring[%/i%] ([%x design %]), they won't just make
+    cleans up some variable names, and does a bit of refactoring[%i "refactoring!for
+    code review" %] ([%x design %]), they won't just make
     reviewing easier: the odds are very good that they will find and fix a few
     problems on their own.
 
@@ -218,7 +218,7 @@ Review at most 200 lines of a code at a time.
 
 Use checklists.
 :   [%b Gawande2011 %] popularized the idea that using
-    [%i "checklists!use in code review" %]checklists[%/i%] improves results even
+    checklists[%i "checklists!use in code review" %] improves results even
     for experts.  While [%b Hatton2008 %] found no evidence that they made
     a difference to code reviews by professionals, I have found them very useful
     as a starter for students.  If you are new to code reviews, ask the
@@ -272,7 +272,7 @@ Don't tolerate rudeness.
     we speak to each other."  We'll talk about this more in
     [%x fairness %].
 
-How we [%i "code review!responding to" %]respond[%/i%] to reviews is just as
+How we respond[%i "code review!responding to" %] to reviews is just as
 important:
 
 Be specific in replies to reviewers.

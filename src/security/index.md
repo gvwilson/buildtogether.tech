@@ -4,10 +4,10 @@ title: Security
 
 Companies, universities, and other institutions have mostly failed to protect us
 from online threats: nothing happens to them if they don't, and as
-[%i "Schneier, Bruce" %]Bruce Schneier[%/i%] has pointed out, their business models
+Bruce Schneier[%i "Schneier, Bruce" %] has pointed out, their business models
 are designed to put the cost of security failures on users
 [%b Schneier2021 %]. As a result, much of what we are forced to go through
-is [%i "security theater" %][%g security_theater "security theater" %][%/i%]
+is [%g security_theater "security theater" %][%i "security theater" %]
 intended to make us believe something is being done rather than to actually make
 us safer: forcing people to change passwords every three months encourages
 people to choose memorable (and therefore easy-to-guess) passwords, while all
@@ -40,18 +40,18 @@ everyone within a few meters knew their full name, their date of birth, their
 credit card number (including three-digit verification code on the back), and
 what was almost certainly their mother's maiden name.
 
-[%i "social engineering" %][%g social_engineering "Social engineering" %][%/i%] is
+[%g social_engineering "Social engineering" %][%i "social engineering" %] is
 far more common than hacking: it is much easier to trick someone into giving you
 their password than to break into their devices digitally.  The defense against
 this is to pay attention to what's happening and respond accordingly.  However,
-being on guard all the time is exhausting; [%i "Snowden, Edward" %]Edward
-Snowden[%/i%] and the journalists who worked with him took extraordinary
+being on guard all the time is exhausting; Edward
+Snowden[%i "Snowden, Edward" %] and the journalists who worked with him took extraordinary
 measures to safeguard themselves against [%g state_level_actor "state-level
 actors" %] [%b Snowden2019 %], but most of us aren't involved in issues
 of national security and don't need to take those kinds of precautions.
 Instead, we typically face one of three kinds of threat:
 
--   [%i "casual threat" "threat!casual" %][%g casual_threat "Casual threats" %][%/i%]
+-   [%g casual_threat "Casual threats" %][%i "casual threat" "threat!casual" %]
     are opportunistic. For example, Monica, a professor, is targeted by Mohan,
     an undergraduate who spends hours every day in online echo chambers
     complaining about how "SJW bullshit" is ruining tech. He thinks it would be
@@ -59,7 +59,7 @@ Instead, we typically face one of three kinds of threat:
     invest significant effort in his attack, but his attack may be backed up by
     more knowledgeable allies in online forums.
 
--   [%i "intimate threat" "threat!intimate" %][%g intimate_threat "Intimate threats" %][%/i%] come from people who know their targets' passwords or have a
+-   [%g intimate_threat "Intimate threats" %][%i "intimate threat" "threat!intimate" %] come from people who know their targets' passwords or have a
     chance to install spyware on their targets' devices (which abusers
     frequently do [%b Leitao2019 %]). For example, Elena has ended an
     unhappy relationship and is rebuilding her life.  Her ex, Eric, is obsessed
@@ -67,7 +67,7 @@ Instead, we typically face one of three kinds of threat:
     He knows the IDs she uses on social media, some of her old passwords, and
     the PIN for phone.
 
--   [%i "insider threat" "threat!insider" %][%g insider_threat "Insider threats" %][%/i%] come from people who abuse legitimate access to accounts and
+-   [%g insider_threat "Insider threats" %][%i "insider threat" "threat!insider" %] come from people who abuse legitimate access to accounts and
     devices. For example, Boris, a professor, has agreed to serve as an expert
     witness in an upcoming lawsuit; Bethany, a sys admin in his department, has
     been asked by a former colleague to find out what he is going to say in
@@ -86,20 +86,20 @@ How can you help counter these threats?
     everyone who manufactures packaged food is required to list its
     ingredients.)
 
-1.  Keep a [%i "logging!for security" %]log[%/i%] of every administrative
+1.  Keep a log[%i "logging!for security" %] of every administrative
     action ([%x errors %]) so that there will be a record if someone uses
     their privileges inappropriately. They might be able to delete that record,
-    but if it is [%i "digital signature!for activity logs" %][%g digital_signature "digitally signed" %][%/i%] there will still be evidence of tampering.
+    but if it is [%g digital_signature "digitally signed" %][%i "digital signature!for activity logs" %] there will still be evidence of tampering.
 
 1.  Do code reviews to ensure that programmers aren't inserting
-    [%i "code review!for security" %][%g back_door "back doors" %][%/i%] in software
+    [%g back_door "back doors" %][%i "code review!for security" %] in software
     [%b Sharma2021 %] or accidentally leaving access points intended
     solely for testing.
 
 ## Authentication
 
 Using a weak password is a good way to ensure that your account will eventually
-be compromised, in part because [%i "dictionary attack" %][%g dictionary_attack "dictionary attacks" %][%/i%] can be run offline against stored passwords to
+be compromised, in part because [%g dictionary_attack "dictionary attacks" %][%i "dictionary attack" %] can be run offline against stored passwords to
 find ones that match common patterns. Using a clever password scheme, such as
 the name of the site plus a word only you know, does not make you more secure:
 whatever scheme you have thought of, attackers have seen before.  And since
@@ -130,10 +130,10 @@ of practice keeping track of bits of paper, and will probably notice if their
 purse or wallet is stolen.
 </div>
 
-Passwords are just one form of [%i "authentication" %]authentication[%/i%].
+Passwords are just one form of authentication[%i "authentication" %].
 In general, proving your identity relies on something you know (like a
 password), something you have (like a swipe card), or something you are (like
-your fingerprints).  [%i "two-factor authentication" "authentication!two-factor" %][%g 2fa "Two-factor authentication" %][%/i%] (2FA) requires two
+your fingerprints).  [%g 2fa "Two-factor authentication" %][%i "two-factor authentication" "authentication!two-factor" %] (2FA) requires two
 of these together to establish your identity, e.g., a password (which can be
 stolen electronically) plus a random code generated by an app on your phone
 (which means attackers need access to you).
@@ -141,8 +141,8 @@ stolen electronically) plus a random code generated by an app on your phone
 It is more secure to use an app for 2FA instead of text messages or email, but
 either is a big advance on single-factor authentication.  Many security experts
 now recommend using a physical 2FA key such as a
-[%i "YubiKey" %]YubiKey[%/i%] that fits on a keychain and plugs into a standard USB
-port.  Sites like [%i "Tech Solidarity" %][Tech Solidarity][tech-solidarity][%/i%]
+YubiKey[%i "YubiKey" %] that fits on a keychain and plugs into a standard USB
+port.  Sites like [Tech Solidarity][tech-solidarity][%i "Tech Solidarity" %]
 have easy-to-follow instructions explaining
 how to set them up for a range of popular social networking sites.
 
@@ -169,16 +169,16 @@ Much of the software we use was designed in more innocent times, and since
 companies are almost never held liable for the damage caused by their software,
 they have consistently prioritized convenience for the many over harm to the
 few. One common example is documents that contain code that automatically runs
-when the document is opened. Used for good, these [%i "macro" %]macros[%/i%]
+when the document is opened. Used for good, these macros[%i "macro" %]
 can check that an address field has been filled in correctly. Used for evil, it
 can email everyone in your address book, or send a copy of it to anyone in the
 world.  Microsoft Word and various game mods are particularly notorious for this
 vulnerability.
 
 Attempts to get you to open an email attachment, click on a link, install
-software, or log into a website are called [%i "phishing" %][%g phishing "phishing" %][%/i%] attacks.  The strongest defense is to never do
+software, or log into a website are called [%g phishing "phishing" %][%i "phishing" %] attacks.  The strongest defense is to never do
 these things, but that would make most work impossible. The second-best defense
-is to invest in a [%i "virus scanner" %]virus scanner[%/i%] to check email
+is to invest in a virus scanner[%i "virus scanner" %] to check email
 attachments and downloads before you open them.
 
 Similarly, don't click links in emails without checking them first: instead,
@@ -199,7 +199,7 @@ access to your email in order to break into your account. On the other hand,
 random URLs are hard to type in, so these emails encourage us to click on links
 in emails. If you are not expecting a password reset email, *don't click on the
 link*, even if it includes your name or other details:
-[%i "spearphishing" %][%g spearphishing "spearphishing" %][%/i%] uses data harvested
+[%g spearphishing "spearphishing" %][%i "spearphishing" %] uses data harvested
 from previous victims to attack specific targets.
 
 Similarly, if someone from your bank calls you up and asks for information to
@@ -225,15 +225,15 @@ How can you support these safety rules with software?
 
 Moving files into the trash and then emptying it does not actually erase the
 data: it just tells the computer that the space is available for reuse. (This is
-why reporters and private investigators regularly go [%i "dumpster diving" %][%g dumpster_diving "dumpster diving" %][%/i%].) The best way to address this
+why reporters and private investigators regularly go [%g dumpster_diving "dumpster diving" %][%i "dumpster diving" %].) The best way to address this
 problem is to encrypt your hard drive, which is a quick setup option for all
 major operating systems these days.
 
 Even with that, you should act as if any device you throw away might fall into
 unfriendly hands.  (The odds of this happening by accident are low, but it won't
 be by accident: attackers have been known to get jobs in electronics recycling
-depots in order to collect the raw material for attacks.)  Use a [%i "secure
-deletion tool" %]secure deletion tool[%/i%] like [BleachBit][bleachbit] (for
+depots in order to collect the raw material for attacks.)  Use a secure deletion tool[%i "secure
+deletion tool" %] like [BleachBit][bleachbit] (for
 Linux or Windows) or [FileShredder][fileshredder] (for MacOS) before selling,
 recycling, or discarding your hardware, but keep in mind that this doesn't
 affect backups or files stored online on sites like [Dropbox][dropbox]. And keep
@@ -286,8 +286,8 @@ Here are some things you can do as a developer to support these rules:
 The last of these rules shows why security is hard. On the one hand, people
 should be able to erase themselves from your records. On the other, abusers will
 use this to cover their tracks. You may not get to decide how to balance these
-two needs: legislation like the EU's [%i "General Data Protection Regulation
-(GDPR)" %][General Data Protection Regulation][gdpr][%/i%] (GDPR) includes a
+two needs: legislation like the EU's [General Data Protection Regulation][gdpr][%i "General Data Protection Regulation
+(GDPR)" %] (GDPR) includes a
 [right to be forgotten][gdpr-forgotten].
 
 <div class="callout" markdown="1">
@@ -332,8 +332,8 @@ Report the attack.
     usually (eventually) take what steps they can once they know there is a
     problem. They are more inclined to take real action against the attacker if
     they believe that you might speak publicly about what has happened and
-    thereby damage their reputation, so never agree to a [%i "non-disclosure
-    agreement!abuse of" %]non-disclosure agreement[%/i%] that would prevent you
+    thereby damage their reputation, so never agree to a non-disclosure agreement[%i "non-disclosure
+    agreement!abuse of" %] that would prevent you
     from doing so ([%x fairness %]).
 
 Above all, remember that it's not just about you. We don't just wear masks to
@@ -386,7 +386,7 @@ the safer all of us will be. As a programmer, you can push for this:
 > journeys, needs to show leadership in privacy, and it might as well be
 > you.
 >
-> — [%i "Burns, Heather" %][Heather Burns][burns-privacy-quote][%/i%]
+> — [Heather Burns][burns-privacy-quote][%i "Burns, Heather" %]
 
 ## An Example Attack
 
@@ -411,10 +411,10 @@ Once this is inserted, the query becomes:
 
 which looks up a user without a name, erases all of the data in the `User`
 table, and then returns an empty string (the final `select`).  This is called an
-[%i "SQL injection attack" %][%g sql_injection "SQL injection attack" %][%/i%],
-and with a few modifications, it can be used to [%i "exfiltrate" %]exfiltrate[%/i%] data rather than delete it.
+[%g sql_injection "SQL injection attack" %][%i "SQL injection attack" %],
+and with a few modifications, it can be used to exfiltrate[%i "exfiltrate" %] data rather than delete it.
 
-You defend against this by always [%i "sanitizing data" %][%g sanitizing_data "sanitizing user input" %][%/i%] before using it. In this case, the query can
+You defend against this by always [%g sanitizing_data "sanitizing user input" %][%i "sanitizing data" %] before using it. In this case, the query can
 be written as:
 
 [%inc sanitize_input.py %]

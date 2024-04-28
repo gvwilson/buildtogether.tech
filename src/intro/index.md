@@ -61,7 +61,7 @@ which means projects will be more successful if we take motivation into account.
 ## Audience
 
 Every lesson should be written with specific learners in mind.
-These [%i "learner persona" %][personas][t3-personas][%/i%] describe ours:
+These [personas][t3-personas][%i "learner persona" %] describe ours:
 
 -   Yanina is in the third year of a computer science degree.
     She worked on several volunteer projects in high school and through her mosque,
@@ -139,9 +139,9 @@ Any errors, omissions, or misunderstandings that remain are entirely our fault.
 
 Some of this material originally appeared in 
 [%b Sholler2019 Wilson2019 Irving2021 Smalls2021 %];
-I'm grateful to [%i "Taylor & Francis" %][Taylor & Francis][taylor-francis][%/i%],
-[%i "PLoS" %][PLoS][plos][%/i%],
+I'm grateful to [Taylor & Francis][taylor-francis][%i "Taylor & Francis" %],
+[PLoS][plos][%i "PLoS" %],
 and my co-authors for making available under open licenses.
-I would also like to thank [%i "Graf, David" %]David Graf[%/i%] for [%i "doi2bib" %][doi2bib][doi2bib][%/i%]
-and [%i "Elbakyan, Alexander" %]Alexandra Elbakyan[%/i%] for [%i "Sci-Hub" %][Sci-Hub][sci-hub][%/i%]:
+I would also like to thank David Graf[%i "Graf, David" %] for [doi2bib][doi2bib][%i "doi2bib" %]
+and Alexandra Elbakyan[%i "Elbakyan, Alexander" %] for [Sci-Hub][sci-hub][%i "Sci-Hub" %]:
 this book would have been much harder to write without their idealism and hard work.

@@ -25,18 +25,18 @@ At a minimum, your finished project should have:
     help newcomers orient themselves.
 
 1.  An architectural overview, including a block diagram of the major components
-    and a walkthrough of how it behaves.  (I prefer the [%i "use-case
-    map" %]use-case maps[%/i%] introduced in [%x design %] for this.)
+    and a walkthrough of how it behaves.  (I prefer the use-case maps[%i "use-case
+    map" %] introduced in [%x design %] for this.)
 
 1.  An installation guide.
 
-1.  An up-to-date set of [%i "issue tracker!as course
-    deliverable" %]issues[%/i%]. If the work has been done, the issue should be
+1.  An up-to-date set of issues[%i "issue tracker!as course
+    deliverable" %]. If the work has been done, the issue should be
     closed; if not, it should describe the state of the bug (or enhancement, or
     question) well enough for someone to know where to start work.
 
-Another possible deliverable is a [%i "package!as course
-deliverable" %]package[%/i%] that other people can download and install
+Another possible deliverable is a package[%i "package!as course
+deliverable" %] that other people can download and install
 ([%x design %]). It isn't an either/or choice: every good package has a home page,
 installation instructions, and so on.
 
@@ -55,7 +55,7 @@ much you would charge for the software you have produced.  The answer is out of
 scope for this book, but [%b Davidson2009 %] is a good short introduction
 to the topic.
 
-You may also be asked to do some [%i "marketing" %][%g marketing "marketing" %][%/i%],
+You may also be asked to do some [%g marketing "marketing" %][%i "marketing" %],
 which is the process of figuring out how to tell
 the people you're trying to help how you can help them. This doesn't mean
 spamming people with discount coupons; instead, it means explaining the problem
@@ -71,8 +71,8 @@ over the course of the term. That means it's important for you to keep track of
 exactly what version you're working on at any time, where it came from, and
 where it's going.
 
-The usual way to do this is with [%i "version numbers" %][%g version_number "version numbers" %][%/i%].  Most projects these days use
-[%i "semantic versioning" "version numbers!semantic versioning" %][%g semantic_versioning "semantic versioning" %][%/i%];
+The usual way to do this is with [%g version_number "version numbers" %][%i "version numbers" %].  Most projects these days use
+[%g semantic_versioning "semantic versioning" %][%i "semantic versioning" "version numbers!semantic versioning" %];
 when you see a number like "6.2.3.1407"
 attached to a piece of software, it generally means:
 
@@ -84,27 +84,27 @@ attached to a piece of software, it generally means:
 
 -   build 1407
 
-The [%i "major version number" "version numbers!major" %]major version
-number[%/i%] is only incremented when significant changes are made. In
+The major version
+number[%i "major version number" "version numbers!major" %] is only incremented when significant changes are made. In
 practice, "significant" means "changes that make it impossible for older
 versions to read the new version's data or configuration files". In practice,
 major version numbers are often under the control of the marketing
 department—if a competitor releases a new major version, we'd pretty much have
 to as well.
 
-[%i "version numbers!minor" "minor version number" %]Minor version
-numbers[%/i%] are what most people think of as releases. If you've added a few
+Minor version
+numbers[%i "version numbers!minor" "minor version number" %] are what most people think of as releases. If you've added a few
 new features, changed part of the GUI, etc., you increment the minor version
 number so that your customers can talk intelligently about which version they
 have.
 
-[%i "patch (software)" "software patch" "version numbers!patch" %][%g patch "Patches" %][%/i%] don't have their own installers. If, for example,
+[%g patch "Patches" %][%i "patch (software)" "software patch" "version numbers!patch" %] don't have their own installers. If, for example,
 you need to change one HTML form, or one DLL, you will often just mail that out
 to customers, along with instructions about where to put it, rather than
 creating a new installer. You should still give it a number, though, and make an
 entry in your release log.
 
-The [%i "build number" "version numbers!build" %][%g build_number "build number" %][%/i%] is incremented every time you create a new version of the product
+The [%g build_number "build number" %][%i "build number" "version numbers!build" %] is incremented every time you create a new version of the product
 for QA to test. Build numbers are never reset, i.e. you don't go from 5.2.2.1001
 to 6.0.0.0, but from 5.2.2.1001 to 6.0.0.1002, and so on. Build numbers are what
 developers care about: they're often only matched up with version numbers after
@@ -126,7 +126,7 @@ reporting bugs.
 
 ## The Final Report
 
-The other thing student projects usually have to deliver is some kind of [%i "final report" %]final report[%/i%]. Most students short-change this part of
+The other thing student projects usually have to deliver is some kind of final report[%i "final report" %]. Most students short-change this part of
 the course, in part because it comes at the end, but also because they think, "I
 want to write code, not a novel." However, [%b Fogel2005 %] had this to
 say:
@@ -202,12 +202,12 @@ about writing it? It will probably include:
 Lots of tools exist that will handle these, but they all have shortcomings.  You
 can create your report as a set of wiki pages or Google Docs, but they don't
 flag conflicts between concurrent authors.  On the other end of the spectrum are
-WYSIWYG editors like [%i "Microsoft Word" %]Microsoft Word[%/i%] and [%i "LibreOffice" %]LibreOffice[%/i%]. Unfortunately, these get in the way at least
+WYSIWYG editors like Microsoft Word[%i "Microsoft Word" %] and LibreOffice[%i "LibreOffice" %]. Unfortunately, these get in the way at least
 as much as they help:
 
-1.  They store documents in non-text formats that [%i "version
-    control!inability to handle office documents" %]version control systems can't
-    diff or merge[%/i%].
+1.  They store documents in non-text formats that version control systems can't
+    diff or merge[%i "version
+    control!inability to handle office documents" %].
 
 2.  It's hard to write scripts to process these documents, so inclusions (such
     as code fragments) have to be done manually.
@@ -218,19 +218,19 @@ as much as they help:
     italic") rather than logical styles ("making this a book title"), which
     makes it difficult to keep the document consistent over time.
 
-For these reasons, most teams format their reports as a set of [%i "Markdown!for final report" %]Markdown[%/i%] pages under version control and
-use a [%i "static site generator" %]static site generator[%/i%]
+For these reasons, most teams format their reports as a set of Markdown[%i "Markdown!for final report" %] pages under version control and
+use a static site generator[%i "static site generator" %]
 ([%x communicate %]) to turn them into a report. That solves the problem of
 multiple authors (Markdown is a text format, so diff and merge will work), and
 if you know a little CSS, you can make it look as pretty as you want. Diagrams
-and screenshots work well, and you can embed [%i "MathML" %][MathML][mathml][%/i%] for equations if you need to.  The downside
+and screenshots work well, and you can embed [MathML][mathml][%i "MathML" %] for equations if you need to.  The downside
 is that you can't actually see what your document is going to look like until
-you compile it, and doing that breaks your [%i "flow" %]flow[%/i%].
+you compile it, and doing that breaks your flow[%i "flow" %].
 
 <div class="callout" markdown="1">
 ### LaTeX
 
-[%i "LaTeX" %]LaTeX[%/i%] is a markup language that's much more sophisticated
+LaTeX[%i "LaTeX" %] is a markup language that's much more sophisticated
 than HTML and has literally thousands of add-on packages for equations, code
 formatting, and just about everything else you could want. Like HTML, LaTeX is a
 text format, so it plays nicely with version control.  However, its power comes
@@ -242,14 +242,14 @@ several times to resolve cross-references.
 ## The Post Mortem
 
 The most valuable part of your project isn't the software you write, or the
-grade you're given: it's the [%i "post mortem" %][%g post_mortem "post mortem" %][%/i%]. Literally, this is an examination of a deceased person; in a
+grade you're given: it's the [%g post_mortem "post mortem" %][%i "post mortem" %]. Literally, this is an examination of a deceased person; in a
 software project, it's a look back at what went right and what went wrong.
 
 The aim of a post mortem is to help the team and its members do better next time
 by giving everyone a chance to reflect on what they've just accomplished. It is
 *not* to shame people, but it can be hard to critique someone's work without
 them taking it personally, so post mortems add a few extra rules to the ones
-introduced for [%i "meetings!extra rules for post mortems" %]meetings[%/i%]
+introduced for meetings[%i "meetings!extra rules for post mortems" %]
 in [%x important %]:
 
 Get a moderator who wasn't part of the project.

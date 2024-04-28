@@ -5,7 +5,7 @@ title: Debugging
 Finding errors is good; fixing them is better, so learning how to debug is as
 important as learning how to program in the first place.  However, while most
 schools teach defensive programming and unit testing, only a handful offer a
-course on [%i "debugging!why schools don't teach" %]debugging[%/i%], which is
+course on debugging[%i "debugging!why schools don't teach" %], which is
 weird when you consider that most programmers spend anywhere from a quarter to
 three quarters of their time finding and fixing bugs.  A single chapter can't
 make up for that, but I hope the guidance below will help make you more
@@ -15,7 +15,7 @@ Debugging depends on being able to read code, which is the single most effective
 way known to find bugs [%b Basili1987 Kemerer2009 Bacchelli2013 %].
 However, most schools don't offer courses on that either, and of the thousands
 of books that have been written about writing code, only a handful have been
-written about how to [%i "reading code" %]read[%/i%] it
+written about how to read[%i "reading code" %] it
 ([%b Spinellis2003 %] being my favorite).  As [%x rules-joining %]
 says, reading other people's code is one of the best ways to learn how to be a
 better programmer; tracking down a bug may not be when you want to broaden your
@@ -25,8 +25,8 @@ knowledge, but if you're there anyway, you might as well.
 
 Software can fail in many different ways, but the process for diagnosing and
 fixing problems is consistent from one bug to the next.  The first rule of
-debugging is therefore to make [%i "debugging!importance of good
-habits" %]good practices a habit[%/i%].  You are more likely to make mistakes or
+debugging is therefore to make good practices a habit[%i "debugging!importance of good
+habits" %].  You are more likely to make mistakes or
 overlook things when you're tired or under pressure; if writing assertions and
 unit testing aren't automatic by then, the odds are that you'll be at your worst
 when it matters most.
@@ -34,7 +34,7 @@ when it matters most.
 What habits should you have?
 
 Make sure you are trying to build the right thing.
-:   [%i "requirements error" %][%g requirements_error "Requirements errors" %][%/i%] are a major cause of software projects failing in the real
+:   [%g requirements_error "Requirements errors" %][%i "requirements error" %] are a major cause of software projects failing in the real
     world, and every instructor has horror stories about students
     misinterpreting assignments and spending days building the wrong thing. When
     in doubt, ask, and to make your question and its answer clear, provide an
@@ -58,29 +58,29 @@ Make sure you understand what the bug actually is.
 Make it fail.
 :   You can only debug things when you can see them going wrong, so as we
     discussed in [%x communicate %], you should try to create a minimal
-    [%i "reproducible example (reprex)" %]reproducible example[%/i%] or
+    reproducible example[%i "reproducible example (reprex)" %] or
     reprex.  Doing this finds the problem in a surprising number of cases, since
     each time you throw out part of the original program or dataset because the
     bug reoccurs without it, you are also throwing out a bunch of possible
     causes.
 
-    The easiest way to create a reprex is to divide and conquer.  The [%i "fault" %][%g fault "fault" %][%/i%] responsible for a [%i "failure" %][%g failure "failure" %][%/i%] has to occur before the failure, so check the
+    The easiest way to create a reprex is to divide and conquer.  The [%g fault "fault" %][%i "fault" %] responsible for a [%g failure "failure" %][%i "failure" %] has to occur before the failure, so check the
     input to the function where the bug is showing up.  If that's wrong, check
     the function that's calling it, and so on.
 
 Instrument your code.
-    Add [%i "assertion" %]assertions[%/i%] to make the checks in your code
+    Add assertions[%i "assertion" %] to make the checks in your code
     explicit: they'll help you keep track of what you have looked at for this
     bug, and if you leave them in, they will help prevent others in future.
-    (This is a form of after-the-fact [%i "defensive programming" %]defensive
-    programming[%/i%].)
+    (This is a form of after-the-fact defensive
+    programming[%i "defensive programming" %].)
 
 Alternate between exploration and confirmation.
 :   I often don't know what assertions to write until I've looked at the state
     of the program, so I go back and forth between adding logging statements (or
     just `print` statements if the code is small and I'm reasonably sure I can
-    find the bug quickly) and adding assertions.  [%i "logging!during
-    debugging" %]Logging[%/i%] gives me new information to help me formulate
+    find the bug quickly) and adding assertions.  Logging[%i "logging!during
+    debugging" %] gives me new information to help me formulate
     hypotheses; assertions either confirm or refute those hypotheses.
 
 Change one thing at a time.
@@ -98,16 +98,16 @@ Change one thing at a time.
 <div class="callout" markdown="1">
 ### Programs concurrent to debug hard are
 
-[%i "concurrent systems!difficult of debugging" "debugging!concurrent
-systems" %]Concurrent systems[%/i%] in which many things are happening
+Concurrent systems[%i "concurrent systems!difficult of debugging" "debugging!concurrent
+systems" %] in which many things are happening
 simultaneously are much harder to debug than sequential systems.  It's not just
 that the order of events is unpredictable; it's often not repeatable, so
 creating a reliable reprex may be impossible.  What's worse, the act of
 observing can hide the bug: a `print` statement or a breakpoint can change
 timing in a way that makes the bug disappear.  Modeling tools can help
 ([%x tooling %]), as can the use of immutable data structures, but the best
-solutions are to test components in isolation using [%i "mock object" %]mock
-objects[%/i%] in place of the things they communicate with
+solutions are to test components in isolation using mock
+objects[%i "mock object" %] in place of the things they communicate with
 ([%x testing %]) and to add *lots* of assertions to check the consistency
 of data structures.  In particular, giving every class a method called `isOK` to check
 that it's in good shape can save hours of later debugging, as well as helping
@@ -116,7 +116,7 @@ the next programmer understand what the data is supposed to look like.
 
 ## Common Errors
 
-What mistakes do programmers make [%i "common programming errors" "error!common" %]most often[%/i%]?  The largest study of this for novices is
+What mistakes do programmers make most often[%i "common programming errors" "error!common" %]?  The largest study of this for novices is
 [%b Brown2017 %], which found that mismatched quotes and parentheses are
 the most common type of errors in novice Java programs, but also the easiest to
 fix, while some mistakes (like putting the condition of an `if` in `{…}` instead
@@ -125,8 +125,8 @@ compiler errors are fixed much faster than ones that don't.  Some mistakes,
 however, are made many times, like invoking methods with the wrong arguments
 (e.g., passing a string instead of an integer).
 
-[%b Brown2017 %] also compared [%i "error!misperception of
-frequency" %]the mistakes novices actually make[%/i%] with what their teachers
+[%b Brown2017 %] also compared the mistakes novices actually make[%i "error!misperception of
+frequency" %] with what their teachers
 thought they made.  They found that, "…educators formed only a weak consensus
 about which mistakes are most frequent, that their rankings bore only a moderate
 correspondence to the students in the…data, and that educators' experience had
@@ -207,7 +207,7 @@ found that the five most common are:
     being assigned to.
 
 Wherever we find patterns we can try to write programs to spot them and act on
-them.  The goal of research in [%i "automated program repair" %][%g automated_program_repair "automated program repair" %][%/i%] is to build tools that can fix
+them.  The goal of research in [%g automated_program_repair "automated program repair" %][%i "automated program repair" %] is to build tools that can fix
 common bugs on their own [%b Monperrus2018 LeGoues2019 %].  These tools
 use several approaches:
 
@@ -241,26 +241,26 @@ giving feedback on assignments [%b Hu2019 %].  If you are looking for an
 ambitious course project that might lead to graduate research, this is a good
 place to start.
 
-Another semi-automated technique for finding bugs is [%i "delta debugging" %][%g delta_debugging "delta debugging" %][%/i%] [%b Zeller2009 Zeller2021 %].
-[%i "fuzz testing" %]Fuzz testing[%/i%] can automatically generate inputs
+Another semi-automated technique for finding bugs is [%g delta_debugging "delta debugging" %][%i "delta debugging" %] [%b Zeller2009 Zeller2021 %].
+Fuzz testing[%i "fuzz testing" %] can automatically generate inputs
 that make programs fail ([%x testing %]), but since those inputs are partly
 or entirely random, and can be quite long, it is sometimes hard to figure out
 why they make the software fail.  Delta debugging repeatedly tests subsets of
 the original fixture, then subsets of those subsets, to produce a minimal
-[%i "reproducible example (reprex)" %]reprex[%/i%].
+reprex[%i "reproducible example (reprex)" %].
 
 ## Using a Debugger
 
 The tools described above will make you more productive, but sooner or later
 you're going to have to track a bug down yourself.
-A [%i "debugging!symbolic debugger" "symbolic debugger" %][%g symbolic_debugger "symbolic debugger" %][%/i%]
+A [%g symbolic_debugger "symbolic debugger" %][%i "debugging!symbolic debugger" "symbolic debugger" %]
 is a program that allows you to
 control and inspect the execution of another program. Some, like [GDB][gdb], are
 standalone programs; others are built into IDEs, but they all have the same
 basic capabilities.  (Depending on the language you're using, you may have to
 compile or run your program with specific options to make it debuggable.)
 
-[%i "breakpoint" "debugger!breakpoint" %][%g breakpoint "Breakpoints" %][%/i%].
+[%g breakpoint "Breakpoints" %][%i "breakpoint" "debugger!breakpoint" %].
 :   You can tell the debugger to pause the program whenever it reaches a certain
     line.  You can also create a [%g conditional_breakpoint "conditional
     breakpoint" %] that only pauses on that line if some test is true, e.g.,
@@ -272,7 +272,7 @@ Inspection.
     This is why we use the word "symbolic": instead of displaying the bytes at
     particular addresses in memory, the debugger uses the names you wrote.
 
-[%i "single-stepping" "debugger!single-stepping" %]Single-stepping[%/i%].
+Single-stepping[%i "single-stepping" "debugger!single-stepping" %].
 :   Rather than requiring you to set breakpoints on several successive lines,
     the debugger allows you to step through the program a line at a time to see
     which branches of `if`/`else` statements are taken or how the values of
@@ -287,10 +287,10 @@ isn't displaying the values you thought it was.
 
 That said, a page or two of printed output showing which functions are being
 called and what state the data is in at the start and end of each can be less
-[%i "cognitive load!in debugging" %]cognitive load[%/i%] than holding that
+cognitive load[%i "cognitive load!in debugging" %] than holding that
 same information in your head while stepping through the program's execution.
-Again, if you *are* going to print things, using a [%i "logging!during
-debugging" %]logging[%/i%] library to give yourself more control.
+Again, if you *are* going to print things, using a logging[%i "logging!during
+debugging" %] library to give yourself more control.
 
 <div class="callout" markdown="1">
 ### If it was important, it would be on the exam
@@ -298,8 +298,8 @@ debugging" %]logging[%/i%] library to give yourself more control.
 Over the years I've been surprised by how few programmers know how to use a
 debugger [%b Beller2018 %]. The reason can't be the five or ten minutes it
 takes to learn how to use one—that pays for itself almost immediately.  The
-best explanation I've been able to come up with relates to [%i "Goodhart's
-Law" %][Goodhart's Law][goodhart-law][%/i%], which says that as soon as you use
+best explanation I've been able to come up with relates to [Goodhart's Law][goodhart-law][%i "Goodhart's
+Law" %], which says that as soon as you use
 some measure to evaluate people it ceases to be a good measure because people
 will start to game the system.
 

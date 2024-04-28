@@ -11,7 +11,7 @@ you'd like to know more [%b Brown2007 %] and
 
 > If you cannot be brave—and it is often hard to be brave—be kind.
 >
-> — [%i "Kendzior, Sarah" %]Sarah Kendzior[%/i%]
+> — Sarah Kendzior[%i "Kendzior, Sarah" %]
 
 Be sure this is where you want to focus your efforts.
 :   It's going to take years, it could well fail, and there are many other

@@ -31,7 +31,7 @@ Theories change as more data becomes available.
     wasn't used until 1968—so it would be surprising if everything we think
     we know turned out to be true.
 
-Most of these studies' subjects are [%i "WEIRD" %]WEIRD[%/i%].
+Most of these studies' subjects are WEIRD[%i "WEIRD" %].
 :   They are from Western, Education, Industrialized, Rich, and Democratic
     societies [%b Henrich2010 %], and may not be representative of the
     other 99% of humanity.
@@ -43,7 +43,7 @@ The data we have doesn't capture everything.
     several projects and found that many mis-report themselves in ways that will
     inevitably skew the results of simplistic analysis.
 
-Historically, juries in Scotland were allowed to return one of [%i "Scottish verdict" %][%g scottish_verdict "three verdicts" %][%/i%]: innocent,
+Historically, juries in Scotland were allowed to return one of [%g scottish_verdict "three verdicts" %][%i "Scottish verdict" %]: innocent,
 guilty, or not proven.  The world would be a better place if we were all more
 comfortable saying, "I don't know," and with changing our minds as new evidence
 comes in.
@@ -51,8 +51,8 @@ comes in.
 ## What Do We Know About Programmer Productivity?
 
 Let's start our exploration of research results with the often-repeated claim
-that some programmers are [%i "productivity!comparative" %]ten times more
-productive[%/i%] than others.  Is it actually true?  The short answer is, "It's
+that some programmers are ten times more
+productive[%i "productivity!comparative" %] than others.  Is it actually true?  The short answer is, "It's
 complicated."  As [%b Prechelt2019 %] shows, the answer depends on what
 exactly the question is intended to mean. Looking at exactly the same data, you
 could conclude that some programmers are 105 times more productive than
@@ -69,12 +69,12 @@ respectively.
 [%b Sadowski2019a %] summarizes of what we know, and more importantly, how
 to think about the problem.  The chapter [%b Sadowski2019b %] lays out a
 three-axis framework for discussion based on the
-[%i "Goal-Question-Metric" %][%g gqm "goal-question-metric" %][%/i%] approach.
-The more recent [%i "SPACE framework" "productivity!SPACE framework" %]SPACE framework[%/i%] looks at
+[%g gqm "goal-question-metric" %][%i "Goal-Question-Metric" %] approach.
+The more recent SPACE framework[%i "SPACE framework" "productivity!SPACE framework" %] looks at
 Satisfaction, Performance, Activity, Communication, and Efficiency
 [%b Forsgren2018 Forsgren2021 %].  However productivity is measured, it's
-important to remember [%i "Goodhart's Law" %][Goodhart's
-Law][goodhart-law][%/i%]: as soon as you use some measure to evaluate people it
+important to remember [Goodhart's
+Law][goodhart-law][%i "Goodhart's Law" %]: as soon as you use some measure to evaluate people it
 ceases to be a good measure because people will start to game the system.  For
 example, [%b Gitinabard2020 %] reports that it's possible to classify
 student software teams as collaborative, cooperative, or solo-submit by
@@ -105,9 +105,9 @@ research topics the same way.
 ## What Do We Know About Programming Style?
 
 As we mentioned in [%x tooling %], [%b Stefik2013 %] found that
-languages like [%i "C" %]C[%/i%], [%i "Java" %]Java[%/i%], and [%i "Perl" %]Perl[%/i%] were as hard for people to learn as a language with a
-randomly designed syntax, while languages like [%i "Ruby" %]Ruby[%/i%] and
-[%i "Python" %]Python[%/i%] were significantly easier to learn. This result
+languages like C[%i "C" %], Java[%i "Java" %], and Perl[%i "Perl" %] were as hard for people to learn as a language with a
+randomly designed syntax, while languages like Ruby[%i "Ruby" %] and
+Python[%i "Python" %] were significantly easier to learn. This result
 is one of several showing that a programming language is a user interface that
 can be studied and evaluated like any other.
 
@@ -118,19 +118,19 @@ usable and self-documenting APIs by guiding programmers toward the correct use
 of objects and preventing errors. Contrary to expectations, programmers strongly
 preferred and were more effective with APIs that did not require constructor
 parameters.  They then analyzed subjects' behavior using the
-[%i "cognitive dimensions framework" %][%g cognitive_dimensions "cognitive dimensions" %][%/i%]
+[%g cognitive_dimensions "cognitive dimensions" %][%i "cognitive dimensions framework" %]
 framework, which showed that that requiring constructor parameters interfered
 with common learning strategies.
 
-[%b Binkley2012 %] reported that [%i "reading code" %]reading[%/i%] and
+[%b Binkley2012 %] reported that reading[%i "reading code" %] and
 understanding code is fundamentally different from reading prose: "…the more
 formal structure and syntax of source code allows programmers to assimilate and
 comprehend parts of the code quite rapidly independent of style.  In
 particular…beacons and program plans play a large role in comprehension."  It
 also found that experienced developers are relatively unaffected by identifier
 style, so just to use consistent style in all examples.  Since most languages
-have style guides (e.g., [%i "PEP8" "Python!PEP8 style
-guide" %][PEP8][pep8][%/i%] for Python) and tools to check that code follows
+have style guides (e.g., [PEP8][pep8][%i "PEP8" "Python!PEP8 style
+guide" %] for Python) and tools to check that code follows
 these guidelines.  In contrast, [%b Schankin2018 %] found that:
 
 > With descriptive identifier names, developers spent more time in the lines of
@@ -143,12 +143,12 @@ these guidelines.  In contrast, [%b Schankin2018 %] found that:
 > experienced developers.
 
 More recently, [%b Floyd2017 Krueger2020 Peitek2021 %] have used
-[%i "reading code!fMRI studies" %][%g fmri "fMRI" %][%/i%] to look at what programmers'
+[%g fmri "fMRI" %][%i "reading code!fMRI studies" %] to look at what programmers'
 brain do when they are reading or writing code. The main findings are that
 reading code is cognitively different from reading prose, but that the more
 experienced programmers are, the less of a difference there is. This
-corroborates earlier work with [%i "reading code!eye tracking studies" %]eye
-tracking[%/i%] like [%b Hansen2013 %], which also found that experience
+corroborates earlier work with eye
+tracking[%i "reading code!eye tracking studies" %] like [%b Hansen2013 %], which also found that experience
 increases performance in most cases, but can actually *hurt* performance when
 assumptions about what code is supposed to do are violated (i.e., when the eye
 sees what the brain expects).
@@ -156,8 +156,8 @@ sees what the brain expects).
 [%b Kernighan1999 %] wrote, "Programmers are often encouraged to use long
 variable names regardless of context.  This is a mistake: clarity is often
 achieved through brevity."  Lots of programmers believe this, but
-[%b Hofmeister2017 %] found that using full words in [%i "reading
-code!effect of variable names" "variable naming" %]variable names[%/i%] led to an
+[%b Hofmeister2017 %] found that using full words in variable names[%i "reading
+code!effect of variable names" "variable naming" %] led to an
 average of 19% faster comprehension compared to letters and abbreviations.  In
 contrast, [%b Beniamini2017 %] found that using single-letter variable
 names didn't affect novices' ability to modify code.  This may be because their
@@ -166,8 +166,8 @@ names have implicit types and meanings.  For example, most programmers assume
 that `i`, `j`, and `n` are integers and that `s` is a string, while `x`, `y`,
 and `z` are either floating-point numbers or integers more or less equally.
 
-Similarly, programmers have argued for decades about whether [%i "type
-declaration!effect on readability" %]variables' data types[%/i%] should have to
+Similarly, programmers have argued for decades about whether variables' data types[%i "type
+declaration!effect on readability" %] should have to
 be declared or not, usually based on their personal experience as professionals
 rather than on any kind of data.
 [%b Hanenberg2013 Endrikat2014 Fischer2015 %] found that requiring
@@ -175,8 +175,8 @@ variable type declarations does add some complexity to programs, but it pays off
 by acting as documentation for a method's use—in particular, by forestalling
 questions about what's available and how to use it. [%b Gao2017 %] looked
 at how many bugs in JavaScript programs would have been caught if the code had
-been written in TypeScript (which [%i "type declaration!effectiveness at
-catching bugs" %]adds types[%/i%]), and came up with a figure of 15%, which is
+been written in TypeScript (which adds types[%i "type declaration!effectiveness at
+catching bugs" %]), and came up with a figure of 15%, which is
 either low (one in seven) or high (sales tax) depending on how you want to look
 at it.
 
@@ -184,10 +184,10 @@ at it.
 
 If engineering is applied science, then [%b Eichberg2015 %] is a great
 example of software engineering.  In it, the authors show that it's possible to
-identify a wide range of problems in code by comparing the actual [%i "flow
-graph!actual" %]flow graph[%/i%] (which is the set of all possible paths through
-the program) with the [%i "flow graph!abstract interpretation" %]abstract
-interpretation flow graph[%/i%] (which is the set of all paths once possible
+identify a wide range of problems in code by comparing the actual flow graph[%i "flow
+graph!actual" %] (which is the set of all possible paths through
+the program) with the abstract
+interpretation flow graph[%i "flow graph!abstract interpretation" %] (which is the set of all paths once possible
 data values are taken into account).  To make this more concrete, the control
 flow graph for:
 
@@ -196,7 +196,7 @@ flow graph for:
 includes the statement on line 3, but the abstract interpretation flow graph
 doesn't, because there's no way it could ever be executed given the possible
 value(s) of `x`.  Code paths that are never executed signal
-[%i "dead code" %][%g dead_code "dead code" %][%/i%], which in turn usually signals logic errors, such
+[%g dead_code "dead code" %][%i "dead code" %], which in turn usually signals logic errors, such
 as use of `and` instead of `or` in a logical test.  The results from this kind
 of analysis are impressive: the authors found that a lot of code in widely-used
 libraries is littered with unnecessary `null` checks, and that even experienced
@@ -204,9 +204,9 @@ developers don't seem to understand Boolean operators as well as they should.
 
 Program analysis can tell us many other things as well, all of which should
 influence the design of future systems. For example, Python, JavaScript, and
-many other languages are [%i "dynamic typing" "typing!dynamic" %]dynamically
-typed[%/i%], while [%i "static typing" "typing!static" %]statically
-typed[%/i%] languages like Java that restrict variables to particular types of
+many other languages are dynamically
+typed[%i "dynamic typing" "typing!dynamic" %], while statically
+typed[%i "static typing" "typing!static" %] languages like Java that restrict variables to particular types of
 data. [%b Akerblom2015 %] looked at how often Python programs actually
 rely on dynamic typing, and found that it was taken advantage of in only 2.5% of
 cases. Adding generics (i.e., type declarations like `Array<int>`) only makes
@@ -215,7 +215,7 @@ include more complex type systems, but it does (or should) mean that the onus is
 on their designers to show that the complexity is worthwhile.
 
 Meanwhile, lots of people say that copy-pasting code is bad practice: if you
-find yourself creating [%i "code clones" %]code clones[%/i%], you should put
+find yourself creating code clones[%i "code clones" %], you should put
 the repeated code in its own method and call it from all the original copies
 ([%x design %]).  But when [%b Kapser2008 %] explored *why*
 developers create code clones, they found that code clones are OK in some cases:
@@ -233,7 +233,7 @@ developers create code clones, they found that code clones are OK in some cases:
 ## What Do We Know About the Quality of Software?
 
 The answer to the question in this section's title is, "A lot, and it's not good
-news." For example, [%b Nakshatri2016 %] looked at how [%i "exception!under-used and abused" %]exceptions[%/i%] are actually used in Java
+news." For example, [%b Nakshatri2016 %] looked at how exceptions[%i "exception!under-used and abused" %] are actually used in Java
 programs.  Rather than being used to make software more robust, exceptions are
 either ignored or used as a debugging aid.  For example, the most common `catch`
 block is one that logs the error rather than trying to recover from it; the next
@@ -243,7 +243,7 @@ most programmers ignore Java's elaborate exception hierarchy and simply catch
 `Exception` (78%) or `Throwable` (84%) rather than any of their more specific
 subclasses.
 
-In a similar vein, [%b Yuan2015 %] analyzed the [%i "error!root cause analysis" %][%g root_cause "root cause" %][%/i%] of around 200 confirmed failures
+In a similar vein, [%b Yuan2015 %] analyzed the [%g root_cause "root cause" %][%i "error!root cause analysis" %] of around 200 confirmed failures
 in large distributed systems. They report many findings, but the key one is that
 92% of the catastrophic system failures are the result of incorrect handling of
 non-fatal errors explicitly signaled in software, i.e., the software said,
@@ -254,7 +254,7 @@ tests check that your program does the right thing when things go wrong.
 
 One reason things go wrong is that developers don't make use of the tools they
 have. [%b Beller2019 %] monitored 2,443 software engineers over the course
-of 2.5 years in four [%i "IDE!under-used and abused" %]IDEs[%/i%]. They found
+of 2.5 years in four IDEs[%i "IDE!under-used and abused" %]. They found
 that:
 
 > …half of the developers in our study does not test; developers rarely run their
@@ -267,8 +267,8 @@ that:
 
 Another factor that affects quality is how comprehensible the software is: in
 particular, how easy or difficult it is to set it up.  [%b Xu2015 %]
-looked at how often various [%i "configuration!parameters" %]configuration
-parameters[%/i%] are actually used, and how correctly; they report that:
+looked at how often various configuration
+parameters[%i "configuration!parameters" %] are actually used, and how correctly; they report that:
 
 -   Only a small percentage (6.1%-16.7%) of configuration parameters are set by
     the majority of users; a significant percentage (up to 54.1%) of parameters
@@ -303,7 +303,7 @@ they might not work in all situations, they work in all situations that matter.
 ### What *can't* we learn?
 
 Many people have put forward
-[%i "code metrics!ineffectiveness of" %][%g code_metric "code metrics" %][%/i%]
+[%g code_metric "code metrics" %][%i "code metrics!ineffectiveness of" %]
 that are supposed to measure the
 complexity or likely number of bugs in a piece of software. However,
 [%b ElEmam2001 %] found that these metrics are no better at predicting
@@ -315,7 +315,7 @@ more sophisticated metrics are looking for.
 ## What Do We Know About Software Projects?
 
 If there is one "law" of software development that most practitioners have heard
-of, it is [%i "Brook's Law" %][%g brooks_law "Brooks' Law" %][%/i%]: adding people
+of, it is [%g brooks_law "Brooks' Law" %][%i "Brook's Law" %]: adding people
 to a late project makes it later. [%b Meneely2011 %] explores the
 correlation between adding people to a team and the quality of the software the
 team works on.  The paper reports that adding people is correlated with a later
@@ -393,7 +393,7 @@ guide to what research should focus on improving.
   
 ## What Do We Know About the Psychology of Programming?
 
-Do [%i "programmers!happiness" %]happy programmers[%/i%] produce better code?
+Do happy programmers[%i "programmers!happiness" %] produce better code?
 If they do, then focusing on their tools may be missing the point: it may be
 their environment and colleagues that matter more.  Unfortunately, researchers
 haven't yet discovered how to induce happiness, so a randomized controlled trial
@@ -404,8 +404,8 @@ those groups performed on an analytical task and a creative task.  The positive
 group did better at the analytic task, but there was no statistically
 significant difference on the creative task.
 
-The [%i "pair programming!effect of personality" %]broader topic of
-personality[%/i%] also comes up in discussions of pair programming: do you need
+The broader topic of
+personality[%i "pair programming!effect of personality" %] also comes up in discussions of pair programming: do you need
 to be an extrovert to reap its benefits, is the contrast in personality with
 your peer important, and so on. Several studies have addressed these questions;
 [%b Hannay2010 %] is a good place to start reading about them.  As they
@@ -418,7 +418,7 @@ any personality effects.
 <div class="callout" markdown="1">
 ### Myers-Briggs and other danger signs
 
-The [%i "Myers-Briggs Type Indicator" "pseudoscience!Myers-Briggs Type Indicator" %][%g myers_briggs "Myers-Briggs Type Indicator" %][%/i%]
+The [%g myers_briggs "Myers-Briggs Type Indicator" %][%i "Myers-Briggs Type Indicator" "pseudoscience!Myers-Briggs Type Indicator" %]
 advertises itself as personality profiling tool.  It is popular on dating sites
 and some companies use it as part of their interview process—despite the fact
 that it is complete bullshit.  Half or more of people who repeat the test within
@@ -440,7 +440,7 @@ this model in studies of programmers.
 ## What Do We Know About Innate Ability?
 
 The most important result in this chapter comes from [%b Patitsas2016 %].
-[%i "programming!innate ability" %]Its abstract[%/i%] is worth repeating in
+Its abstract[%i "programming!innate ability" %] is worth repeating in
 full:
 
 > Although it has never been rigourously demonstrated, there is a common belief
@@ -474,7 +474,7 @@ people studying how we think when we program and how the ways we think should
 shape the tools we build. For example, [%b Johnson2020 %] reverse
 engineers the cognitive foundations of user interface guidelines, while
 [%b Chattopadhyay2020 %] found that roughly 70% of the actions programmers
-later undo could be attributed to [%i "cognitive bias" %][%g cognitive_bias "cognitive bias" %][%/i%].
+later undo could be attributed to [%g cognitive_bias "cognitive bias" %][%i "cognitive bias" %].
 
 You don't have to do a PhD to do this kind of research: you can gather and
 analyze data on your own, or collaborate with people in academia.  It takes time
