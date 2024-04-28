@@ -47,8 +47,4 @@ def cross_ref(pargs, kwargs, node):
         number = ark.site.config["_meta_"][slug]["number"]
         fill = f"{kind}&nbsp;{number}"
 
-    tagline = ""
-    if (kind == "title") and ("tagline" in ark.site.config["_meta_"][slug]):
-        tagline = f": {ark.site.config['_meta_'][slug]['tagline']}"
-
-    return f'<a href="@root/{slug}/">{fill}</a>{tagline}'
+    return f'<a href="@root/{slug}/">{fill}</a>'
